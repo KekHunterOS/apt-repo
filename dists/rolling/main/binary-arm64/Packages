@@ -8,9 +8,9 @@ Homepage: http://none.com/really
 Priority: optional
 Section: net
 Filename: pool/main/m/mitmf/mitmf_1.0.0_arm64.deb
-Size: 1132
-SHA256: 21cc9ce5401f24bdf686c2cb3e41433ae18e2a9c05ec7efebcb1177c0b3a4f48
-SHA1: 3508f79057ca9f918d65de32dea479ecd987e06a
-MD5sum: 26c2551586453cba37cfe6807ad5fb81
+Size: 1100
+SHA256: 616559fce6edf66cb1f454ecbddc0560d90e6a571165869928a1e2c5dc3d3592
+SHA1: f077d95a09e1897fb5f0a857a331e6b67f5937d9
+MD5sum: 87c5f1f8c66e2432940268fa0f833dcf
 Description: Simple/Complicated mitmf installer in .deb installer
 
