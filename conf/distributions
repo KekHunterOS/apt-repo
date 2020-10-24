@@ -1,0 +1,6 @@
+Origin: kekhunter
+Label: kekhunter-420
+Codename: rolling
+Architectures: arm64
+Components: main
+Description: Apt repository for kekhunter-420

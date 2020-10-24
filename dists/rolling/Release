@@ -1,0 +1,19 @@
+Origin: kekhunter
+Label: kekhunter-420
+Codename: rolling
+Date: Sat, 24 Oct 2020 18:56:35 UTC
+Architectures: arm64
+Components: main
+Description: Apt repository for kekhunter-420
+MD5Sum:
+ d3c1066556d8c270fb39d282477871ae 1285 main/binary-arm64/Packages
+ 282e58ca42fcd238ab9465d919d4ab76 820 main/binary-arm64/Packages.gz
+ 474c0cdafba1f345ac6e11a7b7e1803d 121 main/binary-arm64/Release
+SHA1:
+ 1d6430c872301f4483e97c0e7c57ec580cdeebd6 1285 main/binary-arm64/Packages
+ 173d8d8213b7e663d41ce9021f8c79c980a82406 820 main/binary-arm64/Packages.gz
+ b5cd9283cc337b5901e54296fce6a78a7e7e798e 121 main/binary-arm64/Release
+SHA256:
+ 9f81c9658e42a3ab6ca8c6fc08b116b64a68fa11097a3602d514f67562a77031 1285 main/binary-arm64/Packages
+ 752c415ac3d1366f51e04d6a37812f882b155a762950600f82109c007446a700 820 main/binary-arm64/Packages.gz
+ f60670e8da06b20d7ed2662b567171ebffdbe4f01aa958bec7aebea81d306e47 121 main/binary-arm64/Release
