@@ -1,0 +1,16 @@
+Package: mitmf
+Version: 1.0.0
+Architecture: arm64
+Maintainer: Hilledkinged
+Installed-Size: 4278
+Depends: python-dev, python-setuptools, libpcap0.8-dev, libnetfilter-queue-dev, libssl-dev, libjpeg-dev, libxml2-dev, libxslt1-dev, libcapstone3, libcapstone-dev, libffi-dev, file
+Homepage: http://none.com/really
+Priority: optional
+Section: net
+Filename: pool/main/m/mitmf/mitmf_1.0.0_arm64.deb
+Size: 1132
+SHA256: 21cc9ce5401f24bdf686c2cb3e41433ae18e2a9c05ec7efebcb1177c0b3a4f48
+SHA1: 3508f79057ca9f918d65de32dea479ecd987e06a
+MD5sum: 26c2551586453cba37cfe6807ad5fb81
+Description: Simple/Complicated mitmf installer in .deb installer
+
