@@ -2,15 +2,44 @@ Package: mitmf
 Version: 1.0.0
 Architecture: arm64
 Maintainer: Hilledkinged
-Installed-Size: 4278
+Installed-Size: 1000
 Depends: python-dev, python-setuptools, libpcap0.8-dev, libnetfilter-queue-dev, libssl-dev, libjpeg-dev, libxml2-dev, libxslt1-dev, libcapstone3, libcapstone-dev, libffi-dev, file
-Homepage: http://none.com/really
+Homepage: https://github.com/KekHunterOS/apt-repo
 Priority: optional
 Section: net
 Filename: pool/main/m/mitmf/mitmf_1.0.0_arm64.deb
-Size: 1100
-SHA256: 616559fce6edf66cb1f454ecbddc0560d90e6a571165869928a1e2c5dc3d3592
-SHA1: f077d95a09e1897fb5f0a857a331e6b67f5937d9
-MD5sum: 87c5f1f8c66e2432940268fa0f833dcf
+Size: 1124
+SHA256: b72b6bf4b01d443231e271309d1094dd5185f41d24cdb716bcb2bd1b2c50556e
+SHA1: f3bd5268ba2a67da036364f4b35f8800c67defe2
+MD5sum: 3862dfa68effa27878d5affacfe07dec
 Description: Simple/Complicated mitmf installer in .deb installer
+
+Package: pyrit
+Version: 0.5.1
+Architecture: arm64
+Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
+Installed-Size: 364
+Depends: python (<< 2.8), python (>= 2.7~), python:any (<< 2.8), python:any (>= 2.7~), libc6 (>= 2.17), libpcap0.8 (>= 0.9.8), libssl1.1 (>= 1.1.0)
+Recommends: python-scapy (>= 2.0), python-sqlalchemy (>= 0.5.6)
+Suggests: python-psycopg2 | python-pymssql | python-mysqldb
+Homepage: https://github.com/JPaulMora/Pyrit
+Priority: optional
+Section: net
+Filename: pool/main/p/pyrit/pyrit_0.5.1_arm64.deb
+Size: 138792
+SHA256: a14043851471ef54e4c17319d1f02c61738e326d8306c2629283380bd36252b3
+SHA1: 9b11c55b7b2225bb88966d951480c9719fb0f4bf
+MD5sum: 904e61d815b9b96d4d4a281540451cef
+Description: GPGPU-driven WPA/WPA2-PSK key cracker
+ Pyrit allows one to create massive databases, pre-computing part of the
+ WPA/WPA2-PSK authentication phase in a space-time-tradeoff. Exploiting the
+ computational power of many-core- and other platforms through ATI-Stream,
+ Nvidia CUDA, OpenCL, and VIA Padlock, it is currently by far the most powerful
+ attack against one of the world's most used security-protocols.
+ .
+ This package contains the basic version of Pyrit, with support for MMX, SSE2
+ and VIA PADLOCK detected at run-time. Support for the non-free technologies
+ Nvidia CUDA, ATI-Stream, and OpenCL can be added through extensions. If
+ packaged, these should be available in the contrib section with names in the
+ form of "pyrit-*.
 
