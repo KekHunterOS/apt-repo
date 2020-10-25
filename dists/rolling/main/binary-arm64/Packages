@@ -9,9 +9,9 @@ Priority: optional
 Section: net
 Filename: pool/main/m/mitmf/mitmf_1.0.0_arm64.deb
 Size: 1164
-SHA256: a7fc7104f20dbe11f1f81f4f93024245241ba87af16e029eb68370afa86861cd
-SHA1: 9b7c352aa19149e972d811c48efbea17d2677fa0
-MD5sum: 8c05ba1ddc09b0e7399e5fe72584a058
+SHA256: c1c99003ae25fd9b0eb444e5f2eb934f976a29ce4cdc6a727a6267dc6b4185eb
+SHA1: fcc772ae00c7296935c6ef9965327974cb120c52
+MD5sum: 8a18057bc64bd00bd50b81afa157f88e
 Description: Simple/Complicated mitmf installer in .deb installer
 
 Package: pyrit
