@@ -9,10 +9,10 @@ Homepage: https://github.com/byt3bl33d3r/MITMf
 Priority: optional
 Section: misc
 Filename: pool/main/m/mitmf/mitmf_0.9.1_all.deb
-Size: 128084
-SHA256: 09cfa2080b537d94e2ac97cd6288e0ecc7a083a142874c09cc8a4c8b0d8a3ac2
-SHA1: 4f8c588e6dfea8c4012bc5f80ba0e3ffc85c1fd1
-MD5sum: 7eb8a33d752f3f90ff13ac31d82b1d45
+Size: 124400
+SHA256: 203409bb1d4c401414b89da81fe06421d67315dc84c3211dd44e204c11a53c20
+SHA1: e714631fe7ad2c757e4cb4871de4c846d1938af1
+MD5sum: bd5fb4225a6ad489952d86170d9043bd
 Description: Framework for Man-In-The-Middle attacks
  The program was created to deal with some of the significant shortcomings
  that Ettercap filters have when modifying HTTP traffic. It tries to provide
