@@ -3,15 +3,15 @@ Version: 1.0.0
 Architecture: arm64
 Maintainer: Hilledkinged
 Installed-Size: 1000
-Depends: python-dev, python-setuptools, libpcap0.8-dev, libnetfilter-queue-dev, libssl-dev, libjpeg-dev, libxml2-dev, libxslt1-dev, libcapstone3, libcapstone-dev, libffi-dev, file
+Depends: python-dev, python-setuptools, libpcap0.8-dev, libnetfilter-queue-dev, libssl-dev, libjpeg-dev, libxml2-dev, libxslt1-dev, libcapstone3, libcapstone-dev, libffi-dev, file, git-extras
 Homepage: https://github.com/KekHunterOS/apt-repo
 Priority: optional
 Section: net
 Filename: pool/main/m/mitmf/mitmf_1.0.0_arm64.deb
-Size: 1132
-SHA256: 901217e62acc59de5be689e5c1140e531dbfdd786cb7f1b88d89afe6971f7c3a
-SHA1: 46a1d969435266c530de72ec43946473384fe24d
-MD5sum: 8bd78079996b772fadac289868da29e4
+Size: 1152
+SHA256: 6bc7ca13c02f16a73804c8c0ac163b67652b2611fd6199c79f3cac0f16cf603e
+SHA1: 8fbae36ab51b1df9781951331cbd0da80d42f3b1
+MD5sum: d1ede35f1edf9101824de757dacebb3e
 Description: Simple/Complicated mitmf installer in .deb installer
 
 Package: pyrit
