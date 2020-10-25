@@ -74,3 +74,28 @@ Description: GPGPU-driven WPA/WPA2-PSK key cracker
  packaged, these should be available in the contrib section with names in the
  form of "pyrit-*.
 
+Package: python-nfqueue
+Source: nfqueue-bindings (0.6-1)
+Version: 0.6-1+b3
+Architecture: arm64
+Maintainer: Pierre Chifflier <pollux@debian.org>
+Installed-Size: 101
+Depends: python2.7, libc6, libnetfilter-queue1, libnfnetlink0, libpython2.7
+Replaces: nfqueue-bindings-python
+Provides: python2.7-nfqueue
+Homepage: https://www.wzdftpd.net/redmine/projects/nfqueue-bindings/wiki/
+Priority: extra
+Section: python
+Filename: pool/main/n/nfqueue-bindings/python-nfqueue_0.6-1+b3_arm64.deb
+Size: 23208
+SHA256: 7b86fece5aff89476c7f19f5b643a105941226dfdce85310cd354068f0d015ee
+SHA1: 7579158e75d5fed6d0e9a7914a8f7c5f91e18c4f
+MD5sum: e64a0eb33b56163c5a6c0e7472eab319
+Description: Python bindings for nfqueue
+ nfqueue-bindings is a set of high-level modules for several languages
+ (Python and Perl, for the moment), for libnetfilter_queue.
+ It provides a userspace API to access packets that have been queued by
+ the kernel packet filter using the NFQUEUE target.
+ .
+ This package contains the Python bindings for nfqueue.
+
