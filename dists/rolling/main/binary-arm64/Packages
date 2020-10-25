@@ -8,10 +8,10 @@ Homepage: https://github.com/KekHunterOS/apt-repo
 Priority: optional
 Section: net
 Filename: pool/main/m/mitmf/mitmf_1.0.0_arm64.deb
-Size: 1152
-SHA256: 6bc7ca13c02f16a73804c8c0ac163b67652b2611fd6199c79f3cac0f16cf603e
-SHA1: 8fbae36ab51b1df9781951331cbd0da80d42f3b1
-MD5sum: d1ede35f1edf9101824de757dacebb3e
+Size: 1164
+SHA256: a7fc7104f20dbe11f1f81f4f93024245241ba87af16e029eb68370afa86861cd
+SHA1: 9b7c352aa19149e972d811c48efbea17d2677fa0
+MD5sum: 8c05ba1ddc09b0e7399e5fe72584a058
 Description: Simple/Complicated mitmf installer in .deb installer
 
 Package: pyrit
