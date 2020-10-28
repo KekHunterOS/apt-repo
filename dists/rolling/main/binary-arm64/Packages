@@ -9,9 +9,9 @@ Priority: optional
 Section: interpreters
 Filename: pool/main/i/ipython/ipython_5.8.0-1_all.deb
 Size: 13928
-SHA256: 6516dda90cae2f10b56309d84179cec84db3329453dee431091c65c84e211195
-SHA1: 622b4b04a771c0a19b9b7d3a612eeda873ae47b5
-MD5sum: 04bdabffca2c7475d26be298c1d84e87
+SHA256: 6a21addc336d8312f36c07d29304e046bc43c68fb2286c1d64ddeeaf2aa9cc73
+SHA1: b5b9951e40cf4f47bc055223eae17ae2ccfe85d9
+MD5sum: 6ae8aa0d010b67d5e81ff2b7c2ff160e
 Description: Enhanced interactive Python 2 shell
  IPython can be used as a replacement for the standard Python shell,
  or it can be used as a complete working environment for scientific
@@ -39,9 +39,9 @@ Priority: optional
 Section: javascript
 Filename: pool/main/j/jquery/libjs-jquery_3.2.1-1_all.deb
 Size: 154048
-SHA256: 79e9528775acfd601b7f802b831888e29833a947d7bf68ed528f6a1f9c284158
-SHA1: 26a14cf18dc34e199d2d06ed2ef6180a984c06d1
-MD5sum: 9e47941538745bada571f6218e118c2c
+SHA256: 75bb89297530b9a8b31d0747cc1b7fccc712d024940bfab40ad9df7785cfc3ba
+SHA1: 007769813f6e22fd6de41aea6b6912d95f293aa1
+MD5sum: a4d163b5d41b4716a7c1ce9c452bda87
 Description: JavaScript library for dynamic web applications
  jQuery is a fast, concise, JavaScript Library that simplifies how you
  traverse HTML documents, handle events, perform animations, and add Ajax
@@ -59,10 +59,10 @@ Homepage: https://github.com/byt3bl33d3r/MITMf
 Priority: optional
 Section: misc
 Filename: pool/main/m/mitmf/mitmf_0.9.8_all.deb
-Size: 146480
-SHA256: 33a9c1f0710d387563cc1814fd4d1a167406f7ea1a6c1e51c8c793e41468eed8
-SHA1: 0313b26c383728c96610bbc3fd03dbd2912537d9
-MD5sum: b0bdb83b2a2f48a78ab0856a88cf5eda
+Size: 142208
+SHA256: 4a57321361513fd44f5b126f6bb9ab6b93b6e63ea9667d2ace9306f90a6dde00
+SHA1: 597782cd4df02b8e202233a49b7e0986ecbf4187
+MD5sum: c3073915d3f9a770f23fced727fedd6a
 Description: Framework for Man-In-The-Middle attacks
  The program was created to deal with some of the significant shortcomings
  that Ettercap filters have when modifying HTTP traffic. It tries to provide
@@ -111,9 +111,9 @@ Priority: optional
 Section: net
 Filename: pool/main/p/pyrit/pyrit_0.5.1_arm64.deb
 Size: 137972
-SHA256: 3fc347e671b56d6d77a5e14e64a578eb969fa4806d9ac35f79dfc3e77ec26748
-SHA1: 0e25ec7751b6a814bbd7ec3a518b00e2c701f972
-MD5sum: d148a3b9a054bf25c5278a3591128061
+SHA256: 4cf91873116d4f82d4a777ada4b58f5922a7a6d4cc8679cae1ab0b1b4cb923f7
+SHA1: 033bee447b8d729bdd8d5baf50bc7cc4f935270c
+MD5sum: ba597aed06a0d294b71d4d407b516748
 Description: GPGPU-driven WPA/WPA2-PSK key cracker
  Pyrit allows one to create massive databases, pre-computing part of the
  WPA/WPA2-PSK authentication phase in a space-time-tradeoff. Exploiting the
@@ -138,9 +138,9 @@ Priority: extra
 Section: python
 Filename: pool/main/p/python-argh/python-argh_0.26.2-1_all.deb
 Size: 24312
-SHA256: c8e05ecb1f97fa8d08b63c5828fda96ae09077feffd4cc3c9c8c48b986e44f54
-SHA1: 9f29465abd471948115356ec666cc3706e30c6ab
-MD5sum: 9e41c6f5af3ba82f4961354622ff8212
+SHA256: ca03b0a414a3c86f9fffdb0e6047068516d79960f3a1eab21ff5d6ffcc09c80e
+SHA1: 8007f872b15aebedb657ae26ead6c8442f9c35a2
+MD5sum: a8c4d30b9ae048bd1b22568d141e5c58
 Description: simple argparse wrapper (Python 2)
  Argh provides a very simple wrapper for argparse.
  .
@@ -177,9 +177,9 @@ Priority: optional
 Section: python
 Filename: pool/main/a/asn1crypto/python-asn1crypto_0.22.0-1_all.deb
 Size: 68932
-SHA256: 07167951d44255a9b15349f76a1dfacdc513daf98fa8643cf09e7de40a09020e
-SHA1: 31c1b4595643f5aab379e291a94f5d5c4809c547
-MD5sum: a5c202d3d068f28cd26cbd59d5a7908b
+SHA256: cea0b5028dfe9e8388f172f9487f188eb09e134482394d09f97a5ac09cabb6dd
+SHA1: c9a1f288d920263626eb084981cec005671b5d1d
+MD5sum: e74fe1066c7e82fcd2826e65b2ca9206
 Description: Fast ASN.1 parser and serializer (Python 2)
  asn1crypto focuses on:
   - Delayed parsing of byte string values
@@ -201,9 +201,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-attrs/python-attr_17.2.0-1_all.deb
 Size: 18276
-SHA256: 58a9a1a5e9dfd17ba67be7d795c38a308e73dc7a194b5d312e42e7387cace3fc
-SHA1: bc1ef25beedcb07ba90c3dc29787e98b888e0000
-MD5sum: 393c1c6498955c5ad651fbaa44f0f38d
+SHA256: 5f1ea7280aea0391e2c7566d346cd2b2bce6355b75c667962ad2a889006e6286
+SHA1: 3d504ae87392fa29ce31db01c24d086c88889c45
+MD5sum: 669746392a92d369a71cfaa98301972a
 Description: Attributes without boilerplate (Python 2)
  attrs is an MIT-licensed Python package with class decorators that ease the
  chores of implementing the most common attribute-related object protocols.
@@ -229,9 +229,9 @@ Priority: optional
 Section: python
 Filename: pool/main/a/automat/python-automat_0.6.0-1_all.deb
 Size: 24440
-SHA256: 8f09cdc324eec94a639b314b369fac2f31790810e1f48823000ff993280e66b1
-SHA1: 6afc6f46f7fbf0e2f3a5e452d47759669ae06404
-MD5sum: 081142df3392947065180bae47cd2ca6
+SHA256: 61b2751813797ffbaeb415ce6d654aba6615d1ee4dddc64c6472c70ea42928e1
+SHA1: 3ab7cc6c0f24375e56a754df297171567f43612e
+MD5sum: 7ae2e15e4fab83de94628e8fa8cc3d77
 Description: Self-service finite-state machines for the programmer on the go
  Automat is a library for concise, idiomatic Python expression of
  finite-state automata (particularly deterministic finite-state
@@ -249,9 +249,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-backports-shutil-get-terminal-size/python-backports-shutil-get-terminal-size_1.0.0-5_all.deb
 Size: 4764
-SHA256: 90a804d4afcad478c4579e9d036b1f70a0c0dfe8f175155d3f7a40c7ce417b68
-SHA1: 32e54184796827b02f327476fe24d29de01c8343
-MD5sum: eaaec89095669275968832df3be990eb
+SHA256: 34a68c4471d65db15d93c84b0db4a492a6a2da463f7fb23b50b0ef868d498fb8
+SHA1: 0d6f4c3369755c2c772b2807953886811ac8c7c7
+MD5sum: 2343290b19c5f1760c8fbcc9bb7b78e5
 Description: Backport of the "shutil.get_terminal_size" function (Python 2)
  This is a backport to Python 2 of the get_terminal_size in the shutil module
  of Python 3.
@@ -270,9 +270,9 @@ Priority: optional
 Section: python
 Filename: pool/main/b/backports.functools-lru-cache/python-backports.functools-lru-cache_1.5-3_all.deb
 Size: 6332
-SHA256: 6a6a3fd2390bb0c82ecf358790265c4330deebecb3dcd21eccba56ef2345252f
-SHA1: 05c9adbcbeb22df4c4d2d98a9c3c100a4d3706e1
-MD5sum: 7ff727ff70b2e377af1f689da8456b43
+SHA256: 1985c79b27453450197d3e1df15b5bf4f330629579c7574f0278eac33061e510
+SHA1: 41752598bf8652b0d54cac61cc6cef87fb8cb725
+MD5sum: e75c63163d68c2c54dfedb34e1d3c7f9
 Description: backport of functools.lru_cache from Python 3.3 to Python 2
  Backport of functools.lru_cache from Python 3.3 as published at ActiveState:
  <http://code.activestate.com/recipes/578078/>
@@ -292,9 +292,9 @@ Priority: optional
 Section: python
 Filename: pool/main/b/beautifulsoup4/python-bs4_4.8.2-1_all.deb
 Size: 105888
-SHA256: 019b6ab2fa359f64151682b9a84f311f9e87aa2a42980d792c6b8559e0dba1f0
-SHA1: 286d31ee263c045e927f0d3cad8834f049dbd002
-MD5sum: ae02440ab63d1d4aea6bfc079034f817
+SHA256: 32de6630c3153d0f9991047d490d7c92a7f7a0fe335d44d03aad44095bd1277c
+SHA1: ffc970c6a4a737ead85b81f3aa899586855f0e4e
+MD5sum: aaa52265d98582a80f0bd399ccb43a8b
 Description: error-tolerant HTML parser for Python
  Beautiful Soup is a Python library for pulling data out of HTML and XML files.
  It works with your favorite parser to provide idiomatic ways of navigating,
@@ -314,9 +314,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-certifi/python-certifi_2017.4.17-2_all.deb
 Size: 176820
-SHA256: d4419445790eaf5a2e6f209a2b731237f6a69d686389f376094a4c520afcf508
-SHA1: 17ad22f72ffa262303f9bb5f7912efbc1015a0ec
-MD5sum: 51866ec6aa97f06cd1378ed59a193eff
+SHA256: 7c8e484350b92d7db7ad20a844bc8f35eb1578fc927aae79bc6c90e0c7c4a2fb
+SHA1: ddbbcefc11677f9bcada83b31445dcc5be755751
+MD5sum: 43f2c901c6af93f9f45492a483daf4f0
 Description: root certificates for validating SSL certs and verifying TLS hosts
  Certifi is a carefully curated collection of Root Certificates for
  validating the trustworthiness of SSL certificates while verifying
@@ -339,9 +339,9 @@ Priority: optional
 Section: python
 Filename: pool/main/c/chardet/python-chardet_3.0.4-1_all.deb
 Size: 78824
-SHA256: b1d2b0ba7bbe971768a44ee0906a5b2ecc28379d23019535a21c2de1fb712f63
-SHA1: 6d04d2e30e5c8378adb84ac1f2c4da5f391d4c41
-MD5sum: e2a3e247459663bf9ff62ce822e6bd37
+SHA256: fdad75aa9818cbaf83ce352830195f4f27563a8e54b69af32f7bdfbafe441f03
+SHA1: 9bfc87f12e298dd36f20ac886d8d8db1ceb8f315
+MD5sum: 3af43ff948e6c1740a7dd7d22ae0625f
 Description: universal character encoding detector for Python2
  Chardet takes a sequence of bytes in an unknown character encoding, and
  attempts to determine the encoding.
@@ -373,9 +373,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-click/python-click_6.7-1_all.deb
 Size: 55636
-SHA256: c42d21a510bbd903ad092c4a6e83191dba22865bb9147502fdfb0421ba20d1b0
-SHA1: 593bfe3bcc7c09e1cb9228e2c20c622994a5bcc1
-MD5sum: 306cffa81665b20a5e19138373b10002
+SHA256: 93b3d065cfd162f554f0ff540ea14fac4b04950ccab24442b7a9b25585038a60
+SHA1: 8391c94367e897d9ed03f8563cab10cf1e295504
+MD5sum: 95df407e217c0c25b727d5dc7a6dd9b1
 Description: Simple wrapper around optparse for powerful command line utilities - Python 2.7
  Click is a Python package for creating beautiful command line interfaces
  in a composable way with as little code as necessary.  It's the "Command
@@ -399,9 +399,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-colorama/python-colorama_0.3.7-1_all.deb
 Size: 24984
-SHA256: 45a1d98690d2f3957bb6c4e17e114f4ffb174a2f55612ee28a9afb6050ffc08f
-SHA1: 6a2fd9edf460faa0ac791dfb4e8aa35b386aa86f
-MD5sum: 91f2b529fd679763984e253aee9879f9
+SHA256: a4634b297234308cdc784f260b23944b703b76779978d1de6129818c893b2d31
+SHA1: 043afb12e8326ccf4e55b091a58806ee5d6fe15d
+MD5sum: 6ac92f939abda7fd3bf1a0ee6d70d611
 Description: Cross-platform colored terminal text in Python - Python 2.x
  Python-colorama provides a simple cross-platform API to print colored terminal
  text from Python applications.
@@ -427,9 +427,9 @@ Priority: optional
 Section: python
 Filename: pool/main/c/configobj/python-configobj_5.0.6-2_all.deb
 Size: 35020
-SHA256: 670ca92fe080d87453f37cdda5b14cdcb661e970a91dcd36f5c88218099446e0
-SHA1: 19fdab21913a1b2738b3914f0dbb8f51351f32c4
-MD5sum: 058031817842ac1722fce4d933bce894
+SHA256: d38749ebe24c07f35bbd83b892ac6328fc0b28783d3882cf72fa899aa8e33a6f
+SHA1: 3151d2010549cb52ef91c88d5aef24b356bc9f0e
+MD5sum: d360c0d1429844a157f6d42c95dace55
 Description: simple but powerful config file reader and writer for Python 2
  ConfigObj is a simple but powerful config file reader and writer: an
  ini file round tripper. Its main feature is that it is very easy to
@@ -463,9 +463,9 @@ Priority: optional
 Section: python
 Filename: pool/main/c/configparser/python-configparser_3.5.0-1_all.deb
 Size: 59268
-SHA256: 69a36009cefefc228080092ee9c3567a7f4174431cf3f89ecd9943f83af89fc9
-SHA1: eac0b2c3592426297c35e2d64b174ee797e25598
-MD5sum: 8917f3b577958951b56a57211a602571
+SHA256: b41782b254f79b3e5689ed72b32968474834a8d9bfb7200d95c78a08793c832f
+SHA1: 8cafe733198006f4a59db052364ef3c748286f2d
+MD5sum: dd33c5710437a7f4b2278a56c5fb3632
 Description: backport of the enhanced config parser introduced in Python 3.2
  The ancient ConfigParser module available in the standard library 2.x has
  seen a major update in Python 3.2. This is a backport of those changes so
@@ -483,9 +483,9 @@ Priority: optional
 Section: python
 Filename: pool/main/c/constantly/python-constantly_15.1.0-1_all.deb
 Size: 7632
-SHA256: 2bb971a85797b1e20723bd7976713a7d5d310858136f418e44bfaf91b7e98f34
-SHA1: acf22a758c2499274618d54ce338843c65fd2e4c
-MD5sum: ca1b2dcaa43810793d9df7416980e67b
+SHA256: 52b1faf5fd332060dddf34e2a2d58da88958863f34e3450f881fb22cb0cec796
+SHA1: b50ff33b32f3c381e1cbcc35c144d5e93cd0d9e7
+MD5sum: fde3f3a3e1d59d1302546acf854e48cc
 Description: Symbolic constants in Python
  A library that provides symbolic constant support. It includes
  collections and constants with text, numeric, and bit flag
@@ -509,9 +509,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-crypto/python-crypto_2.6.1-7+b1_arm64.deb
 Size: 249252
-SHA256: 1bbd039148c4b5fd21d3598333cf4b84aac51b4aaf37610b74b5ffbc37df3347
-SHA1: 21d13e821848c45b5698e602ca576e24a87b495f
-MD5sum: 993e86f6aa316c1cf9d4a45d2cf96d1c
+SHA256: 31a927abb17afa5b380a07252d78168daea83cff7aa2f16e0947e7b58d0a2df4
+SHA1: 3ac4e42d02dfa11e0a86fffea9e1602de2b143e5
+MD5sum: 40fba6c46f917dc10987b03e2c594e1f
 Description: cryptographic algorithms and protocols for Python
  A collection of cryptographic algorithms and protocols, implemented
  for use from Python. Among the contents of the package:
@@ -537,9 +537,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-cryptography/python-cryptography_2.6.1-4_arm64.deb
 Size: 226396
-SHA256: 5dae50f145b1a2dde21abcfd88003cb13acad8765cdaaa246901a7d91b62e823
-SHA1: 00e2fb61dfc5fae1a5e72af6f2133f9ca9000cf4
-MD5sum: cf7fd67e0da1d70b1b475693f2ac11f6
+SHA256: bb15c1f0ffc938756c062e238bd070fb5861dae3eb3e6851aae751f8a65bfc3e
+SHA1: 8f9f8da5f2594c0f83f1d04a081a537e2532d964
+MD5sum: 9ea2bdfb757ee742c7d5ec0c7ffb0321
 Description: Python library exposing cryptographic recipes and primitives (Python 2)
  The cryptography library is designed to be a "one-stop-shop" for
  all your cryptographic needs in Python.
@@ -569,9 +569,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-decorator/python-decorator_4.3.0-1_all.deb
 Size: 13860
-SHA256: 83c0af9345dd0b1bec1ee7f50317154908f2c4f400d572fbca27687f06dcc9e7
-SHA1: f08f6b887bdc432ed50d16d2e01757e0988e5dc2
-MD5sum: 325c86f4214a33825ad922d706ba26a9
+SHA256: cc09dc9b41b046fc32c80d8b2b028d00788db8649a87c04d23c078418c42dfaa
+SHA1: 000d124c93f5047d538c62f5420d11a89963e919
+MD5sum: 87a1b04a16cfed947263682d1860ff2e
 Description: simplify usage of Python decorators by programmers
  Python 2.4 decorators have significantly changed the way Python programs are
  structured.
@@ -598,9 +598,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-dnslib/python-dnslib_0.9.7+hg20170303-1_all.deb
 Size: 38588
-SHA256: d6ec1e8f6b169d8f0a94869f6436c7b97a14028db78b1ffa5bd60da96bdf5277
-SHA1: 87dac3c7cbe27abf98fc3a10d99c4e366e3b7d01
-MD5sum: 11cab90a3108c506e857e0c17cd79619
+SHA256: ffbd0ae6d5475640fdee8cd0ba391ff636dab802247f24bcd7384d3fe909a8a1
+SHA1: 11674acdcc267dcfe93c8d6bcaf83c767b48a65b
+MD5sum: 5bd3da74a72ff76ed7c6402918d6c774
 Description: Module to encode/decode DNS wire-format packets (Python 2)
  This DNS encode/decode Python module provides:
  .
@@ -626,9 +626,9 @@ Priority: optional
 Section: python
 Filename: pool/main/d/dnspython/python-dnspython_1.15.0-1_all.deb
 Size: 98868
-SHA256: 3d0a6deb4747d8ffcfa4dc3fd88343d22019267dcadd521da8f2825ee696b8ca
-SHA1: 8ed4baa83d2cf353c001d976cc493a78f8c62403
-MD5sum: d5ee60d8196c8e30a2e8deeebb3330a3
+SHA256: c39925578a7b8fde16c4f2f458cb8058bded66638b2c50a1dc9b24d4bcece0cd
+SHA1: 0cbf45345ceb84671ac385084a926bce3497c831
+MD5sum: 0795c9c86f3671729da5dd282053b83e
 Description: DNS toolkit for Python
  dnspython is a DNS toolkit for Python. It supports almost all record types. It
  can be used for queries, zone transfers, and dynamic updates. It supports TSIG
@@ -653,9 +653,9 @@ Priority: optional
 Section: python
 Filename: pool/main/e/enum34/python-enum34_1.1.6-1_all.deb
 Size: 34656
-SHA256: fccae827300326add103d0cc6559574354bafc71802a029b4aa72093d8ed2659
-SHA1: 1a7e1cf5a8b68e06fa04ba389ee3f2f6599d9245
-MD5sum: eed3c887f9531af84d400a67cba7d7a3
+SHA256: 2db2bfbd62afcfba5c894b6a9f5d02dc8b4717da228873f5bedc5cebb355a6a6
+SHA1: 31d5875c6316fab86361ef1c169031e29593f063
+MD5sum: 6cf625a9dbe3e84002b37f8c4a3fe88b
 Description: backport of Python 3.4's enum package
  PEP 435 adds an enumeration to Python 3.4.  This module provides a
  backport of that data type for older Python versions.  It defines two
@@ -678,9 +678,9 @@ Priority: optional
 Section: python
 Filename: pool/main/f/flask/python-flask_0.12.2-2_all.deb
 Size: 61372
-SHA256: 8c677215d8d2402c74cc8d2ced50c47482f371957eda6f7461c8132a70c60119
-SHA1: 24beb8f05444f9f29af4f506c833f8a4e1766de1
-MD5sum: f02e4116a1962c522fc11341a1206c69
+SHA256: d6e01b3a8f6f974a6e7602f2004a0226402e277f98dd851aadb13ca2ea0172ce
+SHA1: b8f570cff1d3a8c628b20417c65493ec39ef3d31
+MD5sum: c3bd805b75aa58a30565b196c0432e7a
 Description: micro web framework based on Werkzeug and Jinja2 - Python 2.7
  Flask is a micro web framework for Python based on Werkzeug, Jinja 2 and good
  intentions. A minimal Flask application looks like that:
@@ -709,9 +709,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-future/python-future_0.15.2-4_all.deb
 Size: 340868
-SHA256: 34d792f210eafaa6af9571d6b5a995db756e721ee83f44a5669142256c45f8d6
-SHA1: f2c51d426f7b3672a2dbf5d10c96465fa4e9f6ea
-MD5sum: 4e234125a290834055ec9f96d76127bf
+SHA256: 7908bcb0f33109f3a8c8c04a484c529a57de290edaabf7d7cc3d31517ddbbcee
+SHA1: 4e376ee6151937f3585f573ddba75c2c0d8d1b9e
+MD5sum: 5b482bc11c252d8e72d64dcf1c472ecc
 Description: single-source support for Python 3 and 2 - Python 2.x
  Future is the missing compatibility layer between Python 2 and Python 3. It
  allows one to use a single, clean Python 3.x-compatible codebase to support
@@ -735,9 +735,9 @@ Priority: optional
 Section: python
 Filename: pool/main/h/hyperlink/python-hyperlink_17.3.1-2_all.deb
 Size: 28772
-SHA256: aeeb5177baf8583a422e226c2abeac4a46216d3fd89f38b6c36896518336d91e
-SHA1: be9724f512fc06a99f10b210d15518fc29fb425f
-MD5sum: 0198aab05d7e5506b138072146ef3669
+SHA256: bafb868351bdc7062284a53b83d2487d42aea70fab54338ad1a3e2d19ab83fed
+SHA1: 36a0a948c35b57d06d4263372d4fba81545f1668
+MD5sum: 1004bd8fa687ea453fe08a15f27c4a23
 Description: Immutable, Pythonic, correct URLs.
  Hyperlink provides a pure-Python implementation of immutable URLs. Based on
  RFC 3986 and 3987, the Hyperlink URL makes working with both URIs and IRIs
@@ -756,9 +756,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-idna/python-idna_2.5-1_all.deb
 Size: 32668
-SHA256: 17304f1d7f8bb04a3d35d5ac8943e1c3341835c9cca89c3bee38935391312292
-SHA1: a0d3faa2697e963d7c3ea16d97f463f7cfae2281
-MD5sum: 205c9eb0beebf62a66f70e590d4a74bb
+SHA256: b99fe68be908131ce1f86d07b4220c273a48ab1c9c7e3845ec278c9799c0d800
+SHA1: c3b23fe1e82918f1abbf9c21e7df8a6da9cc940b
+MD5sum: 73cea17e1629f6040b851310d5671ae9
 Description: Python IDNA2008 (RFC 5891) handling (Python 2)
  A library to support the Internationalised Domain Names in Applications (IDNA)
  protocol as specified in RFC 5891. This version of the protocol is often
@@ -783,9 +783,9 @@ Priority: optional
 Section: python
 Filename: pool/main/i/impacket/python-impacket_0.9.15-1kali1_all.deb
 Size: 688052
-SHA256: 0f8478206fec452eefa85b443a65a85732b85ff2492a1c3801820105f978d94b
-SHA1: 612f490479274bf8a3def3c65f779cc2784535f7
-MD5sum: fba601ba20d6ff3bde2cf311def11ce3
+SHA256: 9615dd76fd23da5a9960c0c8848a74366de95d463ecc4fa735b548a9cdc03ce2
+SHA1: 7b65ec42ece297206f2def249d3703fc93c6d08c
+MD5sum: 314e5a44461d4f509125330612cdc9e1
 Description: Python module to easily build and dissect network protocols
  Impacket  is a  collection  of Python  classes  focused on  providing
  access  to network  packets.   Impacket allows  Python developers  to
@@ -813,9 +813,9 @@ Priority: optional
 Section: python
 Filename: pool/main/i/incremental/python-incremental_16.10.1-3_all.deb
 Size: 13976
-SHA256: 288c2f782ab49d6a22f91321158eb27ef7eaee61e17d66f5e6847ba3e815fd31
-SHA1: 38d85dc9093c4338e810371899b0f04eb7c03804
-MD5sum: 9087ec27af6636f2c4781ae2d64019be
+SHA256: 60c19f6a9d925fe5269d4c0920045cd8182d0b0557ba7ba5f4895eafa1f8194f
+SHA1: ac15d39d5e188dcd0333e461c49723927a1effd4
+MD5sum: 74051e8cba8fae1e8bbc88c3f1e54171
 Description: Library for versioning Python projects.
  Incremental is a small library that versions your Python projects.
  .
@@ -832,9 +832,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-ipaddr/python-ipaddr_2.2.0-2_all.deb
 Size: 15944
-SHA256: 62fa02948e93c3928a6e505b436bcf3e557253b4c89868a990c650d97139ae57
-SHA1: 6ccddd168f28cd3952a7a093a6e45078630f85cb
-MD5sum: d3185f61bab301e40a463d7293d2f8fd
+SHA256: d4e102a499d78f7f8d5ef6df60e81edc39ae34dfec2dbdd4a52865e41aea130d
+SHA1: 61f3e7936e7100a9e98916fa8a251a3a1de7ab07
+MD5sum: e8d4bf5c98ca8498f7fc6c2e73c4c6dc
 Description: Python module for working with IP addresses, both IPv4 and IPv6
  This library is used to create/poke/manipulate IPv4 and IPv6 addresses
  and networks in Python.  It is intended to be fast and lightweight.
@@ -859,9 +859,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-ipaddress/python-ipaddress_1.0.17-1_all.deb
 Size: 17916
-SHA256: 3c062a75d99689933a31da557a2bc5b67ddd260eccfc3e9fcf29e0103970ee38
-SHA1: ed02a955fcf5fb040d9cdbad3166203cb4f66529
-MD5sum: b19bc39e1e0ff794f4cb46abcac8c6eb
+SHA256: 3edb6ca356521d048c25e1abd94ce8bdcdf210542f54f39deb347b1b5c25c6ac
+SHA1: d8186ad93aae276799642a49913701023b9b165a
+MD5sum: b926d3d3c2b1ab9049dcf0fd920a8d6b
 Description: Backport of Python 3 ipaddress module (Python 2)
  This module is a backport of the stdlib "ipaddress" module from Python 3. The
  "ipaddress" module is in turn based off of the "ipaddr" module available in
@@ -882,9 +882,9 @@ Priority: optional
 Section: python
 Filename: pool/main/i/ipy/python-ipy_0.83-1_all.deb
 Size: 31596
-SHA256: 2bca9840398b1c716cda629640c3c946c1ea742141fbcad8a3fafd71d5e45a95
-SHA1: 7bbe4f515971bad2fa92201a4aac3f26522bbde4
-MD5sum: cfa97f4209a19b80fd78b5575cbd3a05
+SHA256: e5848fe449d64f143d021595ecf17541b8188f00dca420d2e31bfebf89f8ff11
+SHA1: adbd2f406a1b07be78c7aafc05524b18db9ce084
+MD5sum: 65ed16d946e99f94f67b73d7385a67ec
 Description: Python module for handling IPv4 and IPv6 addresses and networks
  IPy is a Python module for handling IPv4 and IPv6 addresses and
  networks in a fashion similar to perl's Net::IP and friends. The IP
@@ -905,9 +905,9 @@ Priority: optional
 Section: python
 Filename: pool/main/i/ipython/python-ipython_5.8.0-1_all.deb
 Size: 383672
-SHA256: 7386d341f2dcb16f9787ed0dfadd5d8785377e7ddde5a006049af268ebd8bd65
-SHA1: fd39a1d593707a0cbe9f5ec7a3f2fc63223abbb7
-MD5sum: 1f0a942f3f1b1ba99c857080e556bc3e
+SHA256: 9babd90b420b4c00e6b549b96da89c068eadbd5de58208ba7afc7aa5ce0a5b2a
+SHA1: 6500a860ce4ecc6c2037ec816bc46ed0ed3147e7
+MD5sum: a25b1b363b029b991b43b23d0b10710a
 Description: Enhanced interactive Python shell (Python 2 version)
  IPython can be used as a replacement for the standard Python shell,
  or it can be used as a complete working environment for scientific
@@ -934,9 +934,9 @@ Priority: optional
 Section: python
 Filename: pool/main/i/ipython-genutils/python-ipython-genutils_0.2.0-1_all.deb
 Size: 20272
-SHA256: e64c1e07c5ce456645f75003b5dfa345a4caa14f7acd34b776ffa635427343f0
-SHA1: 16402272210b4081675ca1463f1cee200cf5422a
-MD5sum: 635caeb7b4c194ce49f8d509b90b4f2f
+SHA256: cc04e6b99e9b4ea5d2c9fd035537627b8d6970f01d1dbbec2eb828b5f476760b
+SHA1: 9c4ac897a89b5b3c494cd3df71ceabb120228add
+MD5sum: 658896dd9c22f93d2453cb9d72d5855b
 Description: IPython vestigial utilities for Python 2
  Contains some utilities shared by the IPython and Jupyter projects.
  .
@@ -956,9 +956,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-itsdangerous/python-itsdangerous_0.24+dfsg1-2_all.deb
 Size: 12768
-SHA256: 519146d528a120e789281a9221e14c63f4db0504ed06ad1241df72f083a52857
-SHA1: 1a327199a37b058b53dadc99053b6039437a04d8
-MD5sum: 233b0bc1edd04245032ee6bc0a4abc8a
+SHA256: 0a6e3721e45b60fdcec3a8ce700982e71c1b41075e0d728e82a0106c0116f8d5
+SHA1: a9129fb6688f32b06085ef23364f24a68fd9c4a8
+MD5sum: b7d5225bb057ba80d2191aba3bb37468
 Description: Various helpers to pass trusted data to untrusted environment - Python 2.x
  itsdangerous provides a module that is a port of the django signing
  module.  It's not directly copied but some changes were applied to
@@ -986,9 +986,9 @@ Priority: optional
 Section: python
 Filename: pool/main/j/jinja2/python-jinja2_2.9.6-1_all.deb
 Size: 115960
-SHA256: 0ac97320f291f752d8b6592f204f4fda7688c64e20c72e63adbd5bbf3d5fc4b9
-SHA1: a77480cfe3a01f47f502e46374361e1d22353fdf
-MD5sum: 4128926de96a152d9474405702183a3c
+SHA256: 600dc41f1727b4f5542587fb5d0c0326f8e67f5fd581105530a16bd2bda40ac2
+SHA1: 73c4c300e0547012a50a0d49bdaec5d5a48ee94f
+MD5sum: 33a64ca45256b6e7e9f1dce3fddc1cb7
 Description: small but fast and easy to use stand-alone template engine
  Jinja2 is a template engine written in pure Python. It provides a Django
  inspired non-XML syntax but supports inline expressions and an optional
@@ -1023,9 +1023,9 @@ Priority: optional
 Section: python
 Filename: pool/main/l/lxml/python-lxml_3.8.0-2_arm64.deb
 Size: 729620
-SHA256: 92311cc72009217105ed9c6568a42266b433d4ac8364c52a52f6a1614293bb09
-SHA1: d3118985b785e1a2e3f18c2a04c279d7f1f9d36c
-MD5sum: 201843060a3727bc2869f8e6a7c5d47d
+SHA256: dbc7440f9c0c16c16a0977019b949e28606a30f550219fc221cdf54ef814afcd
+SHA1: 8f0e341361ab659d9253948aaf133b378e6d13f7
+MD5sum: 146d66268f7b7d2eab5ed7b0b535bd9a
 Description: pythonic binding for the libxml2 and libxslt libraries
  lxml is a new Python binding for libxml2 and libxslt, completely
  independent from existing Python bindings. Its aim:
@@ -1053,9 +1053,9 @@ Priority: optional
 Section: python
 Filename: pool/main/f/file/python-magic_5.32-1_all.deb
 Size: 48088
-SHA256: 68ebd7d3f11c244f22cf712775076053bca4efa2204588a722229c15277c563e
-SHA1: df0a9e4d88154ac698d169b7a294637754c1093b
-MD5sum: 4c3da0f1880bac46685ea291c4b19310
+SHA256: 3ef0e82303b85fc9d161b5a3745a9e2936ed25eb9d43946953b2e1ee2ce0a071
+SHA1: 5ac18e0e59892e79a71864307d7260af60e0c73a
+MD5sum: 82cc98ce60b0649212e20f40f211676d
 Description: Recognize the type of data in a file using "magic" numbers - Python bindings
  This package contains the Python bindings for the libmagic file type
  detection library.
@@ -1073,9 +1073,9 @@ Priority: optional
 Section: python
 Filename: pool/main/m/markupsafe/python-markupsafe_1.0-1+b1_arm64.deb
 Size: 13364
-SHA256: 8a88baaa892ad61401b819fb1a71a4124734885a4494c3455cdf2ea00a486015
-SHA1: 6cfc7093ad746f5605937e10c133817e38d153e9
-MD5sum: 4e81bb6f90e5eeddb27cac8a12d9a376
+SHA256: f600c6d849a866a5dfbf0ee6a0460b78dc1cdfbc066607d3230bc656cd016dc8
+SHA1: 265942baa2ac23181105d8bc3bfa2f6f20c86421
+MD5sum: fb09f5e634e7170a277ec1c40ef233f1
 Description: HTML/XHTML/XML string library for Python
  MarkupSafe is a Python library implementing a unicode subclass that is
  aware of HTML escaping rules. It can be used to implement automatic
@@ -1094,9 +1094,9 @@ Priority: optional
 Section: python
 Filename: pool/main/m/msgpack-python/python-msgpack_0.4.8-1+b1_arm64.deb
 Size: 59068
-SHA256: 00a0087ab86d99fdae9d8ee0f5dd9cbb0ca23557cd131a8ea40c645394b9eaf3
-SHA1: 8eaad4e6d876ea61601b8d34e7faa28ef2626cdc
-MD5sum: 2b4c116a61c6c219def279df8d98f46d
+SHA256: 7496cafa7d702688d81471dc6998afeb7d8d60cf5d0668a603105a23e40f5d93
+SHA1: d4dff72e11a14338517069fec0bcdcd0ee6b5327
+MD5sum: a14a1d764c7cad119fac0338e9cf1727
 Description: Python implementation of MessagePack format
  MessagePack is a binary-based efficient object serialization format.
  It enables the exchange of structured objects between many languages
@@ -1117,9 +1117,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-netaddr/python-netaddr_0.7.19-1_all.deb
 Size: 228324
-SHA256: 85298da6a4fd05ab8b03db5a2544a9108512f2598577b0de1c29690eae9c8892
-SHA1: 157bf97a7847ce3b66c1b398a2938ecf5c253d1f
-MD5sum: 82fe1142687774537ab1c6f60763a1a6
+SHA256: 41522b9254e007e80309b824fb03382bb59738f5cfc7464a7501becab8ef64c4
+SHA1: 634620550a83b68e4b08906b4741ce188ec3823c
+MD5sum: 911bd2b3bb46876d6b68c96e3e29af12
 Description: manipulation of various common network address notations (Python 2)
  netaddr is a Python library for the manipulation of various common
  network address notations and representations.
@@ -1149,9 +1149,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-netfilterqueue/python-netfilterqueue_0.6+git20150907-0kali1_arm64.deb
 Size: 23028
-SHA256: 72bbc2ccc84aa0d8590ccfb7788dc91aad8086b35535c6be828bea8bf61953dd
-SHA1: 4ee873551d82d1023cd2d577d622aab336ed3b61
-MD5sum: 43be011c277be6b15c5a9ad7477ff564
+SHA256: 0fa50d9ac270cce215045a7b33b96773b6b180c5b57edea007cbe7b6e299bb08
+SHA1: 5a890476ddb4b2e03ed96b0a01b2586479da3495
+MD5sum: 13908650fb6cb7dc033360a86e8b4447
 Description: Python bindings for libnetfilter_queue
  This package provides Python bindings for libnetfilter_queue.
 
@@ -1169,9 +1169,9 @@ Priority: extra
 Section: python
 Filename: pool/main/n/nfqueue-bindings/python-nfqueue_0.6-1+b3_arm64.deb
 Size: 23248
-SHA256: 0b9d510ff2079d186b2a39c873ffc846dfacb2f2b67c4eb3e1d262f10a2b225c
-SHA1: bc5873bf97669976d9b12d774807165f02fe6708
-MD5sum: 805a126162b95196c3f24645198f8ffa
+SHA256: 1629b9107b013782be6c11accbdac1870f56edc1f663ce983eef5f461efed1b2
+SHA1: 424409ab97455117cf63db00cbab6db5d8bbd410
+MD5sum: fb098f370e4e79e5156fd6acc35609d1
 Description: Python bindings for nfqueue
  nfqueue-bindings is a set of high-level modules for several languages
  (Python and Perl, for the moment), for libnetfilter_queue.
@@ -1192,9 +1192,9 @@ Priority: optional
 Section: python
 Filename: pool/main/o/olefile/python-olefile_0.44-1_all.deb
 Size: 37036
-SHA256: e0cf95c4b2f02a2478deba865199cf8603370ab0e0269f0a81ec4c64fd2dd737
-SHA1: 2561edafd803f17e0622284557cae21109fc7bc6
-MD5sum: 39aba47c9b0777c50ec71c7c9addd793
+SHA256: 1592854f15d464bd56aa85895c53c2c3c6a8dfe674a2814f3973e14b89035064
+SHA1: 479a80cd6e8f7e18285ac4a8beb1a86f36111489
+MD5sum: b751489c784590d84b889b91f67ee3f4
 Description: Python module to read/write MS OLE2 files
  Python package to parse, read and write Microsoft OLE2 files (also called
  Structured Storage, Compound File Binary Format or Compound Document File
@@ -1216,9 +1216,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/pyopenssl/python-openssl_16.2.0-1_all.deb
 Size: 43304
-SHA256: 3eeda2f676a2f4b16e4aa4ab52ca304d9b3c3ea8caa31cdb00b1afbaad0c7e35
-SHA1: 403f07d8643f0fa72dba8ea9f4f320dfc2ee4427
-MD5sum: 495b6180576864d5c047b5f80ff79022
+SHA256: ce75d93bb3dd3e975201094c66a14ef7248797d4293e29d27bf1862420a09cf5
+SHA1: bad836ca11866682d741d8b9f9a0498f90608dd7
+MD5sum: 28abe7b45ad8fb7f15a5edfde6374bcb
 Description: Python 2 wrapper around the OpenSSL library
  High-level wrapper around a subset of the OpenSSL library, includes
  .
@@ -1243,9 +1243,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-pathlib/python-pathlib_1.0.1-2_all.deb
 Size: 24664
-SHA256: e8ace78dfd06875bc30dfbfdf06570072a75a645083576dacb4d36a22a466203
-SHA1: dfed02bddb5f35a21956ec122ccd533304f1c332
-MD5sum: 7e9dbce312b0af7b1a33fb70dfbf33fd
+SHA256: 05e5147396d9a8373be654db49091b988b84751983f26e87415ff5ac5b139f0b
+SHA1: c06d21235df353afe594e8a708f236ef090d8caf
+MD5sum: 4a0f417195c9d8bb63e747a0f8c29c42
 Description: set of Python 2 classes to handle filesystem paths
  Pathlib offers a set of classes to handle filesystem paths.
  It offers the following advantages over using string objects:
@@ -1270,9 +1270,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-pathlib2/python-pathlib2_2.3.5-1_all.deb
 Size: 19252
-SHA256: 6aa93c17e112f06dd8e113b9635e7f4f2876d985201efa6df9abecde4d0d5bd9
-SHA1: c0449018d958848df4625c112b3a215f302d0450
-MD5sum: 49e2d3c36a313501beabc904fb9f6b0e
+SHA256: 7ab05a96c048ad323be8aba0db876f1398fbe44bd58299ebd93d9f07af04ecd3
+SHA1: bb329846560da2cf4b5e51d667e7ab8fd94b1294
+MD5sum: 70deb2d0618b690c22679dd964ad7c8b
 Description: Backport of the "pathlib" stdlib module (Python 2)
  The old pathlib module on bitbucket is in bugfix-only mode. The goal of
  pathlib2 is to provide a backport of standard pathlib module which tracks
@@ -1292,9 +1292,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-pathtools/python-pathtools_0.1.2-2_all.deb
 Size: 10592
-SHA256: 134e55a2428b9ea8f16a3eb4349174ade7d5941ae31eb5b1a2ea5acbae2ce59b
-SHA1: 755e8f159a6eadf222cf717fedab98b90328a5f1
-MD5sum: 06e888aa70a7d83753a4c4754b3df78b
+SHA256: 29acc7a91d1eb45fc0478568b6743cefe544b8f00664d4c2617d140be6d6dd79
+SHA1: c26561efa7be3806b889e963c0f6354c5f9fcf53
+MD5sum: f369a50fc13119e6a0e6a3ddb06dd69f
 Description: Path utilities for Python - Python 2.x
  Python API library which provides pattern matching functions
  and various utilities for filesystem paths.
@@ -1316,9 +1316,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/pcapy/python-pcapy_0.10.8-1+b1_arm64.deb
 Size: 19252
-SHA256: 2120f0ec7bacd2ef1b81e7faa9502b742c81a5e9db2e09177624b1eb48b8fc8b
-SHA1: 15b71c1e7193a2c27d4f7c53c8c1f1f9c736c16d
-MD5sum: 5e3f24888f63fc0c17a5bf4eaa6639a0
+SHA256: 7606be355b2acf571b772dd66308a61218fc0c9794ebf25261fc2d0b19da1254
+SHA1: da26ab5c40e12141fee34ad5e2d5a30585ecc912
+MD5sum: 12aaface2b8c78f8b1428c89d781ff6e
 Description: Python interface to the libpcap packet capture library
  Pcapy is a  Python extension module that interfaces  with the libpcap
  packet capture library.
@@ -1339,9 +1339,9 @@ Priority: extra
 Section: python
 Filename: pool/main/p/python-pefile/python-pefile_2017.9.3-1_all.deb
 Size: 54476
-SHA256: eebef7ef461a81977e9eeff94c7e0918e7af8497deba5bf5b829bedc2b051e0b
-SHA1: f1e476f35bcabec23ba0054c0dd39f0e98d930d7
-MD5sum: c0375bef9ea10b328b6045bde4d1b6fd
+SHA256: 1b205bb63c19057516f69f54c8aecd87c63e5ebac7f07ae365483e9f981723e5
+SHA1: 063a36d2e4bd79b5f856e299e4416147c4011117
+MD5sum: 4f3426d4ac545aee43e620ea49565dc8
 Description: Portable Executable (PE) parsing module for Python
  pefile is a Python module to read and work with Portable Executable (PE)
  files. Most of the information in the PE header is accessible, as well as all
@@ -1379,9 +1379,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/pexpect/python-pexpect_4.6.0-1_all.deb
 Size: 51032
-SHA256: 5323cc0d6c8114c3b4109629e17384364eca63b1eaa7384fe353b667bf54213d
-SHA1: 9b4497521d4b77e469a91e3ce374d418f7a383cc
-MD5sum: e217582f7e57181c3f2926d08badd201
+SHA256: 1512295c3a374196db9daed34743b66871b01e1e05f4674ab378b447cde7685c
+SHA1: d8257705025c5b0f8fb9d0a13f2a689db4104977
+MD5sum: 30619e5ffcee8af897e26262bbc95615
 Description: Python module for automating interactive applications
  Pexpect is a pure Python module for spawning child applications;
  controlling them; and responding to expected patterns in their
@@ -1401,9 +1401,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/pickleshare/python-pickleshare_0.7.5-1_all.deb
 Size: 6988
-SHA256: 893daf9e8999bc335aea464334fc5e919a3dbbec74e9f101220cfc572d483bbc
-SHA1: c36f623abe8883769f6cd36595df24efea0e49cd
-MD5sum: c393d8eb7f05f1b266e456126d06537d
+SHA256: b673bdab78e9ccb27ad009f8b2de2f90137e598fe1c0b332f8d66105a87799fc
+SHA1: 5f5bed13aa302be1ef92424ffcbc4fb082f02066
+MD5sum: c0c75ba9696ca370321f8ab4c9f4e53a
 Description: File system based database that uses Python pickles for Python 2
  Like shelve, a PickleShareDB object acts like a normal dictionary. Unlike
  shelve, many processes can access the database simultaneously. Changing a
@@ -1433,9 +1433,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/pillow/python-pil_4.2.1-1_arm64.deb
 Size: 329676
-SHA256: 78cda3b326b54771a24458ecc84f1558b5d05ff03976273e9ff5265cef601aaa
-SHA1: 2a99e6ebff3491c09bc61e451bf34ba65cdce2f0
-MD5sum: 8258f781e75f31a429db903448a2361f
+SHA256: 9d807d358ce46e463a59d38f46ef419998d1b7b6f6481da12e4e712cbcc2f6f4
+SHA1: 0d7a8b584504885e5f12c9848e3a8959ca7a19af
+MD5sum: 92ecfcf94d4bcd0f669856841a17ce60
 Description: Python Imaging Library (Pillow fork)
  The Python Imaging Library (PIL) adds an image object to your Python
  interpreter. You can load images from a variety of file formats, and
@@ -1472,9 +1472,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/prompt-toolkit/python-prompt-toolkit_1.0.15-1_all.deb
 Size: 175812
-SHA256: 62383c28f921205c4ad786d15d03b6c27b62e6e6e5b3adf2195d8a46098bcec1
-SHA1: fd11c2285b3d4e2d62456249d2077952fca6170c
-MD5sum: 3e94cd8e7323cba6b73b1b108408c406
+SHA256: 89d21c3df7c70b0616b2864c3d3e36df15976c6523b5f41270b3d602b37869fd
+SHA1: 704a19def0f5475cbc8e7ba94e0be8194e1e5927
+MD5sum: 2a0799f96ede22bc36bc03d37ab75171
 Description: library for building interactive command lines (Python 2)
  prompt_toolkit is a GNU readline replacement written in pure Python supporting
  advanced features like syntax highlighting, multi line editing and code
@@ -1494,9 +1494,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/ptyprocess/python-ptyprocess_0.6.0-1_all.deb
 Size: 12844
-SHA256: 5762e45a2438127259fb89a300bd56c32656c21330b971ba3bfd8223f2121c6f
-SHA1: 6d5cf00a067e8a29e3f58cb3ea218de35d30bbf6
-MD5sum: ef06b3618af06b2ef7ef9c78e0cb33c4
+SHA256: 4440a45f0d0911efc7427fad797b0714fcaa06e3816baf1ea7f379e5b2b0c662
+SHA1: 795a6c3c1d961356a061b44d1380c13ed46400b9
+MD5sum: 22d023de7e226294b38d94d1787ce311
 Description: Run a subprocess in a pseudo terminal from Python 2
  Launch a subprocess in a pseudo terminal (pty), and interact with both
  the process and its pty.
@@ -1522,9 +1522,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/pyasn1/python-pyasn1_0.1.9-2_all.deb
 Size: 50688
-SHA256: 9e9f98e158f7c5f2c13c6e5df4ac2f52f97c712044b5935f736f32b1aa642376
-SHA1: 551002c2aa99303eb181c6af859354494cd1ffe7
-MD5sum: acff5ff2c97a0c9cb86a9badb2112b2d
+SHA256: 07082ad6a8bf176603a195c548523430d3749fb884bd2b2f38589a28fbf0c0bb
+SHA1: d320cfd5b24d92cb545ecef3c208568d1e671d4a
+MD5sum: c40ddd06ecbad38c92bb51529b9f374e
 Description: ASN.1 library for Python (Python 2 module)
  This  is  an implementation  of  ASN.1  types  and codecs  in  Python
  programming language. It has been first written to support particular
@@ -1544,9 +1544,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-pyasn1-modules/python-pyasn1-modules_0.0.7-0.1_all.deb
 Size: 20732
-SHA256: 74db2e53767968a99dbe730dbe34ab1a8b2f394126b0df31ce76831befe2cdc1
-SHA1: ff12a376661f6210f26577d23629fcb44260477a
-MD5sum: 644af2d844bb1a7fc50ec7af8a132391
+SHA256: 7023f5ad962982929de401b04a21d519a156f28aa1bfdd102edb889fa112780d
+SHA1: 6773086a951abaedd9203b84289d0df2d3d8c9c5
+MD5sum: 9de4437962f61b13d54be0ca121a9c63
 Description: Collection of protocols modules written in ASN.1 language
  This is a small but growing collection of ASN.1 data structures
  expressed in Python terms using pyasn1 data model.
@@ -1571,9 +1571,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/pygments/python-pygments_2.3.1+dfsg-3_all.deb
 Size: 589148
-SHA256: 54d2a196b92c06977f850dced6c552cbbd707ce7de986c4c2d425207427f8d4f
-SHA1: e115eed6f3a272c048e38efc8e700cc76f4f2a0d
-MD5sum: 1d5ab1377a323820cb466cefc2f1793d
+SHA256: 247c5b5e1efcf40e7c2b66a2dbcf5141699239f1e65b60312be90b5874f0a9f2
+SHA1: d57e38cfbcfe109bdabc82947a2dd5f4998534df
+MD5sum: e0ead89da1a84c12ec1e9e8ed3a1fe7f
 Description: syntax highlighting package written in Python
  Pygments aims to be a generic syntax highlighter for general use in all kinds
  of software such as forum systems, wikis or other applications that need to
@@ -1600,9 +1600,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/pyinotify/python-pyinotify_0.9.6-1_all.deb
 Size: 26624
-SHA256: 21e921d28b366f8a75c2be032b741a32e3a231ac6e070d2eee67a9b19413e97d
-SHA1: 33e76d8f1c7cd1f87fe18c06fd2269f3c93506e2
-MD5sum: c3796341ca9ba1c37932f57db68eea47
+SHA256: 9496a5a72007f2169fae53feaefa785a2924a9ccd7ea521693ccb36910bdeea1
+SHA1: 97a1193c072f691d5a83dbef1ab4f686677c9ef0
+MD5sum: 4a29d61315ecec205ada1bb60de034fe
 Description: simple Linux inotify Python bindings
  pyinotify is a simple wrapper for the Linux inotify mechanism.
  .
@@ -1623,9 +1623,9 @@ Priority: optional
 Section: python
 Filename: pool/main/r/requests/python-requests_2.18.1-1_all.deb
 Size: 75672
-SHA256: b2a7caa3af632470237e6a5d1474e4bdf89576d68f8acf979ac223fa90d00818
-SHA1: ebefd581e7fe5a564706740214b079acbafb3a0d
-MD5sum: 7cb641132a4d95b21e54a1bbdfb781f5
+SHA256: 7221fe70887855f43143adfba161bbd18f0ef9e618c01b9803cff80c014c0211
+SHA1: def57dbf7c75ffa956ee7377ee8e376d2e561430
+MD5sum: 35f1e2608b9cf87b2d183483af507b42
 Description: elegant and simple HTTP library for Python2, built for human beings
  Requests allow you to send HTTP/1.1 requests. You can add headers, form data,
  multipart files, and parameters with simple Python dictionaries, and access
@@ -1656,9 +1656,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-scandir/python-scandir_1.10.0-2_arm64.deb
 Size: 17896
-SHA256: 078b7e5306d195c75b09a2f4300cc3dab9390d3c162b74ee6193b3d20bd797b8
-SHA1: 081d69cfc5b0c9f8947182315e0e54ffb6cd4ecc
-MD5sum: b84bd18ffcc1de57857cc9be3abec95b
+SHA256: 26b92a105b6bb008f35fd97039d43d3640022fd9c4cff93cc3ea3952ca1a6b40
+SHA1: 64ade3bbe19d383e85d073b901f71caa6405fcfb
+MD5sum: 7f000170e2337c2be2f3fabf58f0e46d
 Description: Backport of the "scandir" stdlib module (Python 2)
  Better directory iterator and faster os.walk(), as found in Python 3:
  instead of returning a list of bare filenames, it yields DirEntry objects
@@ -1682,9 +1682,9 @@ Priority: optional
 Section: python
 Filename: pool/main/s/scapy/python-scapy_2.3.3-1_all.deb
 Size: 357412
-SHA256: ba292251e28489ec48c9e2a406798d053dd092a2daa3d51723046f00f8d3279d
-SHA1: eb85dcbbed351c8277b12b557a9ff9095d3aa7a8
-MD5sum: 51653f86154feea55069fd7001666690
+SHA256: c02794c2180bf1ca485d6addf29253be22050b238602bea2c96510602f77514c
+SHA1: ed7a0a6b2f13ab3213f7c5b4d0d0539ab0a754fd
+MD5sum: 7812b68fe4a5aad26fe4ca146001f1dd
 Description: Packet generator/sniffer and network scanner/discovery
  Scapy is a powerful interactive packet manipulation tool, packet
  generator, network scanner, network discovery, packet sniffer, etc. It
@@ -1709,9 +1709,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-service-identity/python-service-identity_16.0.0-2_all.deb
 Size: 9000
-SHA256: a2411ec46979593456e77dc905473c2cc1fc01e1c418f9fdf5b4566043982b7c
-SHA1: 421bee1f4c80f7b501b79fac317d0fa8bce5367c
-MD5sum: e04aeab15adbb6dd6c69533bf5e425e4
+SHA256: dca4a705ae2e7ec0e3a4fba5a2b8ef155edb56a354780588f60e139001055095
+SHA1: 48016cab89379382d8424e4232347e9cfbf1afd0
+MD5sum: 174d6fbeaee5b5ec05216a338d80697e
 Description: Service identity verification for pyOpenSSL (Python 2 module)
  Service_identity aspires to give you all the tools you need for verifying
  whether a certificate is valid for the intended purposes.
@@ -1734,9 +1734,9 @@ Priority: optional
 Section: python
 Filename: pool/main/s/simplegeneric/python-simplegeneric_0.8.1-2_all.deb
 Size: 10708
-SHA256: 8fc31b89176f9e7186274156529c3978b4c9f646d96285f8a65e6c9b12ce46ef
-SHA1: 6c508a985e67c2760e3bd9b00be7d2c1bca3332f
-MD5sum: 0ef509383cab24167303dec7cfa6708f
+SHA256: 1e9681662add14dd6b5abc03e5396c2fb99fd29206e4a7bf616cdfb5160c6748
+SHA1: 6f1a13adf3750cae06935f357b8ecaa60457ba1a
+MD5sum: db397004a165fc2ba9e163b467b136b5
 Description: simple generic functions for Python
  The simplegeneric module lets you define simple single-dispatch generic
  functions, akin to Python's built-in generic functions like len(), iter() and
@@ -1756,9 +1756,9 @@ Priority: optional
 Section: python
 Filename: pool/main/s/soupsieve/python-soupsieve_1.9.5+dfsg-1_all.deb
 Size: 32996
-SHA256: 73fc014ce4dc51117a42ceb8492bfa72c7a28c59fff83e0bebd2595e73b1a897
-SHA1: 5d8fff5b690a105a0774808a3bb2618cdb0b66ef
-MD5sum: 098090c0d6b60cabf84c834361514542
+SHA256: 564d2c862131e7ec3ff17427a898aaaddcbcb758068ba4c3cefea9cd19711278
+SHA1: 060cb174d7b6bc082ccc317029036e8551bb996d
+MD5sum: 35a0b5023d03ba508b0b76b35332392b
 Description: Modern CSS selector implementation for BeautifulSoup (Python 2.7)
  Soup Sieve is a CSS selector library designed to be used with Beautiful Soup 4
  (python-bs4 in Debian). It aims to provide selecting, matching, and filtering
@@ -1785,9 +1785,9 @@ Priority: optional
 Section: python
 Filename: pool/main/t/traitlets/python-traitlets_4.3.3-2_all.deb
 Size: 60528
-SHA256: 987eb0cc1af71813e92a777ee83a30770ddcb34bc2915e300596d99136c1dc4a
-SHA1: 7d776537c6ec8d9848735fb9a843f67d256a119e
-MD5sum: 53ab482ce22b1aa2ceb88780a5d29f91
+SHA256: 15dc5e92ed4824e914905d90e7b9640ab9dd9c4d1f4bec71a7529df6fb8e3923
+SHA1: 882c9910a7ac1cb59d0e8c6ccc285fb3bda48e88
+MD5sum: ac88ab9ea1c9ade78bbaee27d4044016
 Description: Lightweight Traits-like package for Python 2
  A lightweight pure-Python derivative of Enthought Traits, used
  for configuring Python objects.
@@ -1812,9 +1812,9 @@ Priority: optional
 Section: python
 Filename: pool/main/t/twisted/python-twisted-bin_17.5.0-2_arm64.deb
 Size: 20752
-SHA256: 69a64be26c70fffacaa14d925127eb27cb965b304d3e6bc12812155ac28df0f8
-SHA1: 73a3997c3e5600a60aed793d480f0379c8c65fd8
-MD5sum: edeae383410d3cacf3122dc381334d09
+SHA256: 744e63943eaf3994b9eccb2f4feb63ea184aef419f13f06ea7f3e1d234fedb00
+SHA1: 10853d99971e219142f006d4e1029c1f80280246
+MD5sum: a2f591178e874a900fdfacc89a5d25e2
 Description: Event-based framework for internet applications
  It includes a web server, a telnet server, a multiplayer RPG engine, a
  generic client and server for remote object access, and APIs for creating
@@ -1838,9 +1838,9 @@ Priority: optional
 Section: python
 Filename: pool/main/t/twisted/python-twisted-core_17.5.0-2_all.deb
 Size: 1968476
-SHA256: 3212c93d208c51bec0fad69b95e5351b3804088fd28eb530ffa02e29bca205b8
-SHA1: c783dd9c15141dc3b8dc2d0252546d1317ce3215
-MD5sum: f8c6b969ce75345bc05529c21ec67c11
+SHA256: 8fda65e2638250bede4a295e8bf40a3bca5e669a73e646c8d2cfa6ea7e6f5870
+SHA1: 3ca0028df991062c980da0b077351060bb758da8
+MD5sum: 9ff768e175a18c6ab5959c8203ab2235
 Description: Event-based framework for internet applications
  It includes a web server, a telnet server, a multiplayer RPG engine, a
  generic client and server for remote object access, and APIs for creating
@@ -1882,9 +1882,9 @@ Priority: optional
 Section: python
 Filename: pool/main/t/twisted/python-twisted-web_17.5.0-2_all.deb
 Size: 78532
-SHA256: 38663e3e4d163195d6d6ba230a59b8ae287aa40be620ff22856147dca9d0bdae
-SHA1: 9f9176ccab595cd444afc031458323a73bb50703
-MD5sum: 1fea6ce3784414114e8eea2b46a1c66f
+SHA256: 100c62ddcbde7e5c9593cb7552c9429d51e5b9f632cfb5d9a94f8ddb99844ea4
+SHA1: 00a13c18a6b64ad1f16d6adecdc5ef217e09672a
+MD5sum: 672862ec179a4f6c82d6618dce0808ed
 Description: twisted dummy package for HTTP protocol implementation
  All the code has been moved to python-twisted-core, this package
  contains only documentation and is going to be removed.
@@ -1901,9 +1901,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-ua-parser/python-ua-parser_0.3.6-0kali1_all.deb
 Size: 21056
-SHA256: c8f60f7984584043721236f53e1c8633e355d935c10e0d4fb9f268874cfeca7a
-SHA1: 48cb835651d2ccbd1752cec768f025bc093b3404
-MD5sum: ed1dfc48ee01bd9736aa1615f117f04b
+SHA256: 63eb21569adad86b00519bdace5c9ade6246a5e13946c93a277ef020039eee2d
+SHA1: 1caea5214ce9fa6e5e87d4e4499c2d318796d56d
+MD5sum: 3994558e46e3d2dac08f92524673bc7d
 Description: Python port of Browserscope's user agent parser
  This package containe a Python port of Browserscope's user agent parser.
 
@@ -1920,9 +1920,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-urllib3/python-urllib3_1.21.1-1_all.deb
 Size: 95828
-SHA256: 73e3eba4ea6ee3f4c64261d25b63ca69b8eb1db8296a1f6509158742b6cfa744
-SHA1: 8e1cb58e3e24da15b87404e3f65b6776ace3d2c1
-MD5sum: 410d14e863068de796871185b154ecde
+SHA256: bdadb043afbdf006e92e7a81ef7aca166611425d66d80c80b52030c79381e4b8
+SHA1: 6001381cbf02ee9642c91c766624b2b2253dda5e
+MD5sum: 97a987e5c6ca5d955d0e9a7f5b6b3b69
 Description: HTTP library with thread-safe connection pooling for Python
  urllib3 supports features left out of urllib and urllib2 libraries.
  .
@@ -1947,9 +1947,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-user-agents/python-user-agents_0.3.2-0kali1_all.deb
 Size: 9116
-SHA256: 8d87d944577447af96e2b31b5603e9ecebcc771e0f53cafdd18b063246d36eb1
-SHA1: 513eb531b1c40b7e0cde82465bbcfc006ef7dead
-MD5sum: 3684d5e35a1f90e7347f945bdc78473a
+SHA256: 70f899dc054b383b8f03b8cd6396fe76cd1668aa1dab0612cf1b3b4ec1ecfa5a
+SHA1: 3216ac03e785545cd348b6545458204e3a6c968d
+MD5sum: 5e206cfdb21445639debee42c936c8ee
 Description: library to identify devices and their user agent
  This package contains a Python library that provides an easy way to
  identify/detect devices like mobile phones, tablets and their capabilities
@@ -1969,9 +1969,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-watchdog/python-watchdog_0.8.3-2_all.deb
 Size: 182648
-SHA256: f943644320082958a6791926b12d47065e7b2eeaf5dc7aec3dcaa11534708e7a
-SHA1: 0986d5f1d195c4bfb620be9b94ee58df1d19377c
-MD5sum: e23553e6a2cb385e8449650e816b5eaa
+SHA256: 5d05a9cf27c6115c1fd6999108913b5ba9d845b94198429e2b1c6287b5874d45
+SHA1: 1df5be160b1d564beabb1ba246814a8cefd2af51
+MD5sum: 56bb5cd591a7d2053360af2cc584b2d2
 Description: Python API and shell utilities to monitor file system events - Python 2.x
  Watchdog comes with a utility script called watchmedo. It can be used to
  execute commands in response to events.
@@ -1990,9 +1990,9 @@ Priority: optional
 Section: python
 Filename: pool/main/w/wcwidth/python-wcwidth_0.1.8+dfsg1-1_all.deb
 Size: 15000
-SHA256: a7fe37289a8f5561963b1e97a883b60238871c7a38bc7f372be587887365d94a
-SHA1: 09aa623a90d652118dd604fe9b6fdb2ec68d935b
-MD5sum: 01ffe8005a6939818a7a4cdabfce3f81
+SHA256: 28c120b1fb3b9c75c51f9c2ba6325e685aa0ae999c1c7a0058c9cda6a79ae4aa
+SHA1: 3086b103c9fb555f01f1984f9759b0988fee4bbc
+MD5sum: 64247374e9d067d499b66cda132520a5
 Description: determine printable width of a string on a terminal (Python 2)
  wcwidth allows one to determine the printable width of a string on a terminal.
  It provides functions similar to wcwidth(3) and wcswidth(3) for Python
@@ -2013,9 +2013,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/python-werkzeug/python-werkzeug_1.0.0+dfsg1-1_all.deb
 Size: 192844
-SHA256: f6a650dd289d410a56780316c28d08deef21a584717e6f833196fb771c8e868f
-SHA1: 07e7ce35ec4a2dd1e9f4b2765a15861a96cb2d17
-MD5sum: 79936352bfe344c592e3a40071462b5c
+SHA256: 0b356c68490eb9568ed9870da676bae96ec766555a7cd4adaf83ebb1e9fe62ba
+SHA1: 439b750e36617848b44fa8a351c73ae29344c936
+MD5sum: d1b9165acb4543b0663cfa2d2838d583
 Description: collection of utilities for WSGI applications (Python 2.x)
  The Web Server Gateway Interface (WSGI) is a standard interface between web
  server software and web applications written in Python.
@@ -2039,9 +2039,9 @@ Priority: optional
 Section: python
 Filename: pool/main/p/pyyaml/python-yaml_3.12-1+b1_arm64.deb
 Size: 103836
-SHA256: 8ee0e19b0bf1a8a6d5ddcfd809b970d5adabb1f59f43cb6bc4fcbd8ee3772166
-SHA1: 7224774e43ab6462e8f2ea6d71a05494c9e1333d
-MD5sum: 333a02bd0cfcd163bb9ce15c64ccc673
+SHA256: 54a07c9e7752e1cdc3a9e44568eda2a1da1778a65814c38f6eefdd8e21d9e2f6
+SHA1: fc69d6ef6103c3e41172deef74c30da3cbfcdaf1
+MD5sum: 736b548b52c952387daa7b831c57b20c
 Description: YAML parser and emitter for Python
  Python-yaml is a complete YAML 1.1 parser and emitter for Python.  It can parse
  all examples from the specification. The parsing algorithm is simple enough to
@@ -2063,9 +2063,9 @@ Priority: optional
 Section: zope
 Filename: pool/main/z/zope.interface/python-zope.interface_4.3.2-1+b1_arm64.deb
 Size: 86960
-SHA256: df67323273d98e1ba0d716f3710fa38435a196c30b5a0f02737d214128cf9dc0
-SHA1: ac47a39e8f0374a7f61604c70f01e87c413eca7e
-MD5sum: 5d41448913f70e3e7862a8db48a018f5
+SHA256: 26803e44c1241ecc979ffc7871203e9ca8ec76a5636e6ffbab2f1aabe03ecf45
+SHA1: 1870247d0e9961055ce7bbbcc2f079fb51600e2b
+MD5sum: 6e9d5522e7ec37b812153b101a9b3e7d
 Description: Interfaces for Python
  This package provides an implementation of object interfaces for Python.
  Interfaces are a mechanism for labeling objects as conforming to a given API
