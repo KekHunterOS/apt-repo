@@ -4,6 +4,26 @@
 ### INFO (Comaptible only with)
 * DISTRO: Kali rolling (2020.3)
 * ARCH:   ARM64
+### Adding this repo
+##### Make sure that u have updated and upgraded kali distro/chroot
+###### Adding the repository
+```
+nano /etc/apt/sources.list
+```
+* And add this to youre list
+```
+deb [trusted=yes] https://raw.githubusercontent.com/KekHunterOS/apt-repo/master/ rolling main
+```
+###### Updating and installing mitmf package for the example
+* Updating and upgrading
+* Thing to note is some packages will overwrite official packages, but it shouldnt breake anything.
+```
+apt update && apt full-upgrade
+
+apt install mitmf
+```
+
+
 ### Packages (Main ones)
 * Mana, Pyrit, OpenJDK-8
 ### Packages (All of them)
