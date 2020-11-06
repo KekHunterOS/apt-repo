@@ -1,9 +1,10 @@
 ## General info
 ### Why i made it
 * This apt repository is made for nethunter arm64 based chroots. The main reason i created it is to add these old packages that were useful for the nhapp and chroot itself
-### INFO (Comaptible only with)
-* DISTRO: Kali rolling (2020.3)
-* ARCH:   ARM64
+### INFO (Only comaptible with)
+OS    | Distro  | ARCH  | Version
+-----:|:-------:|:-----:|:--------
+Kali  | Rolling | ARM64 | 2020.3+
 ### Adding this repo
 ##### Make sure that u have updated and upgraded kali distro/chroot
 ###### Adding the repository
