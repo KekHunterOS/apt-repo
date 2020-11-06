@@ -1,6 +1,11 @@
 ## General info
 ### Why i made it
 * This apt repository is made for nethunter arm64 based chroots. The main reason i created it is to add these old packages that were useful for the nhapp and chroot itself
+### Can this repo be trusted?
+* Yes and No as people are different. From my view it can be trusted as everuthing is open source.
+* Link to the unextracted packages that are used here: https://github.com/KekHunterOS/apt-repo-source
+* Also things to keep in mind. This repo is maintained by one person for now and its beign done by my own free time.
+
 ### INFO (Only comaptible with)
 OS    | Distro  | ARCH  | Version
 -----:|:-------:|:-----:|:--------
