@@ -26,6 +26,8 @@ apt install mitmf
 ```
 ### Credits
 * @S133py | for better commands to add repo into sources.list
+* Offsec | for 2017.2 kali packages i use. 
+* http://old.kali.org/kali/dists/2017.2/
 
 ### Packages (Main ones)
 * Mana, Pyrit, OpenJDK-8
