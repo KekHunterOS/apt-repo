@@ -14,7 +14,7 @@ Kali  | Rolling | ARM64 | 2020.3+
 ##### Make sure that u have updated and upgraded kali distro/chroot
 ###### Adding the repository
 ```
-echo "deb-src deb [trusted=yes] https://raw.githubusercontent.com/KekHunterOS/apt-repo/master/ rolling main" | sudo tee -a /etc/apt/sources.list
+echo "deb [trusted=yes] https://raw.githubusercontent.com/KekHunterOS/apt-repo/master/ rolling main" | sudo tee -a /etc/apt/sources.list
 ```
 ###### Updating and installing mitmf package for the example
 * Updating and upgrading
