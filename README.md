@@ -24,7 +24,8 @@ apt update && apt full-upgrade
 
 apt install mitmf
 ```
-
+### Credits
+* @S133py | for better commands to add repo into sources.list
 
 ### Packages (Main ones)
 * Mana, Pyrit, OpenJDK-8
