@@ -1,19 +1,19 @@
 Origin: kekhunter
 Label: kekhunter-420
 Codename: rolling
-Date: Fri, 06 Nov 2020 20:35:17 UTC
+Date: Thu, 19 Nov 2020 17:26:16 UTC
 Architectures: arm64
 Components: main
 Description: Apt repository for kekhunter-420
 MD5Sum:
- edc89624efb404adb1b0ce8605b86c46 97339 main/binary-arm64/Packages
- 6758d76887413f910e1fbf5bf6819858 33273 main/binary-arm64/Packages.gz
+ 7fb207eaab3c752c943eb3dd47249c98 97325 main/binary-arm64/Packages
+ 409a50d03934fade804b37188b37bd73 33246 main/binary-arm64/Packages.gz
  474c0cdafba1f345ac6e11a7b7e1803d 121 main/binary-arm64/Release
 SHA1:
- d10f292fff11221b7281202a878e45d93a5e9b58 97339 main/binary-arm64/Packages
- 2a3a9a14847a8b1e576c483f17d17572f9bd3a2c 33273 main/binary-arm64/Packages.gz
+ 8bdfdd1f9ccfbfb6413a52cd6d498eab942992b5 97325 main/binary-arm64/Packages
+ de8d5a9b5e853d16d26cbab2d57798a5577373ce 33246 main/binary-arm64/Packages.gz
  b5cd9283cc337b5901e54296fce6a78a7e7e798e 121 main/binary-arm64/Release
 SHA256:
- 324ccbdd82e6d249e44955fa0a08e986a916655163cd0ac581be4a5d5ecaba6d 97339 main/binary-arm64/Packages
- cde1c2a1ceb15bbe945849e98745a6183f0bd3eb421ca954ed2d3ef5ddea14c5 33273 main/binary-arm64/Packages.gz
+ 2bd2ba5a4ca781a54e7b23aa404fe07d9c7bf56eb47a65cab790a76c6322fd2b 97325 main/binary-arm64/Packages
+ 2db57b2f2d7d5cc22583e046a9ff38c8187cd4414466d57a59566d92e4d5c9d8 33246 main/binary-arm64/Packages.gz
  f60670e8da06b20d7ed2662b567171ebffdbe4f01aa958bec7aebea81d306e47 121 main/binary-arm64/Release
