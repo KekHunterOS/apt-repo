@@ -24,6 +24,10 @@ apt update && apt full-upgrade
 
 apt install mitmf
 ```
+* If u have some porblems with apt overwrite then use this command
+```
+sudo apt-get -o Dpkg::Options::="--force-overwrite" install PACKAGES
+```
 ### Credits
 * @S133py | for better commands to add repo into sources.list
 * Offsec | for 2017.2 kali packages i use. 
