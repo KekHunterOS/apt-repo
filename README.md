@@ -9,7 +9,7 @@
 ### INFO (Only comaptible with)
 OS    | Distro  | ARCH  | Version
 -----:|:-------:|:-----:|:--------
-Kali  | Rolling | ARM64 | 2020.3+
+Kali  | Rolling | ARM64 | 2020.4+
 ### Adding this repo
 ##### Make sure that u have updated and upgraded kali distro/chroot
 ###### Adding the repository
