@@ -1,0 +1,228 @@
+Package: openjdk-8-dbg
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: amd64
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 6287
+Depends: openjdk-8-jre-headless (= 8u212-b01-1)
+Recommends: openjdk-8-jre (= 8u212-b01-1)
+Suggests: openjdk-8-jdk (= 8u212-b01-1)
+Multi-Arch: same
+Homepage: http://openjdk.java.net/
+Priority: optional
+Section: debug
+Filename: pool/main/o/openjdk-8/openjdk-8-dbg_8u212-b01-1_amd64.deb
+Size: 2010552
+SHA256: f1e43a532e12d09df8507fd75114cb2b0cc339d68b3220ef7f9ea2da0e83560d
+SHA1: 7b99d9b261c0807fc90bebacfeb9a7fb2266a046
+MD5sum: c9ac04708d16819b40bd2599b2d83f9d
+Description: Java runtime based on OpenJDK (debugging symbols)
+ OpenJDK is a development environment for building applications,
+ applets, and components using the Java programming language.
+ .
+ This package contains the debugging symbols.
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.
+Build-Ids: 0071b665751d1657076b82853531401d79693531 030ace235bd6d9d6cdc3f745e798a65e37ba24a7 06080320328984fc115e3e34ad204d373904e175 103dbf7836372b9734a96817542100ec84a0b35a 1136f09ba305bc1b3d9a55e5da0cdbb9320ffc1a 120362f07a040e14645a29fe84009d553570f2de 13a6da2536137547a115606181647588e9f67610 1a686125a021e1c1fe4d54ead9659814a29823af 27d862cfb0895da66f0d832d37238c9c6d0f0a92 2a3eb0512326182f0e97d9398cf30f8124f52409 303b3ee57fe97dc13da336c35671a38c32fca5f4 352a8fecd87c6ac9555033657856346356fd90da 391f9021adc2ed4c80f92a510fbf9928fde8842b 39a51a733873eefc437f75d24c7e41add891dd84 3bda6750286f01aa960ec337f56e86e0c35ed6db 417a2c2f4dfc23e807fe7b79272489fd93dc54ac 43b2daf78c9270fdcdd94b2965853ffcdaf137c0 464885fb645f3864c1daf73e2a4ba6e16ca63c71 4bc8bdfb045b7038568d499311bea3022e4ad658 4c6dbbbe635f3ac54ca8119e3bd1b1390043c4ef 4c84684d5e40e70b2b83f1561b0f90c04d36c07e 4e72e943229f5023d9de68fd97bbe69b987f394c 4e871781d636aab5cfe137f5a8dbcf3bff4a8308 502a247a603ebdb13387c4693597178a1245fcb4 51d366c9d16621546c2fa74593d92386395095fa 528ca5945daee76a9737f9aae3fa7a2fbf66614c 529df7454edc7a8bcd6d266ab35235fb04808258 537815ee9c4f1828d511e5ff4c1f172676bd1b76 57d67c1c3501a9d4214badb785d3f55e9d438f63 5e4527f541a319cb967e4db237deecbf76d8724f 63550e5525be9356d52f9de9395aa9a43a20c27e 63f856de3d36c85807f60dfc999705e8a622eec9 64ab5900ccaa55f19ba09c01a1fdefc64d64e022 64c42244d05d511f30240343f76d1fd8f21238be 6587a293826e9b66c051250dcd7c82221a2e8ce0 6778a1ca6a629df460b7fd1ea0037e46ee4fd7a0 6885df44a8cdeecc1155607b140153573e62bf4a 6ba7b636a81c8f42904637a20680034cda220f4c 711a3bc315134d42c6d5f24f800a2a70dc3bba25 77924a311161b4057b817403a5ec71cd2add8cd1 7a69e5e9ee8e5c40ab1c26a47194a795c1f93382 7a7498a0c35742c1d551b40254d1b5514fea4869 84fbd0064cacbb80eadd0211eb8a3643376a375c 8915783383d02d9336b4f9d1389e9f846dc2cf90 8ed7c79f112c71ddbdbf491f90b32b5267e0ddf6 8f1c4f2aa336635d321216ce2ccbd4d533d5628d 9083f43d20913646fd0371311be041a9e1e0d371 917c568789185ce5ddb8bf030c0231ca56eae814 92fd637edebd9a4769d636aa1c50ba3118f34e87 95b9b0d92fecbf69941bcff526a0fd0c18b15df6 97f622fbecdd0f97a36cb79be2a504eaca5fd320 9a3ed5b0b706abe177cf3e73fbe81f32f16bf63c 9bf1897c487d265ff55819cc86ef4b565c990c61 9d2f3922e11419051cf5e1f0469567e7d2bab8fe 9ea2dda1e6c630fc136c9cbd1b920ba1b20737c8 a5ae2bb65eabb11cc6528862da1dcb80516158e1 a7bd453be860863a2cac51901cf6967d5776d573 aa91b1e81d65a4d94bc83bcaf59acb95a611d307 acee55b2b4c43c7f15c78620f7274ab742523f25 af15860d6e434816544f07f997c8aa82003142dd b157d796976ba0a74729e3cabf73858c7a07df02 b239ae933fc29e2b14001763bab9e8cca40dee69 b269e35c305efbbee6d73f1b407ba45f74090639 b2c7cac5231ff488e5a3760865802fab8316b219 b4e91194be071498fadfccbb6a2e316a5f587c69 bbf5416f1eaef53a8a6b6f675ad3928124823ca7 bda5c4016876f1817811787610f5d3f0a0a87699 bfab16ef1cbef1396d48b948f2529cc9c4a1e1a9 c0245aab7cf985804ce1513298fdfd26df1273b7 c11b58b967e9e9dd774f8eb00a5d8cf13e071c2e c864ecd0e200dfa792e6c5a3f26488ed1e287369 ca4b768c366771580772b1a5b6adc2c03d4d07f7 d31d20a7debc7c5d9433af2172317ab7236e1e3c d3a585f50afb3eaa184bfb66c11a3d9a286e5a34 d4f57c645e7a18efd07f14ab9094613bec4639bf d5d993d96d6f0727a24b895795d536abe9d8d389 d69275e9c5726392c22bccde50b7f0973d1a77db dbc1493e97f60a609e52f1e1c7f1ace6df8c0d81 dc515f32398753cb97ec3557aeeccd4dcfbeb39c dd0616bb81ca63c39f4fcb1c24a9d2ac3874ce0a ddb282a0a429c3678afc7429929d144b3cf0d704 df82f20ac1335e54a9ea0eb20947902387f954d6 e1c21cebe90b437eb619fa1c56ce6aafadc0ddac e4bfc6bd3f08d59e6234d0a46eea35bd2fd76fb9 f03092f215b319f9b24bcef48eabf1ddd7dd5765 f04dac2730c528f070a88e808b8d4fb27993b6ec f5deba0cf0bbd0f7ddb3637107fdc125e2376abc f926c220531172a263b25ada247c872d2e945f11
+
+Package: openjdk-8-demo
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: amd64
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 4513
+Depends: openjdk-8-jre (= 8u212-b01-1), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 4.1.1)
+Homepage: http://openjdk.java.net/
+Priority: optional
+Section: java
+Filename: pool/main/o/openjdk-8/openjdk-8-demo_8u212-b01-1_amd64.deb
+Size: 1812468
+SHA256: 2ad042ab1c39e2e3f0b494697ffee0d6eaf33fe7a8a1e3d78cc41904b95db108
+SHA1: 16845740ffa6d0d3c6659660413e4a70a1926cba
+MD5sum: a29c7f31cd07f2a2d9b51e9d75694e03
+Description: Java runtime based on OpenJDK (demos and examples)
+ OpenJDK Java runtime
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.
+
+Package: openjdk-8-doc
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: all
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 282819
+Suggests: openjdk-8-jdk
+Homepage: http://openjdk.java.net/
+Priority: optional
+Section: doc
+Filename: pool/main/o/openjdk-8/openjdk-8-doc_8u212-b01-1_all.deb
+Size: 11701604
+SHA256: 42944a2b5a21e0106752ed4732735a95b9c6c6570a0c6a3ac08a7f197f75b1b1
+SHA1: 5110f3e9099258a4cab5969f1f2e187e34311991
+MD5sum: 2f60944b370c5d37965efd6549963809
+Description: OpenJDK Development Kit (JDK) documentation
+ OpenJDK is a development environment for building applications,
+ applets, and components using the Java programming language.
+ .
+ This package contains the API documentation.
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.
+
+Package: openjdk-8-jdk
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: amd64
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 1470
+Depends: openjdk-8-jre (= 8u212-b01-1), openjdk-8-jdk-headless (= 8u212-b01-1), libc6 (>= 2.2.5), libx11-6, zlib1g (>= 1:1.1.4)
+Recommends: libxt-dev
+Suggests: openjdk-8-demo, openjdk-8-source, visualvm
+Provides: java-compiler, java-sdk, java2-sdk, java5-sdk, java6-sdk, java7-sdk, java8-sdk
+Multi-Arch: same
+Homepage: http://openjdk.java.net/
+Priority: optional
+Section: java
+Filename: pool/main/o/openjdk-8/openjdk-8-jdk_8u212-b01-1_amd64.deb
+Size: 1392168
+SHA256: 4cdbd37f9ae7c3997c6a09d4ed6a61a5f3e1660bab339decaf0be020819d48b9
+SHA1: 870fcad16851767f2aeac16cb51b829974575e6c
+MD5sum: c823aa6b0c808709dc1afc20eaab0aa8
+Description: OpenJDK Development Kit (JDK)
+ OpenJDK is a development environment for building applications,
+ applets, and components using the Java programming language.
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.
+
+Package: openjdk-8-jdk-headless
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: amd64
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 38656
+Depends: openjdk-8-jre-headless (= 8u212-b01-1), libc6 (>= 2.2.5), zlib1g (>= 1:1.1.4)
+Suggests: openjdk-8-demo, openjdk-8-source
+Replaces: openjdk-8-jdk (<< 8u72-b15-4)
+Provides: java-sdk-headless, java2-sdk-headless, java5-sdk-headless, java6-sdk-headless, java7-sdk-headless, java8-sdk-headless
+Multi-Arch: same
+Homepage: http://openjdk.java.net/
+Priority: optional
+Section: java
+Filename: pool/main/o/openjdk-8/openjdk-8-jdk-headless_8u212-b01-1_amd64.deb
+Size: 8180824
+SHA256: 21238ddea85451461675ba6777e5be78a1bba068434084e9dbff9cc80907f0e6
+SHA1: b3fd930fee90feb7fe46e1df3e01daefe2737438
+MD5sum: 7772fcb5ccfe62fa8134ba096809dff6
+Description: OpenJDK Development Kit (JDK) (headless)
+ OpenJDK is a development environment for building applications,
+ applets, and components using the Java programming language.
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.
+
+Package: openjdk-8-jre
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: amd64
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 274
+Depends: openjdk-8-jre-headless (= 8u212-b01-1), libglib2.0-0 (>= 2.24), libxrandr2, libxinerama1, libgl1-mesa-glx | libgl1, libgtk-3-0, libatk-wrapper-java-jni (>= 0.33.3-9~), libasound2 (>= 1.0.16), libc6 (>= 2.14), libgif7 (>= 5.1), libjpeg62-turbo (>= 1.3.1), libpng16-16 (>= 1.6.2-1), libpulse0 (>= 0.99.1), libx11-6, libxext6, zlib1g (>= 1:1.1.4)
+Recommends: fonts-dejavu-extra
+Suggests: icedtea-8-plugin
+Replaces: openjdk-8-jre-headless (<< 8u20~b20-3)
+Provides: java2-runtime, java5-runtime, java6-runtime, java7-runtime, java8-runtime
+Multi-Arch: same
+Homepage: http://openjdk.java.net/
+Priority: optional
+Section: java
+Filename: pool/main/o/openjdk-8/openjdk-8-jre_8u212-b01-1_amd64.deb
+Size: 68764
+SHA256: 59b791b2d88669fe299d83d57d268f1fb64ee75e612031ed0585097db5bc1a51
+SHA1: 04ac44c50c7448429e61fb52b4f5dd2f699145a9
+MD5sum: 8b2fcfa302269a4a5c308bb4fe984464
+Description: OpenJDK Java runtime, using Hotspot JIT
+ Full Java runtime environment - needed for executing Java GUI and Webstart
+ programs, using Hotspot JIT.
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.
+
+Package: openjdk-8-jre-headless
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: amd64
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 97166
+Depends: ca-certificates-java, java-common (>= 0.28), libcups2, liblcms2-2 (>= 2.2+git20110628), libjpeg62-turbo (>= 1.3.1), libfontconfig1, libnss3 (>= 2:3.17.1), util-linux (>= 2.26.2-4), libc6 (>= 2.28), libfreetype6 (>= 2.2.1), libgcc1 (>= 1:3.0), libpcsclite1 (>= 1.3.0), libstdc++6 (>= 4.1.1), libx11-6, libxext6, libxi6, libxrender1, libxtst6, zlib1g (>= 1:1.1.4)
+Suggests: libnss-mdns, fonts-dejavu-extra, fonts-ipafont-gothic, fonts-ipafont-mincho, fonts-wqy-microhei, fonts-wqy-zenhei, fonts-indic
+Breaks: ca-certificates-java (<< 20160321~), oracle-java8-installer (<< 8u77+8u77arm-1), tzdata-java
+Provides: java2-runtime-headless, java5-runtime-headless, java6-runtime-headless, java7-runtime-headless, java8-runtime-headless
+Multi-Arch: same
+Homepage: http://openjdk.java.net/
+Priority: optional
+Section: java
+Filename: pool/main/o/openjdk-8/openjdk-8-jre-headless_8u212-b01-1_amd64.deb
+Size: 27150968
+SHA256: 98acb2c94a87ba040b30e00070e34ad2fa385fc5c8ce868dedb001aaa3368e12
+SHA1: 5fef7aca67b4bd312496f84a2172b4979384b46c
+MD5sum: 16343ebf920f1ff2fc75637a41250b34
+Description: OpenJDK Java runtime, using Hotspot JIT (headless)
+ Minimal Java runtime - needed for executing non GUI Java programs,
+ using Hotspot JIT.
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.
+
+Package: openjdk-8-jre-zero
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: amd64
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 6304
+Depends: openjdk-8-jre-headless (= 8u212-b01-1), libc6 (>= 2.14), libstdc++6 (>= 4.1.1)
+Multi-Arch: same
+Homepage: http://openjdk.java.net/
+Priority: optional
+Section: java
+Filename: pool/main/o/openjdk-8/openjdk-8-jre-zero_8u212-b01-1_amd64.deb
+Size: 1944500
+SHA256: bf92479710b42cd25441e1601e58a53cd9eeb19764ee66c00738e9b836d5f140
+SHA1: 49b04d7787220804da61e8ac9f59a5caa7514c16
+MD5sum: 4f47703ccd9d95aada4763e4a237fc00
+Description: Alternative JVM for OpenJDK, using Zero/Shark
+ The package provides an alternative runtime using the Zero VM and the
+ Shark Just In Time Compiler (JIT).  Built on architectures in addition
+ to the Hotspot VM as a debugging aid for those architectures which don't
+ have a Hotspot VM.
+ .
+ The VM is started with the option `-zero'. See the README.Debian for details.
+
+Package: openjdk-8-source
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: all
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 50814
+Depends: openjdk-8-jre (>= 8u212-b01-1), openjdk-8-jdk (>= 8u212-b01-1)
+Replaces: openjdk-8-jdk (<< 8u20~b26-1~)
+Homepage: http://openjdk.java.net/
+Priority: optional
+Section: java
+Filename: pool/main/o/openjdk-8/openjdk-8-source_8u212-b01-1_all.deb
+Size: 46326200
+SHA256: 35d24f09a66089930da592e10cac213537d6c99f18e162e45982fc90b50b69d3
+SHA1: ef9e52d843dde1acf6aec1aa58d445b9a726c3ca
+MD5sum: a31e9d5bebcb6d334abf8ce35e7d6b8e
+Description: OpenJDK Development Kit (JDK) source files
+ OpenJDK is a development environment for building applications,
+ applets, and components using the Java programming language.
+ .
+ This package contains the Java programming language source files
+ (src.zip) for all classes that make up the Java core API.
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.
+
