@@ -6,6 +6,9 @@
 * Link to the unextracted packages that are used here: https://github.com/KekHunterOS/apt-repo-source
 * Also things to keep in mind. This repo is maintained by one person for now and its beign done by my own free time.
 
+## Additional info
+* This still depends on kali official apt repository!!
+
 ### INFO (Only comaptible with)
 OS    | Distro  | ARCH  | Version
 -----:|:-------:|:-----:|:--------
