@@ -1,0 +1,3 @@
+# this are pre-stripped binaries (fastdebug)
+openjdk-8-dbg binary: library-in-debug-or-profile-should-not-be-stripped
+openjdk-8-dbg binary: debug-file-with-no-debug-symbols

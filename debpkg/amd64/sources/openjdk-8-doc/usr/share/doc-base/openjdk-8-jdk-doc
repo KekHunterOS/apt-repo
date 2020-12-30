@@ -1,0 +1,11 @@
+Document: openjdk-8-jdk-doc
+Title: OpenJDK Java(TM) 8 JDK, Standard Edition Documentation
+Author: OpenJDK
+Abstract: The Java 8 Platform Documentation contains API specifications,
+ feature descriptions, developer guides, reference pages for JDK tools
+ and utilities, demos, and links to related information.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/openjdk-8-jre-headless/api/index.html
+Files: /usr/share/doc/openjdk-8-jre-headless/api/*/*.html

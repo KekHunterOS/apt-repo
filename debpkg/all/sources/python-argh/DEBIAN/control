@@ -1,0 +1,32 @@
+Package: python-argh
+Version: 0.26.2-1
+Architecture: all
+Maintainer: Marco Nenciarini <mnencia@debian.org>
+Installed-Size: 94
+Depends: python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Section: python
+Priority: extra
+Homepage: http://pypi.python.org/pypi/argh
+Description: simple argparse wrapper (Python 2)
+ Argh provides a very simple wrapper for argparse.
+ .
+ Argparse is a very powerful tool; argh just makes it easy to use.
+ .
+ Here’s a list of features that argh adds to argparse:
+ .
+  * mark a function as a CLI command and specify its arguments before
+    the parser is instantiated;
+  * nested commands made easy: no messing with subparsers;
+  * infer command name from function name;
+  * infer argument type from the default value;
+  * infer argument action from the default value (for booleans);
+  * infer arguments from function signature;
+  * add an alias root command help for the --help argument;
+  * enable passing unwrapped arguments to certain functions instead of
+    an argparse.Namespace object.
+ .
+ Argh is fully compatible with argparse. You can mix argh-agnostic and
+ argh-aware code. Just keep in mind that dispatch() does some extra
+ work that a custom dispatcher may not do.
+ .
+ This package installs the library for Python 2.

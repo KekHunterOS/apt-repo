@@ -1,0 +1,10 @@
+Document: python-configparser-reference-manual
+Title: Python ConfigParser Library Reference Manual
+Author: Łukasz Langa <lukasz@langa.pl>
+Abstract: ConfigParser is a backport of the enhanced config parser introduced
+ in Python 3.2
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-configparser/html/configparser.html
+Files: /usr/share/doc/python-configparser/html/*

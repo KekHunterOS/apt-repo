@@ -1,0 +1,18 @@
+Package: python-bs4
+Source: beautifulsoup4
+Version: 4.8.2-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 447
+Depends: python-soupsieve, python2:any (<< 2.8)
+Recommends: python-chardet, python-lxml | python-html5lib
+Section: python
+Priority: optional
+Homepage: https://www.crummy.com/software/BeautifulSoup
+Description: error-tolerant HTML parser for Python
+ Beautiful Soup is a Python library for pulling data out of HTML and XML files.
+ It works with your favorite parser to provide idiomatic ways of navigating,
+ searching, and modifying the parse tree. It commonly saves programmers hours
+ or days of work.
+ .
+ This package contains BeautifulSoup 4, for Python 2.x.

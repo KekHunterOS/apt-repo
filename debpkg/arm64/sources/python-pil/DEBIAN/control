@@ -1,0 +1,37 @@
+Package: python-pil
+Source: pillow
+Version: 4.2.1-1
+Architecture: arm64
+Maintainer: Matthias Klose <doko@debian.org>
+Installed-Size: 1251
+Depends: python (<< 2.8), python (>= 2.7~), python-olefile, python:any (<< 2.8), mime-support | python-pil.imagetk, libfreetype6 (>= 2.2.1), libjpeg62-turbo (>= 1.3.1), liblcms2-2 (>= 2.2+git20110628), libtiff5 (>= 4.0.3), libwebp6 (>= 0.5.1), libwebpdemux2 (>= 0.5.1), libwebpmux3 (>= 0.6.0-3), zlib1g (>= 1:1.1.4)
+Suggests: python-pil-doc, python-pil-dbg
+Breaks: python-imaging (<< 1.1.7+2.0.0-1.1), rapid-photo-downloader (<< 0.4.11), tilestache (<< 1.49.8-3)
+Replaces: python-imaging (<< 1.1.7+2.0.0-1.1)
+Provides: python-pillow, python2.7-pil
+Section: python
+Priority: optional
+Multi-Arch: same
+Homepage: http://python-pillow.github.io/
+Description: Python Imaging Library (Pillow fork)
+ The Python Imaging Library (PIL) adds an image object to your Python
+ interpreter. You can load images from a variety of file formats, and
+ apply a rich set of image operations to them.
+ .
+ Image Objects:
+  o Bilevel, greyscale, palette, true colour (RGB), true colour with
+    transparency (RGBA).
+  o colour separation (CMYK).
+  o Copy, cut, paste operations.
+  o Flip, transpose, resize, rotate, and arbitrary affine transforms.
+  o Transparency operations.
+  o Channel and point operations.
+  o Colour transforms, including matrix operations.
+  o Image enhancement, including convolution filters.
+ .
+ File Formats:
+  o Full (Open/Load/Save): BMP, EPS (with ghostscript), GIF, IM, JPEG,
+    MSP, PDF, PNG, PPM, TIFF, XBM.
+  o Read only (Open/Load): ARG, CUR, DCX, FLI, FPX, GBR, GD, ICO, IMT, IPTC,
+    MCIDAS, MPEG, PhotoCD, PCX, PIXAR, PSD, TGA, SGI, SUN, TGA, WMF, XPM.
+  o Save only: PDF, EPS (without ghostscript).

@@ -1,0 +1,9 @@
+Document: pcapy
+Title: Pcapy Reference
+Author: Core Security Technologies <oss@coresecurity.com>
+Abstract: This documentation describes the pcapy API
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-pcapy/pcapy.html
+Files: /usr/share/doc/python-pcapy/pcapy.html

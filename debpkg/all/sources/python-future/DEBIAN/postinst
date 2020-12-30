@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ] ; then
+	update-alternatives --install /usr/bin/futurize futurize /usr/bin/python2-futurize 300
+	update-alternatives --install /usr/bin/pasteurize pasteurize /usr/bin/python2-pasteurize 300
+fi
+
+
+# Automatically added by dh_python2:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p python-future 
+fi
+
+# End automatically added section
+
+
+exit 0

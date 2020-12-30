@@ -1,0 +1,17 @@
+Package: python-traitlets
+Source: traitlets
+Version: 4.3.3-2
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 329
+Depends: python-decorator, python-ipython-genutils, python-six, python2:any (<< 2.8), python-enum34
+Section: python
+Priority: optional
+Homepage: https://github.com/ipython/traitlets
+Description: Lightweight Traits-like package for Python 2
+ A lightweight pure-Python derivative of Enthought Traits, used
+ for configuring Python objects.
+ .
+ It powers the config system of IPython and Jupyter.
+ .
+ This package contains the library for Python 2.

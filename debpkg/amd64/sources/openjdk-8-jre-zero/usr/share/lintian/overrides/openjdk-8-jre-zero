@@ -1,0 +1,2 @@
+# Strip libjvm.so with --strip-debug instead of --strip-unneeded. LP: #574997.
+openjdk-8-jre-zero binary: unstripped-binary-or-object

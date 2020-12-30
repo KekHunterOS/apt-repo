@@ -1,0 +1,32 @@
+Package: python-pefile
+Version: 2017.9.3-1
+Architecture: all
+Maintainer: Hilko Bengen <bengen@debian.org>
+Installed-Size: 279
+Depends: python:any (<< 2.8), python-future
+Section: python
+Priority: extra
+Homepage: https://github.com/erocarrera/pefile/
+Description: Portable Executable (PE) parsing module for Python
+ pefile is a Python module to read and work with Portable Executable (PE)
+ files. Most of the information in the PE header is accessible, as well as all
+ the sections, section information and data.
+ .
+ All the basic PE file structures are available with their default names as
+ attributes of the returned instance.
+ .
+ Processed elements such as the import table are made available with lowercase
+ names, to differentiate them from the upper case basic structure names.
+ .
+ pefile has been tested against the limits of valid PE headers; that is,
+ Windows malware. Lots of packed malware attempt to abuse the format beyond its
+ standard use.
+ .
+ Some of the tasks that pefile makes possible are:
+  * Modifying and writing back to the PE image
+  * Header inspection
+  * Section analysis
+  * Retrieving data
+  * Warnings for suspicious and malformed values
+  * Packer detection with PEiD signatures
+  * PEiD signature generation

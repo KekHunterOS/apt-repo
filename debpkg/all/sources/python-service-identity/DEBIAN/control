@@ -1,0 +1,19 @@
+Package: python-service-identity
+Version: 16.0.0-2
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 46
+Depends: python-attr, python-openssl, python-pyasn1, python-pyasn1-modules, python:any (<< 2.8)
+Recommends: python-idna
+Section: python
+Priority: optional
+Homepage: https://pypi.python.org/pypi/service_identity
+Description: Service identity verification for pyOpenSSL (Python 2 module)
+ Service_identity aspires to give you all the tools you need for verifying
+ whether a certificate is valid for the intended purposes.
+ .
+ In the simplest case, this means host name verification.  However,
+ service_identity implements RFC 6125 fully and plans to add other
+ relevant RFCs too.
+ .
+ This package contains service_identity for Python 2.

@@ -1,0 +1,20 @@
+Package: openjdk-8-jdk
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: arm64
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 1540
+Depends: openjdk-8-jre (= 8u212-b01-1), openjdk-8-jdk-headless (= 8u212-b01-1), libc6 (>= 2.17), libx11-6, zlib1g (>= 1:1.1.4)
+Recommends: libxt-dev
+Suggests: openjdk-8-demo, openjdk-8-source, visualvm
+Provides: java-compiler, java-sdk, java2-sdk, java5-sdk, java6-sdk, java7-sdk, java8-sdk
+Section: java
+Priority: optional
+Multi-Arch: same
+Homepage: http://openjdk.java.net/
+Description: OpenJDK Development Kit (JDK)
+ OpenJDK is a development environment for building applications,
+ applets, and components using the Java programming language.
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.

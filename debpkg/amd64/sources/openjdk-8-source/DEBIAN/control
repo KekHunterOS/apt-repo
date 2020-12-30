@@ -1,0 +1,20 @@
+Package: openjdk-8-source
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: all
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 50814
+Depends: openjdk-8-jre (>= 8u212-b01-1), openjdk-8-jdk (>= 8u212-b01-1)
+Replaces: openjdk-8-jdk (<< 8u20~b26-1~)
+Section: java
+Priority: optional
+Homepage: http://openjdk.java.net/
+Description: OpenJDK Development Kit (JDK) source files
+ OpenJDK is a development environment for building applications,
+ applets, and components using the Java programming language.
+ .
+ This package contains the Java programming language source files
+ (src.zip) for all classes that make up the Java core API.
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.

@@ -1,0 +1,17 @@
+Package: python-prompt-toolkit
+Source: prompt-toolkit
+Version: 1.0.15-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 920
+Depends: python-six (>= 1.9.0), python-wcwidth, python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Recommends: python-pygments
+Section: python
+Priority: optional
+Homepage: https://github.com/jonathanslenders/python-prompt-toolkit
+Description: library for building interactive command lines (Python 2)
+ prompt_toolkit is a GNU readline replacement written in pure Python supporting
+ advanced features like syntax highlighting, multi line editing and code
+ completion.
+ .
+ This package installs the library for Python 2.

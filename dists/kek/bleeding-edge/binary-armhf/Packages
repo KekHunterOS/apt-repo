@@ -1,0 +1,1945 @@
+Package: ipython
+Version: 5.8.0-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 29
+Depends: python-ipython
+Homepage: https://github.com/ipython/ipython
+Priority: optional
+Section: interpreters
+Filename: pool/bleeding-edge/i/ipython/ipython_5.8.0-1_all.deb
+Size: 13932
+SHA256: e2350ecc40010af42eac46fe7f226908b2bcda343f3bdb654a5f4beb72a8e226
+SHA1: f0deba09c51dbbc7e76ba762f128deef10045245
+MD5sum: 35705f49baf5081d10ef35523690a0d7
+Description: Enhanced interactive Python 2 shell
+ IPython can be used as a replacement for the standard Python shell,
+ or it can be used as a complete working environment for scientific
+ computing (like Matlab or Mathematica) when paired with the standard
+ Python scientific and numerical tools. It supports dynamic object
+ introspections, numbered input/output prompts, a macro system,
+ session logging, session restoring, complete system shell access,
+ verbose and colored traceback reports, auto-parentheses, auto-quoting,
+ and is embeddable in other Python programs.
+ .
+ This package contains the actual terminal shell for Python 2.
+
+Package: libjs-jquery
+Source: jquery
+Version: 3.2.1-1
+Architecture: all
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Installed-Size: 552
+Conflicts: jquery
+Breaks: movabletype-opensource (<< 5.1.4+dfsg-3~)
+Replaces: jquery
+Multi-Arch: foreign
+Homepage: http://jquery.com/
+Priority: optional
+Section: javascript
+Filename: pool/bleeding-edge/j/jquery/libjs-jquery_3.2.1-1_all.deb
+Size: 154020
+SHA256: 6043ca215f345fc40cb966f3ab45dbd0c3745430ec7921e86c79e9c1f1733329
+SHA1: 9bd490acf557b4953e64f052e2bb7e3a1fd86af3
+MD5sum: 40e1224bc5887c6e20893e71034c4f65
+Description: JavaScript library for dynamic web applications
+ jQuery is a fast, concise, JavaScript Library that simplifies how you
+ traverse HTML documents, handle events, perform animations, and add Ajax
+ interactions to your web pages. jQuery is designed to change the way
+ that you write JavaScript.
+
+Package: mitmf
+Version: 0.9.8
+Architecture: all
+Maintainer: Kali Developers <devel@kali.org>
+Installed-Size: 850
+Depends: python2.7:any, iptables, python-twisted-web, python-twisted-core, python-requests, msgpack-python, python-scapy, python-nfqueue, python-dnspython, python-configobj, python-pil, python-pefile, backdoor-factory, python-magic, python-ipy, python-dnslib, python-watchdog, python-pyinotify, python-impacket, python-flask, python-netaddr, python-user-agents, python-lxml, python-chardet, python-bs4, python-netfilterqueue, python-cffi-backend
+Recommends: tcpdump
+Homepage: https://github.com/byt3bl33d3r/MITMf
+Priority: optional
+Section: misc
+Filename: pool/bleeding-edge/m/mitmf/mitmf_0.9.8_all.deb
+Size: 142192
+SHA256: ce32cd2926761712aeb07c4f8f3bde77f2e5af28152693ef2e96d586a572341f
+SHA1: da132e38f188ab33906d79968257465b21774e87
+MD5sum: 2fca664a254145b54f2fa264f71aad22
+Description: Framework for Man-In-The-Middle attacks
+ The program was created to deal with some of the significant shortcomings
+ that Ettercap filters have when modifying HTTP traffic. It tries to provide
+ an easily extensible Python interface for on-the-fly manipulation of HTTP
+ traffic.
+ .
+ Currently, it has a number of helpful plugins that allow you to set
+ up the MITM attack, inject arbitrary data into a session, launch browser
+ attacks from Metasploit, and dynamically replace files with malicious
+ versions. Available plugins:
+ .
+  - HTA Drive-By - Injects a fake update notification and prompts clients to
+    download an HTA application
+  - SMBTrap - Exploits the 'SMB Trap' vulnerability on connected clients
+  - Screenshotter -  Uses HTML5 Canvas to render an accurate screenshot of a
+    clients browser
+  - Responder - LLMNR, NBT-NS and MDNS poisoner
+  - SSLstrip+ - Partially bypass HSTS
+  - Spoof - Redirect traffic using ARP, ICMP, DHCP or DNS Spoofing
+  - BeEFAutorun - Autoruns BeEF modules based on client's OS or browser
+    type
+  - AppCachePoison - Perform HTML5 App-Cache poisoning attacks
+  - Ferret-NG - Tranperently hijacks sessions
+  - BrowserProfiler - Attempts to enumerate all browser plugins of connected
+    clients
+  - FilePwn - Backdoor executables being sent over http using the Backdoor
+    Factory and BDFProxy
+  - Inject - Inject arbitrary content into HTML content
+  - BrowserSniper - Performs drive-by attacks on clients with out-of-date
+    browser plugins
+  - jskeylogger - Injects a javascript keylogger into clients webpages
+  - Replace - Replace arbitrary content in HTML content
+  - SMBAuth - Evoke SMB challenge-response auth attempts
+  - Upsidedownternet - Flips images 180 degrees
+
+Package: openjdk-8-doc
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: all
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 282819
+Suggests: openjdk-8-jdk
+Homepage: http://openjdk.java.net/
+Priority: optional
+Section: doc
+Filename: pool/bleeding-edge/o/openjdk-8/openjdk-8-doc_8u212-b01-1_all.deb
+Size: 11701616
+SHA256: 9a3ffe958952d6921b366b42923a1e68b42d31a47e16510fd221cc701c3044f6
+SHA1: a0882bb77f8f96dc545a4cdf00b735a7786e85a9
+MD5sum: 9bf8cdfc8c92b0c3aa9e627388225606
+Description: OpenJDK Development Kit (JDK) documentation
+ OpenJDK is a development environment for building applications,
+ applets, and components using the Java programming language.
+ .
+ This package contains the API documentation.
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.
+
+Package: openjdk-8-source
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: all
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 50814
+Depends: openjdk-8-jre (>= 8u212-b01-1), openjdk-8-jdk (>= 8u212-b01-1)
+Replaces: openjdk-8-jdk (<< 8u20~b26-1~)
+Homepage: http://openjdk.java.net/
+Priority: optional
+Section: java
+Filename: pool/bleeding-edge/o/openjdk-8/openjdk-8-source_8u212-b01-1_all.deb
+Size: 46326200
+SHA256: f138c0f1393d037958ab619f919ec07b8d91bd7eef0ea1be0ee362ab15a4e3ab
+SHA1: 6a44f368b009a902fd43e61d6de5bc9bd4514ca4
+MD5sum: cdff92ddf97d2c0398516728c662eee3
+Description: OpenJDK Development Kit (JDK) source files
+ OpenJDK is a development environment for building applications,
+ applets, and components using the Java programming language.
+ .
+ This package contains the Java programming language source files
+ (src.zip) for all classes that make up the Java core API.
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.
+
+Package: python-argh
+Version: 0.26.2-1
+Architecture: all
+Maintainer: Marco Nenciarini <mnencia@debian.org>
+Installed-Size: 94
+Depends: python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Homepage: http://pypi.python.org/pypi/argh
+Priority: extra
+Section: python
+Filename: pool/bleeding-edge/p/python-argh/python-argh_0.26.2-1_all.deb
+Size: 24328
+SHA256: b2f38e565998c8d9075b4ca23d633115b4ce4fca2aaa11a179a2278c5b949e88
+SHA1: 3d8a91ec64e9615b5e7e675eeb16395253481c8f
+MD5sum: 7ea7c1d110f07b1a8f27d53108b65a70
+Description: simple argparse wrapper (Python 2)
+ Argh provides a very simple wrapper for argparse.
+ .
+ Argparse is a very powerful tool; argh just makes it easy to use.
+ .
+ Here’s a list of features that argh adds to argparse:
+ .
+  * mark a function as a CLI command and specify its arguments before
+    the parser is instantiated;
+  * nested commands made easy: no messing with subparsers;
+  * infer command name from function name;
+  * infer argument type from the default value;
+  * infer argument action from the default value (for booleans);
+  * infer arguments from function signature;
+  * add an alias root command help for the --help argument;
+  * enable passing unwrapped arguments to certain functions instead of
+    an argparse.Namespace object.
+ .
+ Argh is fully compatible with argparse. You can mix argh-agnostic and
+ argh-aware code. Just keep in mind that dispatch() does some extra
+ work that a custom dispatcher may not do.
+ .
+ This package installs the library for Python 2.
+
+Package: python-asn1crypto
+Source: asn1crypto
+Version: 0.22.0-1
+Architecture: all
+Maintainer: Tristan Seligmann <mithrandi@debian.org>
+Installed-Size: 478
+Depends: python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Homepage: https://github.com/wbond/asn1crypto
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/a/asn1crypto/python-asn1crypto_0.22.0-1_all.deb
+Size: 68912
+SHA256: ce478cf3af63a84995a6df723ce94556f09aec52daba040ba26978c15b2fa126
+SHA1: 753fcf31d05252970f69028770f68f8e2ce7985c
+MD5sum: 6d2da15ea56dcbbaf876cce124501224
+Description: Fast ASN.1 parser and serializer (Python 2)
+ asn1crypto focuses on:
+  - Delayed parsing of byte string values
+  - Persistence of original ASN.1 encoded data until a value is changed
+  - Lazy loading of child fields
+  - Utilization of high-level Python stdlib modules
+ .
+ This package contains the Python 2 version of asn1crypto.
+
+Package: python-attr
+Source: python-attrs
+Version: 17.2.0-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 86
+Depends: python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Homepage: https://attrs.readthedocs.org/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-attrs/python-attr_17.2.0-1_all.deb
+Size: 18276
+SHA256: 32cc3bd8ea601f42ee7504fa8a896daf939baa5ee372dde28da47641d012029e
+SHA1: f56b4f08cb2a521a373b394bf79b3e7d972413ee
+MD5sum: 35761c84fc6e1f091d9c27c569fd0036
+Description: Attributes without boilerplate (Python 2)
+ attrs is an MIT-licensed Python package with class decorators that ease the
+ chores of implementing the most common attribute-related object protocols.
+ .
+ You just specify the attributes to work with and attrs gives you:
+   - a nice human-readable __repr__,
+   - a complete set of comparison methods,
+   - an initializer,
+   - and much more
+ without writing dull boilerplate code again and again.
+ .
+ This package contains attrs packged for Python 2.
+
+Package: python-automat
+Source: automat
+Version: 0.6.0-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 134
+Depends: python-attr, python-six, python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Homepage: https://github.com/freeekanayaka/systemfixtures
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/a/automat/python-automat_0.6.0-1_all.deb
+Size: 24436
+SHA256: fc4eee91df07bb4fe2202251ebecf9f3bf883321fee44614448a6607bbc31686
+SHA1: fb8ed7145b67674bab0701dd635948d4b91bf92d
+MD5sum: 98ce7bb22f97e4190329520f4d07624e
+Description: Self-service finite-state machines for the programmer on the go
+ Automat is a library for concise, idiomatic Python expression of
+ finite-state automata (particularly deterministic finite-state
+ transducers).
+
+Package: python-backports-shutil-get-terminal-size
+Version: 1.0.0-5
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 29
+Depends: python:any (<< 2.8)
+Breaks: python-backports.ssl-match-hostname (<< 3.5)
+Homepage: https://github.com/chrippa/backports.shutil_get_terminal_size
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-backports-shutil-get-terminal-size/python-backports-shutil-get-terminal-size_1.0.0-5_all.deb
+Size: 4768
+SHA256: 10b9f7e8c78d52732f74c7bf0fc4a160e9b37d9071dac6635b6c47e929671d8c
+SHA1: bd5f453b8884603b823134d83c62ec1f939cb2f9
+MD5sum: 0d45874bae95bda21d36e56feeeadc00
+Description: Backport of the "shutil.get_terminal_size" function (Python 2)
+ This is a backport to Python 2 of the get_terminal_size in the shutil module
+ of Python 3.
+ .
+ This package is (obviously) for Python 2.
+
+Package: python-backports.functools-lru-cache
+Source: backports.functools-lru-cache
+Version: 1.5-3
+Architecture: all
+Maintainer: Sandro Tosi <morph@debian.org>
+Installed-Size: 34
+Depends: python:any (<< 2.8)
+Homepage: https://github.com/jaraco/backports.functools_lru_cache
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/b/backports.functools-lru-cache/python-backports.functools-lru-cache_1.5-3_all.deb
+Size: 6344
+SHA256: 861a5bd5c3e093ad3d2f5422851093b2503ca5390e3f5e39525dcb6cb7fbebe7
+SHA1: 980642ea2ecf349b75d44a1154bd29925392c9ac
+MD5sum: 6dbcaa25a08ce05558d7cdb1631b433e
+Description: backport of functools.lru_cache from Python 3.3 to Python 2
+ Backport of functools.lru_cache from Python 3.3 as published at ActiveState:
+ <http://code.activestate.com/recipes/578078/>
+ .
+ This package provides functools.lru_cache to Python 2.
+
+Package: python-bs4
+Source: beautifulsoup4
+Version: 4.8.2-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 447
+Depends: python-soupsieve, python2:any (<< 2.8)
+Recommends: python-chardet, python-lxml | python-html5lib
+Homepage: https://www.crummy.com/software/BeautifulSoup
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/b/beautifulsoup4/python-bs4_4.8.2-1_all.deb
+Size: 105864
+SHA256: fb36e67a69fa33bdcdad467fed824af13d356052e0a56d38a94971df7926cd45
+SHA1: 2470c37f8ec22895854b4c56ed9246fa8ec351ed
+MD5sum: 789b94a0535f7502a7fbd5bd299aac9f
+Description: error-tolerant HTML parser for Python
+ Beautiful Soup is a Python library for pulling data out of HTML and XML files.
+ It works with your favorite parser to provide idiomatic ways of navigating,
+ searching, and modifying the parse tree. It commonly saves programmers hours
+ or days of work.
+ .
+ This package contains BeautifulSoup 4, for Python 2.x.
+
+Package: python-certifi
+Version: 2017.4.17-2
+Architecture: all
+Maintainer: Sebastien Delafond <seb@debian.org>
+Installed-Size: 719
+Depends: python (<< 2.8), python (>= 2.7), ca-certificates
+Homepage: https://certifi.io/en/latest/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-certifi/python-certifi_2017.4.17-2_all.deb
+Size: 176852
+SHA256: bfe54333d0bf715069256ba8a3a70a16c6ab0396af68e2b30093fbf294250608
+SHA1: 9cc1667f2fff631fe8e91b687793efda60404faf
+MD5sum: cad26096d5130cce6f6ea52fcd44c0c4
+Description: root certificates for validating SSL certs and verifying TLS hosts
+ Certifi is a carefully curated collection of Root Certificates for
+ validating the trustworthiness of SSL certificates while verifying
+ the identity of TLS hosts. It has been extracted from the Requests
+ project.
+ .
+ The version of certifi in this Debian package is patched to return
+ the location of Debian-provided CA certificates, instead of those
+ packaged by upstream.
+
+Package: python-chardet
+Source: chardet
+Version: 3.0.4-1
+Architecture: all
+Maintainer: Piotr Ożarowski <piotr@debian.org>
+Installed-Size: 410
+Depends: python:any (<< 2.8), python-pkg-resources
+Homepage: https://github.com/chardet/chardet
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/c/chardet/python-chardet_3.0.4-1_all.deb
+Size: 78896
+SHA256: e139c4456c7ca6286b9b36cd5785493164132960d981e4adfc96935dfe82c933
+SHA1: ff3af8a7002d494c1eb49ca871e9a66ce247bce4
+MD5sum: bb669fc80793d838889fb632ca3adb6f
+Description: universal character encoding detector for Python2
+ Chardet takes a sequence of bytes in an unknown character encoding, and
+ attempts to determine the encoding.
+ .
+ Supported encodings:
+  * ASCII, UTF-8, UTF-16 (2 variants), UTF-32 (4 variants)
+  * Big5, GB2312, EUC-TW, HZ-GB-2312, ISO-2022-CN (Traditional and Simplified
+    Chinese)
+  * EUC-JP, SHIFT_JIS, ISO-2022-JP (Japanese)
+  * EUC-KR, ISO-2022-KR (Korean)
+  * KOI8-R, MacCyrillic, IBM855, IBM866, ISO-8859-5, windows-1251 (Cyrillic)
+  * ISO-8859-2, windows-1250 (Hungarian)
+  * ISO-8859-5, windows-1251 (Bulgarian)
+  * windows-1252 (English)
+  * ISO-8859-7, windows-1253 (Greek)
+  * ISO-8859-8, windows-1255 (Visual and Logical Hebrew)
+  * TIS-620 (Thai)
+ .
+ This library is a port of the auto-detection code in Mozilla.
+
+Package: python-click
+Version: 6.7-1
+Architecture: all
+Maintainer: Alexandre Viau <aviau@debian.org>
+Installed-Size: 260
+Depends: python:any (<< 2.8), python-colorama
+Homepage: https://github.com/mitsuhiko/click
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-click/python-click_6.7-1_all.deb
+Size: 55628
+SHA256: 63b9becddb6abce4fd5b375cea1245bb5e6a63057a33ffd89e07c55ad9ed97bc
+SHA1: 6928dca3d00c861d9fe701c3e435c17380b7e172
+MD5sum: afc3946c6b05b876094f7cb8c34510ae
+Description: Simple wrapper around optparse for powerful command line utilities - Python 2.7
+ Click is a Python package for creating beautiful command line interfaces
+ in a composable way with as little code as necessary.  It's the "Command
+ Line Interface Creation Kit".  It's highly configurable but comes with
+ sensible defaults out of the box.
+ .
+ It aims to make the process of writing command line tools quick and fun
+ while also preventing any frustration caused by the inability to implement
+ an intended CLI API.
+ .
+ This is the Python 2 compatible package.
+
+Package: python-colorama
+Version: 0.3.7-1
+Architecture: all
+Maintainer: Khalid El Fathi <khalid@elfathi.fr>
+Installed-Size: 89
+Depends: python:any (<< 2.8)
+Homepage: http://pypi.python.org/pypi/colorama/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-colorama/python-colorama_0.3.7-1_all.deb
+Size: 24984
+SHA256: 29437ce484acd559f4cf18e8ed1688abde712d5b0cae2936a655890740483d34
+SHA1: 9793f4ca70634f98ee86d5f3553bdd8e1a42f6d5
+MD5sum: bbbf2c3b923aaa44ec5e4ebba3aff8a5
+Description: Cross-platform colored terminal text in Python - Python 2.x
+ Python-colorama provides a simple cross-platform API to print colored terminal
+ text from Python applications.
+ .
+ ANSI escape character sequences are commonly used to produce colored terminal
+ text on Unix. Colorama provides some shortcuts to generate these sequences.
+ .
+ This has the happy side-effect that existing applications or libraries which
+ already use ANSI sequences to produce colored output on Linux.
+ .
+ This package provides the module for Python 2.
+
+Package: python-configobj
+Source: configobj
+Version: 5.0.6-2
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 162
+Depends: python (>= 2.7), python (<< 2.8), python-six
+Suggests: python-configobj-doc
+Homepage: http://www.voidspace.org.uk/python/configobj.html
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/c/configobj/python-configobj_5.0.6-2_all.deb
+Size: 35000
+SHA256: 6e55c7bb2e837c37a09631f364fad955716eacee160b5bfd70ff649a37217a52
+SHA1: 073b20910a58252015a2c14f4fff9da61487447f
+MD5sum: c88577e60c12c6a36cd3ae460a55d98a
+Description: simple but powerful config file reader and writer for Python 2
+ ConfigObj is a simple but powerful config file reader and writer: an
+ ini file round tripper. Its main feature is that it is very easy to
+ use, with a straightforward programmer's interface and a simple
+ syntax for config files. It has lots of other features, though:
+ .
+  * Nested sections (subsections), to any level
+  * List values
+  * Multiple line values
+  * String interpolation (substitution)
+  * Integrated with a powerful validation system
+    + including automatic type checking/conversion
+    + and allowing default values
+    + repeated sections
+  * All comments in the file are preserved
+  * The order of keys/sections is preserved
+  * Full Unicode support
+  * Powerful unrepr mode for storing/retrieving Python data-types
+ .
+  This is the Python 2 version of the package.
+
+Package: python-configparser
+Source: configparser
+Version: 3.5.0-1
+Architecture: all
+Maintainer: Agustin Henze <tin@debian.org>
+Installed-Size: 389
+Depends: python (<< 2.8), python (>= 2.7), libjs-sphinxdoc (>= 1.0)
+Homepage: https://bitbucket.org/ambv/configparser
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/c/configparser/python-configparser_3.5.0-1_all.deb
+Size: 59300
+SHA256: 540537baba9d30829a92a12a979775c7d44d7f9000f3dda53b708c86e8e3a6ea
+SHA1: bd7366503ffbc1b72a2c75575230fbe4dff0ede9
+MD5sum: f6c2a0d1dfb33d78095f98d80b1e4f35
+Description: backport of the enhanced config parser introduced in Python 3.2
+ The ancient ConfigParser module available in the standard library 2.x has
+ seen a major update in Python 3.2. This is a backport of those changes so
+ that they can be used directly in Python 2.7.
+
+Package: python-constantly
+Source: constantly
+Version: 15.1.0-1
+Architecture: all
+Maintainer: Free Ekanayaka <freee@debian.org>
+Installed-Size: 40
+Depends: python:any (<< 2.8)
+Homepage: https://github.com/twisted/constantly
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/c/constantly/python-constantly_15.1.0-1_all.deb
+Size: 7640
+SHA256: 0cc4f5a816f6fabcd264ed3b099a732c690fd04412d7568e573f03df4271f103
+SHA1: 1035f89ca1aa0f8e4d002313c5e1855cc4e95895
+MD5sum: 816d80330fdb5a150850b371a474b4a5
+Description: Symbolic constants in Python
+ A library that provides symbolic constant support. It includes
+ collections and constants with text, numeric, and bit flag
+ values.
+ .
+ Originally twisted.python.constants from the Twisted project.
+ .
+ This package provides the Python 2.x module.
+
+Package: python-decorator
+Version: 4.3.0-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 44
+Depends: python:any (<< 2.8)
+Enhances: python-pylons
+Homepage: https://pypi.python.org/pypi/decorator
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-decorator/python-decorator_4.3.0-1_all.deb
+Size: 13876
+SHA256: 2e943558716d78af7b49663020c9126bdb3d223ff53e28a1391f0c693647e175
+SHA1: c21c794c7577a1de90946c03b765bf855ea069e1
+MD5sum: 6222956579e55aefc92524b6a7703274
+Description: simplify usage of Python decorators by programmers
+ Python 2.4 decorators have significantly changed the way Python programs are
+ structured.
+    * decorators help reduce boilerplate code;
+    * decorators help the separation of concerns;
+    * decorators enhance readability and maintainability;
+    * decorators are very explicit.
+ Still, as of now, writing custom decorators correctly requires some
+ experience and is not as easy as it could be. For instance, typical
+ implementations of decorators involve nested functions and we all know that
+ flat is better than nested.
+ The aim of the decorator module it to simplify the usage of decorators for
+ the average programmer and to popularize decorators usage giving examples of
+ useful decorators, such as memoize, tracing, redirecting_stdout, locked, etc.
+
+Package: python-dnslib
+Version: 0.9.7+hg20170303-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 207
+Depends: python:any (<< 2.8)
+Homepage: https://bitbucket.org/paulc/dnslib
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-dnslib/python-dnslib_0.9.7+hg20170303-1_all.deb
+Size: 38596
+SHA256: 180d515d1b9227a2d040232566570e44dcabd4bbd84646433903d77808b74f82
+SHA1: 5c572d43c2edc454f33dfc0919ac925c6c889799
+MD5sum: 2e53b157ea19f30e7876a6bf0dab7c18
+Description: Module to encode/decode DNS wire-format packets (Python 2)
+ This DNS encode/decode Python module provides:
+ .
+  - Support for encoding/decoding DNS packets between wire format, Python
+    objects, and Zone/DiG textual representation (dnslib.dns)
+  - A server framework allowing the simple creation of custom DNS resolvers
+    (dnslib.server) and a number of example servers created using this
+    framework
+  - A number of utilities for testing (dnslib.client, dnslib.proxy,
+    dnslib.intercept)
+ .
+ This is the Python 2 version of the package.
+
+Package: python-dnspython
+Source: dnspython
+Version: 1.15.0-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 598
+Depends: python:any (<< 2.8)
+Homepage: http://www.dnspython.org
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/d/dnspython/python-dnspython_1.15.0-1_all.deb
+Size: 98840
+SHA256: daea38cb7048688a955d453a0e919da7a92595b0e6c33c7ab86e8b1e1ceeb7ab
+SHA1: c9c0df44d73dce534693389333eda0f4faff1cd3
+MD5sum: 342adade8c8da9ac477a616384fe7030
+Description: DNS toolkit for Python
+ dnspython is a DNS toolkit for Python. It supports almost all record types. It
+ can be used for queries, zone transfers, and dynamic updates. It supports TSIG
+ authenticated messages and EDNS0.
+ .
+ dnspython provides both high and low level access to DNS. The high level
+ classes perform queries for data of a given name, type, and class, and return
+ an answer set. The low level classes allow direct manipulation of DNS zones,
+ messages, names, and records.
+
+Package: python-enum34
+Source: enum34
+Version: 1.1.6-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 218
+Depends: python:any (<< 2.8)
+Suggests: python-enum34-doc
+Breaks: python-enum
+Homepage: https://pypi.python.org/pypi/enum34
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/e/enum34/python-enum34_1.1.6-1_all.deb
+Size: 34668
+SHA256: 45ae462d5e4693ac22b954dd8c3cd7e77c4f5cc4a67af00a4ef69743810cf096
+SHA1: edfd7cd187285514c0bc804f26e518c872eb673e
+MD5sum: 0f8f0451e2bff73dad3c60ffe13faadd
+Description: backport of Python 3.4's enum package
+ PEP 435 adds an enumeration to Python 3.4.  This module provides a
+ backport of that data type for older Python versions.  It defines two
+ enumeration classes that can be used to define unit sets of names and
+ values: Enum and IntEnum.
+ .
+ This is the Python 2 compatible package.
+
+Package: python-flask
+Source: flask
+Version: 0.12.2-2
+Architecture: all
+Maintainer: Piotr Ożarowski <piotr@debian.org>
+Installed-Size: 286
+Depends: python-click, python-itsdangerous, python-jinja2, python-werkzeug, python:any (<< 2.8)
+Recommends: python-pkg-resources, python-blinker
+Suggests: python-flask-doc
+Homepage: http://flask.pocoo.org/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/f/flask/python-flask_0.12.2-2_all.deb
+Size: 61444
+SHA256: 485791cc5c74047a32c444ffe2662905fc1af65508d6652426101e64e076289e
+SHA1: 127ba156fc0eb620a16c48ead7d5890c6953fe6e
+MD5sum: 52a3b14b087b8874d794c6fc85354766
+Description: micro web framework based on Werkzeug and Jinja2 - Python 2.7
+ Flask is a micro web framework for Python based on Werkzeug, Jinja 2 and good
+ intentions. A minimal Flask application looks like that:
+ .
+   from flask import Flask
+   app = Flask(__name__)
+ .
+   @app.route("/")
+   def hello():
+       return "Hello World!"
+ .
+   if __name__ == '__main__':
+       app.run()
+ .
+ This package contains the Python 2.7 module.
+
+Package: python-future
+Version: 0.15.2-4
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 1710
+Depends: python:any (<< 2.8), python-configparser
+Suggests: python-future-doc
+Homepage: https://python-future.org
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-future/python-future_0.15.2-4_all.deb
+Size: 340988
+SHA256: d48b7491f2232be0b192b2e86c64c5f13e2d0fa73545a9c8fe5d9ea7186d6074
+SHA1: 98c5793fcd39ef93e0e5e3cd93f6b5281c94782e
+MD5sum: ea9001f2b3ab368055ffdca5cfdd677f
+Description: single-source support for Python 3 and 2 - Python 2.x
+ Future is the missing compatibility layer between Python 2 and Python 3. It
+ allows one to use a single, clean Python 3.x-compatible codebase to support
+ both Python 2 and Python 3 with minimal overhead.
+ .
+ The imports have no effect on Python 3. On Python 2, they shadow the
+ corresponding builtins, which normally have different semantics on Python 3
+ versus 2, to provide their Python 3 semantics.
+ .
+ This package contains the Python 2.x module.
+
+Package: python-hyperlink
+Source: hyperlink
+Version: 17.3.1-2
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 132
+Depends: python:any (<< 2.8)
+Homepage: https://github.com/python-hyper/hyperlink
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/h/hyperlink/python-hyperlink_17.3.1-2_all.deb
+Size: 28772
+SHA256: 8ce0e6063fe0eee76f626db23ff1c31fa8d575afc877ed3d585995eef6e29b1d
+SHA1: ab18bbdcca9a9654eb0daadc97d233b05a6f5d9a
+MD5sum: db21eddaa8957eb4cfa4e59228ed498e
+Description: Immutable, Pythonic, correct URLs.
+ Hyperlink provides a pure-Python implementation of immutable URLs. Based on
+ RFC 3986 and 3987, the Hyperlink URL makes working with both URIs and IRIs
+ easy.
+ .
+ This package provides the Python 2.x module.
+
+Package: python-idna
+Version: 2.5-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 269
+Depends: python:any (<< 2.8)
+Homepage: https://github.com/kjd/idna
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-idna/python-idna_2.5-1_all.deb
+Size: 32684
+SHA256: 80154644110f7850987c798f88ca426d218dc838046727269e2c52c4a715eaf3
+SHA1: 290cea1445360abce058586971bdaf0cbe83ac04
+MD5sum: 8db275c4586064db91af460e1eedec56
+Description: Python IDNA2008 (RFC 5891) handling (Python 2)
+ A library to support the Internationalised Domain Names in Applications (IDNA)
+ protocol as specified in RFC 5891. This version of the protocol is often
+ referred to as “IDNA2008” and can produce different results from the earlier
+ standard from 2003.
+ .
+ The library is also intended to act as a suitable drop-in replacement for the
+ “encodings.idna” module that comes with the Python standard library but
+ currently only supports the older 2003 specification.
+ .
+ This package contains the module for Python 2.
+
+Package: python-impacket
+Source: impacket
+Version: 0.9.30
+Architecture: all
+Maintainer: Sophie Brun <sophie@freexian.com>
+Installed-Size: 4902
+Depends: python-crypto, python-pcapy, python-pyasn1, python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Homepage: https://github.com/CoreSecurity/impacket
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/i/impacket/python-impacket_0.9.30_all.deb
+Size: 687804
+SHA256: d51f10b95879497409f9eb69dc9150d5c91cbcf9016509bf56a2bc0ee32be5e2
+SHA1: 4073792775967cfc740eaa64691e88be9b2c353e
+MD5sum: 47405bfc0380ef1759a5cfa9fc656ff4
+Description: Python module to easily build and dissect network protocols
+ Impacket  is a  collection  of Python  classes  focused on  providing
+ access  to network  packets.   Impacket allows  Python developers  to
+ craft and decode network packets in simple and consistent manner.  It
+ includes support for low-level protocols  such as IP, UDP and TCP, as
+ well as higher-level protocols such as NMB and SMB.
+ .
+ Impacket is highly  effective when used in conjunction  with a packet
+ capture utility or package such as Pcapy.  Packets can be constructed
+ from  scratch, as  well as  parsed from  raw data.   Furthermore, the
+ object  oriented API  makes  it  simple to  work  with deep  protocol
+ hierarchies.
+
+Package: python-incremental
+Source: incremental
+Version: 16.10.1-3
+Architecture: all
+Maintainer: Free Ekanayaka <freee@debian.org>
+Installed-Size: 95
+Depends: python:any (<< 2.8)
+Recommends: python-click, python-twisted-core
+Provides: python2.7-incremental
+Homepage: https://github.com/hawkowl/incremental
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/i/incremental/python-incremental_16.10.1-3_all.deb
+Size: 13980
+SHA256: 89667bd5dc480b4bfd3f2bfbcd0b1edd3ad6dcfc922abf0fb8475df9358b2e8c
+SHA1: fdbbfc6f5cf3d7d12c878ad203f6fadb1b1e312a
+MD5sum: 8bcb479112c8853d46806f5003e7b2cb
+Description: Library for versioning Python projects.
+ Incremental is a small library that versions your Python projects.
+ .
+ This package provides the Python 2.x module.
+
+Package: python-ipaddr
+Version: 2.2.0-2
+Architecture: all
+Maintainer: Scott Kitterman <scott@kitterman.com>
+Installed-Size: 78
+Depends: python:any (<< 2.8)
+Homepage: https://github.com/google/ipaddr-py
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-ipaddr/python-ipaddr_2.2.0-2_all.deb
+Size: 15948
+SHA256: 35e54564b2a121bc6f8f22d31379654a9edb9340fdefec0632bf7759045f187e
+SHA1: 3034953f49432540dfff55b516a2f55cbcf37434
+MD5sum: ee68bd605f90a55517325146fe2d5b46
+Description: Python module for working with IP addresses, both IPv4 and IPv6
+ This library is used to create/poke/manipulate IPv4 and IPv6 addresses
+ and networks in Python.  It is intended to be fast and lightweight.
+ .
+ This is a pure Python implementation of classes for IPv4/6 addresses and
+ networks. It supports comparisons to determine if IP addresses are contained
+ inside a defined network, conversion of lists of IP addresses into compact
+ CIDR lists, and other IP address manipulation.
+ .
+ This module was incorporated into python3.3 and later as ipaddress. A direct
+ backport of ipaddress is available in Debian as python-ipaddress.  There are
+ incompatibilies between the two, so both are provided.
+
+Package: python-ipaddress
+Version: 1.0.17-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 101
+Depends: python:any (<< 2.8)
+Homepage: https://github.com/phihag/ipaddress
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-ipaddress/python-ipaddress_1.0.17-1_all.deb
+Size: 17928
+SHA256: bbec870235241782034d2c6b3cb36a6d2e117aa2acca947585e228884aa77522
+SHA1: 29432e62d316a53ea02878a0bda072838958b922
+MD5sum: 963b4da9fd6415cd1afc1692351e3c83
+Description: Backport of Python 3 ipaddress module (Python 2)
+ This module is a backport of the stdlib "ipaddress" module from Python 3. The
+ "ipaddress" module is in turn based off of the "ipaddr" module available in
+ the "python-ipaddr" but there are some important API differences; make sure
+ you are using the right module.
+ .
+ This package contains the Python 2 module.
+
+Package: python-ipy
+Source: ipy
+Version: 1:0.83-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 123
+Depends: python (>= 2.7), python (<< 2.8)
+Homepage: https://github.com/haypo/python-ipy/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/i/ipy/python-ipy_0.83-1_all.deb
+Size: 31600
+SHA256: 572292e89dd5a1adfd73176b7326c364cf249b64201c4e6e09db8bd0b0fcbd2f
+SHA1: 0c8320bd9ed3080631c554c08cd103148d51da4e
+MD5sum: e542781365edd439a6382c2b76426f25
+Description: Python module for handling IPv4 and IPv6 addresses and networks
+ IPy is a Python module for handling IPv4 and IPv6 addresses and
+ networks in a fashion similar to perl's Net::IP and friends. The IP
+ class allows a comfortable parsing and handling for most notations in
+ use for IPv4 and IPv6 addresses and networks.
+
+Package: python-ipython
+Source: ipython
+Version: 5.8.0-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 1912
+Depends: python-decorator, python-pexpect, python-pickleshare, python-prompt-toolkit, python-pygments, python-simplegeneric, python-traitlets, python:any (<< 2.8), python:any (>= 2.7~), python-backports-shutil-get-terminal-size, python-pathlib2
+Breaks: ipython (<< 4)
+Replaces: ipython (<< 4)
+Homepage: https://github.com/ipython/ipython
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/i/ipython/python-ipython_5.8.0-1_all.deb
+Size: 383680
+SHA256: 561f8294b2664d79ece604adfe677a7be412420385e6a4c65d10e8f4e2d231bd
+SHA1: fb5ed930903f13d921e6b11466b0d804d7123273
+MD5sum: a3a2e43279ffbc60ec7a790205ed0845
+Description: Enhanced interactive Python shell (Python 2 version)
+ IPython can be used as a replacement for the standard Python shell,
+ or it can be used as a complete working environment for scientific
+ computing (like Matlab or Mathematica) when paired with the standard
+ Python scientific and numerical tools. It supports dynamic object
+ introspections, numbered input/output prompts, a macro system,
+ session logging, session restoring, complete system shell access,
+ verbose and colored traceback reports, auto-parentheses, auto-quoting,
+ and is embeddable in other Python programs.
+ .
+ This package contains the backend terminal shell for Python 2: for
+ the actual frontend install ipython.
+
+Package: python-ipython-genutils
+Source: ipython-genutils
+Version: 0.2.0-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 84
+Depends: python:any (<< 2.8)
+Multi-Arch: foreign
+Homepage: https://github.com/ipython/ipython_genutils
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/i/ipython-genutils/python-ipython-genutils_0.2.0-1_all.deb
+Size: 20280
+SHA256: ea415fd9c31f67526fb206f6bcad6f1280c8c515c3da59f36ac7b449e11fcbdc
+SHA1: f417fda3e8316b9e29187e7fa745cd2a8dfbd602
+MD5sum: da1b54ede1190c0f0ac380609c34295f
+Description: IPython vestigial utilities for Python 2
+ Contains some utilities shared by the IPython and Jupyter projects.
+ .
+ No new code should be written against those utilities.
+ .
+ This package installs the library for Python 2.
+
+Package: python-itsdangerous
+Version: 0.24+dfsg1-2
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 54
+Depends: python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Recommends: python-simplejson
+Homepage: http://pythonhosted.org/itsdangerous/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-itsdangerous/python-itsdangerous_0.24+dfsg1-2_all.deb
+Size: 12780
+SHA256: 202270d8d8d445457c07af2067cb15a80ae45cf7cba5ceb6f70022f09911df1d
+SHA1: 5fb67d83f863af0d20c946e46a6bf6a278fd5ca3
+MD5sum: 80aa8db54507931fbe084ec7274cd77b
+Description: Various helpers to pass trusted data to untrusted environment - Python 2.x
+ itsdangerous provides a module that is a port of the django signing
+ module.  It's not directly copied but some changes were applied to
+ make it work better on its own.
+ .
+ itsdangerous allows web applications to use a key only it knows to
+ cryptographically sign data and hand it over to someone else (e.g. a
+ user).  When it gets the data back it can easily ensure that nobody
+ tampered with it.
+ .
+ This package provides the itsdangerous Python module for Python 2.x.
+
+Package: python-jinja2
+Source: jinja2
+Version: 2.9.6-1
+Architecture: all
+Maintainer: Piotr Ożarowski <piotr@debian.org>
+Installed-Size: 1030
+Depends: python-markupsafe, python:any (<< 2.8)
+Recommends: python-pkg-resources
+Suggests: python-jinja2-doc
+Enhances: python-pybabel
+Homepage: http://jinja.pocoo.org/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/j/jinja2/python-jinja2_2.9.6-1_all.deb
+Size: 115940
+SHA256: ae8ee56b7aef9d150ed2f1d129e4fe4805675fdabef58fe5189af4932e7d90cf
+SHA1: 78a73fdf544400789e7cede5bdcafd8a255d4a08
+MD5sum: 444df962b4e55a0881982e1e94d67725
+Description: small but fast and easy to use stand-alone template engine
+ Jinja2 is a template engine written in pure Python. It provides a Django
+ inspired non-XML syntax but supports inline expressions and an optional
+ sandboxed environment.
+ .
+ The key-features are:
+  * Configurable syntax. If you are generating LaTeX or other formats with
+    Jinja2 you can change the delimiters to something that integrates better
+    into the LaTeX markup.
+  * Fast. While performance is not the primarily target of Jinja2 it’s
+    surprisingly fast. The overhead compared to regular Python code was reduced
+    to the very minimum.
+  * Easy to debug. Jinja2 integrates directly into the Python traceback system
+    which allows you to debug Jinja2 templates with regular Python debugging
+    helpers.
+  * Secure. It’s possible to evaluate untrusted template code if the optional
+    sandbox is enabled. This allows Jinja2 to be used as templating language
+    for applications where users may modify the template design.
+
+Package: python-magic
+Source: file
+Version: 1:5.32-1
+Architecture: all
+Maintainer: Christoph Biedl <debian.axhn@manchmal.in-ulm.de>
+Installed-Size: 75
+Depends: python:any (<< 2.8), libmagic1, libmagic1
+Provides: python2.7-magic
+Homepage: http://www.darwinsys.com/file/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/f/file/python-magic_5.32-1_all.deb
+Size: 48096
+SHA256: 54ecdb191e3523cfb61925bb399687944405a875164c9af34e92b6225415a720
+SHA1: d5560880d79ca3cee35621ab4b3a124cb536fd90
+MD5sum: b92cd1320971e6cab372e8f141f6ae0b
+Description: Recognize the type of data in a file using "magic" numbers - Python bindings
+ This package contains the Python bindings for the libmagic file type
+ detection library.
+
+Package: python-netaddr
+Version: 0.7.19-1
+Architecture: all
+Maintainer: Vincent Bernat <bernat@debian.org>
+Installed-Size: 994
+Depends: ieee-data, python (<< 2.8), python (>= 2.7)
+Suggests: ipython, python-netaddr-docs
+Homepage: https://github.com/drkjam/netaddr/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-netaddr/python-netaddr_0.7.19-1_all.deb
+Size: 228380
+SHA256: f0f1dd1b931e4ea302e2e9aa9e0aa2e6073c7f8b5f4815e3540023618aeca613
+SHA1: 6353d1959a850519c21f9f07d37c843915bbdf0e
+MD5sum: f3893c42205b4d1039cdfbed1d082efc
+Description: manipulation of various common network address notations (Python 2)
+ netaddr is a Python library for the manipulation of various common
+ network address notations and representations.
+ .
+ It takes the hassle out of fiddling with enumerable variations of
+ network addresses presenting a consistent, extensible, easy-to-use
+ and (above all) Pythonic API.
+ .
+ With it you can validate, convert, categorise, iterate, generate,
+ slice (and dice):
+  - MAC (Media Access Control)
+  - IEEE EUI-48 and EUI-64
+  - IP version 4
+  - IP version 6
+  - CIDR (Classless Inter-Domain Routing)
+ .
+ This is the Python 2 version of the package.
+
+Package: python-olefile
+Source: olefile
+Version: 0.44-1
+Architecture: all
+Maintainer: Matthias Klose <doko@debian.org>
+Installed-Size: 151
+Depends: python:any (<< 2.8)
+Homepage: http://www.decalage.info/olefile
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/o/olefile/python-olefile_0.44-1_all.deb
+Size: 37044
+SHA256: 10788e1b8fd01c13afd13532a5f09faef31a57d0eef23ef7966e9e8110e48401
+SHA1: 9d303cc6072a6e4282db2659846ebdf1700855c4
+MD5sum: ca2defe5ef655276165318ed6be69c01
+Description: Python module to read/write MS OLE2 files
+ Python package to parse, read and write Microsoft OLE2 files (also called
+ Structured Storage, Compound File Binary Format or Compound Document File
+ Format), such as Microsoft Office 97-2003 documents, vbaProject.bin in
+ MS Office 2007+ files, Image Composer and FlashPix files, Outlook MSG files,
+ StickyNotes, several Microscopy file formats, McAfee antivirus quarantine
+ files, etc.
+
+Package: python-openssl
+Source: pyopenssl
+Version: 16.2.0-1
+Architecture: all
+Maintainer: Sandro Tosi <morph@debian.org>
+Installed-Size: 198
+Depends: python-cryptography (>= 1.3.4), python-six (>= 1.5.2), python:any (<< 2.8)
+Suggests: python-openssl-doc, python-openssl-dbg
+Homepage: https://github.com/pyca/pyopenssl
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/pyopenssl/python-openssl_16.2.0-1_all.deb
+Size: 43304
+SHA256: 3ee665a5e49c528c261d1eef319119582419671af34b8fe11af7e46a71252c6f
+SHA1: e8f4aaabcd3bcd210d6e88fb5fcc999773fb689a
+MD5sum: 895f23773c348655efd4ec7e1bd7e2b2
+Description: Python 2 wrapper around the OpenSSL library
+ High-level wrapper around a subset of the OpenSSL library, includes
+ .
+   * SSL.Connection objects, wrapping the methods of Python's portable
+     sockets
+   * Callbacks written in Python
+   * Extensive error-handling mechanism, mirroring OpenSSL's error
+     codes
+ .
+ A lot of the object methods do nothing more than calling a
+ corresponding function in the OpenSSL library.
+
+Package: python-pathlib
+Version: 1.0.1-2
+Architecture: all
+Maintainer: Frank Brehm <frank@brehm-online.com>
+Installed-Size: 81
+Depends: python:any (<< 2.8)
+Provides: python2.7-pathlib
+Homepage: https://pypi.python.org/pypi/pathlib/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-pathlib/python-pathlib_1.0.1-2_all.deb
+Size: 24668
+SHA256: 237049ec7ee17e1a47f7c62ef4c14fdee3681e9177d6ab732ebf9fc504f69846
+SHA1: e283339c38d8edcb062dfa30fab76adc6eeb600d
+MD5sum: 9dc793be3f1868e25f5deef7e04d0942
+Description: set of Python 2 classes to handle filesystem paths
+ Pathlib offers a set of classes to handle filesystem paths.
+ It offers the following advantages over using string objects:
+ .
+  * No more cumbersome use of os and os.path functions. Everything
+    can be done easily through operators, attribute accesses, and method calls.
+  * Embodies the semantics of different path types. For example,
+    comparing Windows paths ignores casing.
+  * Well-defined semantics, eliminating any warts or ambiguities
+    (forward vs. backward slashes, etc.).
+ .
+ This is the Python 2 version of the package.
+
+Package: python-pathlib2
+Version: 2.3.5-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 83
+Depends: python-six, python2:any (<< 2.8), python-scandir
+Homepage: https://pypi.org/project/pathlib2
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-pathlib2/python-pathlib2_2.3.5-1_all.deb
+Size: 19272
+SHA256: bdd1edda63a5879d4e300cced9a445e0811dacc26d08c98e60410c64ed4232db
+SHA1: d2ce983ff7f0179c0db1f01b9e4764ccf796c7e4
+MD5sum: bfcac4f6f5ac6edfffc700d31ed7bbe4
+Description: Backport of the "pathlib" stdlib module (Python 2)
+ The old pathlib module on bitbucket is in bugfix-only mode. The goal of
+ pathlib2 is to provide a backport of standard pathlib module which tracks
+ the standard library module, so all the newest features of the standard
+ pathlib can be used also on older Python versions.
+ .
+ This package is (obviously) for Python 2.
+
+Package: python-pathtools
+Version: 0.1.2-2
+Architecture: all
+Maintainer: gustavo panizzo <gfa@zumbi.com.ar>
+Installed-Size: 79
+Depends: python:any (<< 2.8)
+Homepage: http://github.com/gorakhargosh/pathtools
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-pathtools/python-pathtools_0.1.2-2_all.deb
+Size: 10588
+SHA256: 249057226b40b67bf76cf3f4a392425f26218459caeb412cba0802c840b187ea
+SHA1: ac027db69a3b595515c342955c79954ae32762b4
+MD5sum: 79ca99fea37f9b40891c0616750e76fb
+Description: Path utilities for Python - Python 2.x
+ Python API library which provides pattern matching functions
+ and various utilities for filesystem paths.
+ .
+ This is the Python 2 version.
+
+Package: python-pefile
+Version: 2017.9.3-1
+Architecture: all
+Maintainer: Hilko Bengen <bengen@debian.org>
+Installed-Size: 279
+Depends: python:any (<< 2.8), python-future
+Homepage: https://github.com/erocarrera/pefile/
+Priority: extra
+Section: python
+Filename: pool/bleeding-edge/p/python-pefile/python-pefile_2017.9.3-1_all.deb
+Size: 54480
+SHA256: 5476bd6362616bb09461a24e90c302d0bc70ecf1c7e464df2792be649cc72706
+SHA1: 7f74da287f976464a2a1497e57416ba753a2a8c5
+MD5sum: d6a5759b66233b66f8395935a4715226
+Description: Portable Executable (PE) parsing module for Python
+ pefile is a Python module to read and work with Portable Executable (PE)
+ files. Most of the information in the PE header is accessible, as well as all
+ the sections, section information and data.
+ .
+ All the basic PE file structures are available with their default names as
+ attributes of the returned instance.
+ .
+ Processed elements such as the import table are made available with lowercase
+ names, to differentiate them from the upper case basic structure names.
+ .
+ pefile has been tested against the limits of valid PE headers; that is,
+ Windows malware. Lots of packed malware attempt to abuse the format beyond its
+ standard use.
+ .
+ Some of the tasks that pefile makes possible are:
+  * Modifying and writing back to the PE image
+  * Header inspection
+  * Section analysis
+  * Retrieving data
+  * Warnings for suspicious and malformed values
+  * Packer detection with PEiD signatures
+  * PEiD signature generation
+
+Package: python-pexpect
+Source: pexpect
+Version: 4.6.0-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 197
+Depends: python-ptyprocess, python:any (<< 2.8)
+Suggests: python-pexpect-doc
+Homepage: http://www.noah.org/wiki/Pexpect
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/pexpect/python-pexpect_4.6.0-1_all.deb
+Size: 51028
+SHA256: c858fb1ede861e8726794084400a0fe8bbd70ea4e48582ec57bf3ee1c79643e1
+SHA1: c2c4983120389d4124b5095b2b3554a4c0f5dd98
+MD5sum: 0344b881724295ee9a4adf859d578688
+Description: Python module for automating interactive applications
+ Pexpect is a pure Python module for spawning child applications;
+ controlling them; and responding to expected patterns in their
+ output. Pexpect works like Don Libes' Expect. Pexpect allows your
+ script to spawn a child application and control it as if a human were
+ typing commands.
+
+Package: python-pickleshare
+Source: pickleshare
+Version: 0.7.5-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 30
+Depends: python-pathlib2, python:any (<< 2.8)
+Homepage: https://github.com/pickleshare/pickleshare
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/pickleshare/python-pickleshare_0.7.5-1_all.deb
+Size: 6992
+SHA256: 2a11252030533fbb5d21a2b0f0740c29c04d1c8eae5251cec2f8fb7673af9e76
+SHA1: f80b32b7b090df0415bfa85c8383fcdab3ca40da
+MD5sum: 2ea82d9ce368c404725736f98b0f279b
+Description: File system based database that uses Python pickles for Python 2
+ Like shelve, a PickleShareDB object acts like a normal dictionary. Unlike
+ shelve, many processes can access the database simultaneously. Changing a
+ value in database is immediately visible to other processes accessing the
+ same database.
+ .
+ Concurrency is possible because the values are stored in separate files.
+ Hence the "database" is a directory where all files are governed by
+ PickleShare.
+ .
+ This package installs the library for Python 2.
+
+Package: python-prompt-toolkit
+Source: prompt-toolkit
+Version: 1.0.15-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 920
+Depends: python-six (>= 1.9.0), python-wcwidth, python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Recommends: python-pygments
+Homepage: https://github.com/jonathanslenders/python-prompt-toolkit
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/prompt-toolkit/python-prompt-toolkit_1.0.15-1_all.deb
+Size: 175816
+SHA256: 7b89bb447fd526b9cd47b79644b6115ec6e4cc68501824b21a74b87b96626474
+SHA1: 1425c5c5e069b2da7a85a0162975cca620d62d46
+MD5sum: 265684097139481267fd544d97b7976d
+Description: library for building interactive command lines (Python 2)
+ prompt_toolkit is a GNU readline replacement written in pure Python supporting
+ advanced features like syntax highlighting, multi line editing and code
+ completion.
+ .
+ This package installs the library for Python 2.
+
+Package: python-ptyprocess
+Source: ptyprocess
+Version: 0.6.0-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 53
+Depends: python:any (<< 2.8)
+Homepage: https://github.com/pexpect/ptyprocess
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/ptyprocess/python-ptyprocess_0.6.0-1_all.deb
+Size: 12852
+SHA256: c87aa590092dcbc4f91f90a41118b46265a14823509e2f3645609a476eaf10fd
+SHA1: ed2e7e3c92f379482b1dd50ea63b3c2fa2153b7d
+MD5sum: eaec1e648bed842bf3dab274153df965
+Description: Run a subprocess in a pseudo terminal from Python 2
+ Launch a subprocess in a pseudo terminal (pty), and interact with both
+ the process and its pty.
+ .
+ Sometimes, piping stdin and stdout is not enough. There might be a password
+ prompt that doesn't read from stdin, output that changes when it's going to
+ a pipe rather than a terminal, or curses-style interfaces that rely on a
+ terminal. If you need to automate these things, running the process in a
+ pseudo terminal (pty) is the answer.
+ .
+ This package installs the library for Python 2.
+
+Package: python-pyasn1
+Source: pyasn1
+Version: 0.1.9-2
+Architecture: all
+Maintainer: Jan Lübbe <jluebbe@debian.org>
+Installed-Size: 340
+Depends: python:any (<< 2.8)
+Suggests: doc-base
+Homepage: http://pyasn1.sourceforge.net/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/pyasn1/python-pyasn1_0.1.9-2_all.deb
+Size: 50688
+SHA256: 7118a569899fd3bdfe4ea8bccf9554b434f47976eb73f33a4879daf05a090b1b
+SHA1: 1e6027815e73ec21085cd069ed40c1629f34424a
+MD5sum: 48f2d327c5de79a370d404d0fab5f4a3
+Description: ASN.1 library for Python (Python 2 module)
+ This  is  an implementation  of  ASN.1  types  and codecs  in  Python
+ programming language. It has been first written to support particular
+ protocol (SNMP) but then generalized  to be suitable for a wide range
+ of protocols based on ASN.1 specification.
+ .
+ This package contains the Python 2 module.
+
+Package: python-pyasn1-modules
+Version: 0.0.7-0.1
+Architecture: all
+Maintainer: Marc Haber <mh+debian-packages@zugschlus.de>
+Installed-Size: 170
+Depends: python-pyasn1, python:any (<< 2.8)
+Homepage: http://pypi.python.org/pypi/pyasn1-modules
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-pyasn1-modules/python-pyasn1-modules_0.0.7-0.1_all.deb
+Size: 20728
+SHA256: ad7fe3e9612e936c41dd60f6e190dcd89854e2c85199f70909b20cec8aa7007c
+SHA1: a5d9f8ce745b2968efd34c1f68f1c2d3bb5e08b9
+MD5sum: b3ce2c9dc0da0d917f869181ee7c9941
+Description: Collection of protocols modules written in ASN.1 language
+ This is a small but growing collection of ASN.1 data structures
+ expressed in Python terms using pyasn1 data model.
+ .
+ It's thought to be useful to protocol developers and testers.
+ .
+ Please note that pyasn1_modules is neither part of the pyasn1 package
+ nor related to it.
+
+Package: python-pygments
+Source: pygments
+Version: 2.3.1+dfsg-3
+Architecture: all
+Maintainer: Piotr Ożarowski <piotr@debian.org>
+Installed-Size: 3173
+Depends: python2:any (<< 2.8)
+Suggests: python-pygments-doc, ttf-bitstream-vera
+Breaks: python3-pygments (<< 2.3.1+dfsg-1~)
+Multi-Arch: foreign
+Homepage: http://pygments.org/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/pygments/python-pygments_2.3.1+dfsg-3_all.deb
+Size: 589048
+SHA256: 340b5f1321f8e2d4fb4543916c3f58f9cdc83133c852e7eff35b1b4c32aaa0b1
+SHA1: cfdac428d808a45da1211cfb013abbc1bfdf1c25
+MD5sum: 3373554ffd23b05e3d7c119ac9832ae4
+Description: syntax highlighting package written in Python
+ Pygments aims to be a generic syntax highlighter for general use in all kinds
+ of software such as forum systems, wikis or other applications that need to
+ prettify source code.
+ .
+ Highlights are:
+   * a wide range of common languages and markup formats is supported
+   * special attention is paid to details, increasing quality by a fair amount
+   * support for new languages and formats are added easily
+   * a number of output formats, presently HTML, LaTeX and ANSI sequences
+   * it is usable as a command-line tool and as a library
+
+Package: python-pyinotify
+Source: pyinotify
+Version: 0.9.6-1
+Architecture: all
+Maintainer: Mikhail Gusarov <dottedmag@debian.org>
+Installed-Size: 131
+Depends: python:any (<< 2.8)
+Suggests: python-pyinotify-doc
+Provides: python2.7-pyinotify
+Homepage: https://github.com/seb-m/pyinotify
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/pyinotify/python-pyinotify_0.9.6-1_all.deb
+Size: 26636
+SHA256: d107bc051a6a286c8e1762f9293e835eebe9d2329591ecb739fd708f93bada67
+SHA1: c1fb5c1d50680fb75c16222700d37caf22384ee7
+MD5sum: b5b4f770df1848575b99afcadfa65151
+Description: simple Linux inotify Python bindings
+ pyinotify is a simple wrapper for the Linux inotify mechanism.
+ .
+ inotify is a Linux Kernel feature available since 2.6.13. inotify makes
+ it possible for applications to easily be notified of filesystem changes.
+
+Package: python-requests
+Source: requests
+Version: 2.18.1-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 275
+Depends: python-certifi, python-chardet (>= 3.0.2), python-idna, python-urllib3 (>= 1.21.1), python:any (<< 2.8), ca-certificates, python-urllib3 (<< 1.22)
+Suggests: python-cryptography, python-idna (>= 2.5), python-openssl, python-socks
+Breaks: httpie (<< 0.9.2)
+Homepage: http://python-requests.org
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/r/requests/python-requests_2.18.1-1_all.deb
+Size: 75680
+SHA256: 8fb2d9f71c6e97df84dc00bc06cb90f908743371016d7143432c1f2ef04ba241
+SHA1: fe44449276b49274dbf64d95c2950671a28294d7
+MD5sum: 7aedfb53ee291045e0e4a8f2ffec89cd
+Description: elegant and simple HTTP library for Python2, built for human beings
+ Requests allow you to send HTTP/1.1 requests. You can add headers, form data,
+ multipart files, and parameters with simple Python dictionaries, and access
+ the response data in the same way. It's powered by httplib and urllib3, but
+ it does all the hard work and crazy hacks for you.
+ .
+ Features
+ .
+   - International Domains and URLs
+   - Keep-Alive & Connection Pooling
+   - Sessions with Cookie Persistence
+   - Browser-style SSL Verification
+   - Basic/Digest Authentication
+   - Elegant Key/Value Cookies
+   - Automatic Decompression
+   - Unicode Response Bodies
+   - Multipart File Uploads
+   - Connection Timeouts
+
+Package: python-scapy
+Source: scapy
+Version: 2.3.3-1
+Architecture: all
+Maintainer: Internet Measurement Packaging Team <pkg-netmeasure-discuss@lists.alioth.debian.org>
+Installed-Size: 2465
+Depends: python:any (<< 2.8)
+Suggests: tcpdump, tcpreplay, wireshark, graphviz, imagemagick, python-gnuplot, python-crypto, python-pyx, ebtables, python-visual, sox, xpdf, gv, hexer, librsvg2-bin, python-pcapy
+Breaks: scapy (<< 1.0.5-1)
+Replaces: scapy (<< 1.0.5-1)
+Provides: scapy
+Homepage: http://www.secdev.org/projects/scapy/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/s/scapy/python-scapy_2.3.3-1_all.deb
+Size: 357436
+SHA256: 2494f854339d690bff6edf1c92d3109b84bea8d729a37b8053b1518ac6940845
+SHA1: ab2611bcd9b5b57c74c9af5eb66a51ec10e5e0a6
+MD5sum: e88af3f610ae39ad8e68d0395344e95c
+Description: Packet generator/sniffer and network scanner/discovery
+ Scapy is a powerful interactive packet manipulation tool, packet
+ generator, network scanner, network discovery, packet sniffer, etc. It
+ can for the moment replace hping, 85% of nmap, arpspoof, arp-sk, arping,
+ tcpdump, tethereal, p0f, ....
+ .
+ In scapy you define a set of packets, then it sends them, receives
+ answers, matches requests with answers and returns a list of packet couples
+ (request, answer) and a list of unmatched packets. This has the big advantage
+ over tools like nmap or hping that an answer is not reduced to
+ (open/closed/filtered), but is the whole packet.
+
+Package: python-service-identity
+Version: 16.0.0-2
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 46
+Depends: python-attr, python-openssl, python-pyasn1, python-pyasn1-modules, python:any (<< 2.8)
+Recommends: python-idna
+Homepage: https://pypi.python.org/pypi/service_identity
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-service-identity/python-service-identity_16.0.0-2_all.deb
+Size: 9004
+SHA256: f51ece374cf59875717dbefe4f60484d45eb048e9258c523f9863a38c6fceddb
+SHA1: 8eef9f9008a7d238596ea803ea3b6b0eaea086dc
+MD5sum: d83066c9b4832d706e9068e45693346e
+Description: Service identity verification for pyOpenSSL (Python 2 module)
+ Service_identity aspires to give you all the tools you need for verifying
+ whether a certificate is valid for the intended purposes.
+ .
+ In the simplest case, this means host name verification.  However,
+ service_identity implements RFC 6125 fully and plans to add other
+ relevant RFCs too.
+ .
+ This package contains service_identity for Python 2.
+
+Package: python-simplegeneric
+Source: simplegeneric
+Version: 0.8.1-2
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 36
+Depends: python:any (<< 2.8)
+Homepage: https://pypi.python.org/pypi/simplegeneric
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/s/simplegeneric/python-simplegeneric_0.8.1-2_all.deb
+Size: 10720
+SHA256: ac89bcdf1192bf881473968addda58475165cc8ebb4a0ab7c8627ff88533cb9c
+SHA1: a4b4c12136b34401ec6d9f7cb161a3158e178522
+MD5sum: b8841a2601b52820878e4e0925b45bbd
+Description: simple generic functions for Python
+ The simplegeneric module lets you define simple single-dispatch generic
+ functions, akin to Python's built-in generic functions like len(), iter() and
+ so on. However, instead of using specially-named methods, these generic
+ functions use simple lookup tables, akin to those used by e.g. pickle.dump()
+ and other generic functions found in the Python standard library.
+
+Package: python-soupsieve
+Source: soupsieve
+Version: 1.9.5+dfsg-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 153
+Depends: python-backports.functools-lru-cache, python2:any (<< 2.8)
+Homepage: https://facelessuser.github.io/soupsieve/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/s/soupsieve/python-soupsieve_1.9.5+dfsg-1_all.deb
+Size: 32988
+SHA256: 75435dd5e17b8febc377667853297cdd368748f90a52d471be78f935c0721fe6
+SHA1: 8131e30e6d4bc89ec6f240b419636ad60847944b
+MD5sum: 271319c0d161b7c6662afbe147666859
+Description: Modern CSS selector implementation for BeautifulSoup (Python 2.7)
+ Soup Sieve is a CSS selector library designed to be used with Beautiful Soup 4
+ (python-bs4 in Debian). It aims to provide selecting, matching, and filtering
+ using modern CSS selectors. Soup Sieve currently provides selectors from the
+ CSS level 1 specifications up through the latest CSS level 4 drafts (though
+ some are not yet implemented).
+ .
+ Soup Sieve was written with the intent to replace Beautiful Soup's builtin
+ select feature, and as of Beautiful Soup version 4.7.0, it now is 🎊. Soup
+ Sieve can also be imported in order to use its API directly for more
+ controlled, specialized parsing.
+ .
+ This package contains Soup Sieve for cPython 2.7.
+
+Package: python-traitlets
+Source: traitlets
+Version: 4.3.3-2
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 329
+Depends: python-decorator, python-ipython-genutils, python-six, python2:any (<< 2.8), python-enum34
+Homepage: https://github.com/ipython/traitlets
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/t/traitlets/python-traitlets_4.3.3-2_all.deb
+Size: 60556
+SHA256: 310b17c7b17268251d3637befe2c68dc441f125d729522421e3369b485bc81bf
+SHA1: 82d22c9d47514359a0c3bc8839eea6b16c1799bf
+MD5sum: f178cd1b5429a0c621eaa7ff8a72aa60
+Description: Lightweight Traits-like package for Python 2
+ A lightweight pure-Python derivative of Enthought Traits, used
+ for configuring Python objects.
+ .
+ It powers the config system of IPython and Jupyter.
+ .
+ This package contains the library for Python 2.
+
+Package: python-twisted-core
+Source: twisted
+Version: 17.5.0-2
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 12811
+Depends: python-twisted-bin (>= 17.5.0-2), python-zope.interface (>= 4.0.2), python-automat, python-constantly, python-hyperlink, python-incremental, python:any (<< 2.8), python-openssl, python-service-identity
+Recommends: python-pam, python-serial
+Suggests: python-tk, python-gtk2, python-glade2, python-qt3, python-wxgtk3.0
+Breaks: python-scrapy (<< 1.0.0-1~), python-twisted-conch (<< 1:15.5.0-3), python-twisted-mail (<< 15.5.0-3), python-twisted-names (<< 15.5.0-3), python-twisted-news (<< 15.5.0-3), python-twisted-runner (<< 15.5.0-3), python-twisted-web (<< 15.5.0-3), python-twisted-words (<< 15.5.0-3), torbrowser-launcher (<= 0.2.0-1~), txsocksx (<< 1.13.0.4-1~)
+Replaces: python-twisted-conch (<< 1:15.5.0-3), python-twisted-mail (<< 15.5.0-3), python-twisted-names (<< 15.5.0-3), python-twisted-news (<< 15.5.0-3), python-twisted-runner (<< 15.5.0-3), python-twisted-web (<< 15.5.0-3), python-twisted-words (<< 15.5.0-3)
+Provides: python2.7-twisted-core
+Multi-Arch: foreign
+Homepage: https://github.com/waylan/Python-Markdown
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/t/twisted/python-twisted-core_17.5.0-2_all.deb
+Size: 1968600
+SHA256: 9f7cb362a683e383c445db369f3f141b00cc0968c14f05ce478d6dd542fd634a
+SHA1: afa852d472ca05ea0f1bd176b3fa7d53948d637f
+MD5sum: a3a9c75ca8234636a435096f4de210e2
+Description: Event-based framework for internet applications
+ It includes a web server, a telnet server, a multiplayer RPG engine, a
+ generic client and server for remote object access, and APIs for creating
+ new protocols.
+ .
+ Additionally it includes protocol-specific implementations such as:
+ .
+ Twisted Conch: a client/server implementation of the SSH protocol,
+ using the twisted framework.
+ .
+ Twisted Mail: contains high-level, efficient protocol implementations
+ for both clients and servers of SMTP, POP3, and IMAP4. Additionally,
+ it contains an "out of the box" combination SMTP/POP3 virtual-hosting
+ mail server. Also included is a read/write Maildir implementation and
+ a basic Mail Exchange calculator (depends on Twisted Names).
+ .
+ Twisted Web: a web server, and also provides basic HTTP client
+ support. You may want to check out Nevow, a templating toolkit
+ designed for twisted.web, and Twisted Web2, the next generation
+ Twisted web server.
+ .
+ Twisted Words includes:
+  - Low-level protocol implementations of OSCAR (AIM and ICQ), IRC, MSN,
+    TOC (AIM).
+  - Jabber libraries.
+  - Prototypes of chat server and client frameworks built on top
+    of the protocols.
+
+Package: python-twisted-web
+Source: twisted
+Version: 17.5.0-2
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 203
+Depends: python-twisted-core (>= 17.5.0-2)
+Multi-Arch: foreign
+Homepage: https://github.com/waylan/Python-Markdown
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/t/twisted/python-twisted-web_17.5.0-2_all.deb
+Size: 78524
+SHA256: 28d2769d071341f40da5123e3001762047b4344cda0352f3bd3f52091b30c2d1
+SHA1: 00076928f1b6bc1b2d1e9bfc3cd2e17ed84aa5b5
+MD5sum: 4ac9c18f0aef51bf78109e0a8563dd16
+Description: twisted dummy package for HTTP protocol implementation
+ All the code has been moved to python-twisted-core, this package
+ contains only documentation and is going to be removed.
+ See https://twistedmatrix.com/trac/ticket/7964.
+
+Package: python-ua-parser
+Version: 0.3.6-0kali1
+Architecture: all
+Maintainer: Sophie Brun <sophie@freexian.com>
+Installed-Size: 127
+Depends: python (>= 2.7), python (<< 2.8), python-yaml, python-pkg-resources
+Homepage: https://github.com/tobie/ua-parser
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-ua-parser/python-ua-parser_0.3.6-0kali1_all.deb
+Size: 21036
+SHA256: f25bc485414b9a2a730c2f620b7899e37c3c48a0a3de89c45af82a0e4a05de7b
+SHA1: a5aa6f559601fa891bb59efa17460e1e50e0d23d
+MD5sum: dfae468de13f937837a4adaa0895ab88
+Description: Python port of Browserscope's user agent parser
+ This package containe a Python port of Browserscope's user agent parser.
+
+Package: python-urllib3
+Version: 1.21.1-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 398
+Depends: python:any (<< 2.8), python-six
+Recommends: ca-certificates, python-cryptography, python-idna, python-ipaddress, python-openssl
+Suggests: python-ntlm, python-socks
+Homepage: http://urllib3.readthedocs.org
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-urllib3/python-urllib3_1.21.1-1_all.deb
+Size: 95844
+SHA256: 6fe364699de3c5ef34384c4d89eaf5b7d3338c6f3678176e4afe0fd79f5c2c70
+SHA1: b4b21d7f8f1a7fab4f2c0da92de7f1c636833b70
+MD5sum: 17a5607924d37bdc15567a8b5134d01b
+Description: HTTP library with thread-safe connection pooling for Python
+ urllib3 supports features left out of urllib and urllib2 libraries.
+ .
+   - Re-use the same socket connection for multiple requests (HTTPConnectionPool
+     and HTTPSConnectionPool) (with optional client-side certificate
+     verification).
+   - File posting (encode_multipart_formdata).
+   - Built-in redirection and retries (optional).
+   - Supports gzip and deflate decoding.
+   - Thread-safe and sanity-safe.
+   - Small and easy to understand codebase perfect for extending and
+     building upon.
+
+Package: python-user-agents
+Version: 0.3.2-0kali1
+Architecture: all
+Maintainer: Sophie Brun <sophie@freexian.com>
+Installed-Size: 39
+Depends: python (>= 2.7), python (<< 2.8), python-yaml, python-ua-parser
+Homepage: https://github.com/selwin/python-user-agents/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-user-agents/python-user-agents_0.3.2-0kali1_all.deb
+Size: 9112
+SHA256: 971db44898830db1439a10fdaa84b8fdf62b44603dc8a754d0ecadee8c91943c
+SHA1: a9c72ca63a177eb674a2c8b62a06c9a9fe82a91d
+MD5sum: c9d398b57ca2f702ce7aa0af9bacf726
+Description: library to identify devices and their user agent
+ This package contains a Python library that provides an easy way to
+ identify/detect devices like mobile phones, tablets and their capabilities
+ by parsing (browser/HTTP) user agent strings. The goal is to reliably detect
+ whether:
+   * User agent is a mobile, tablet or PC based device
+   * User agent has touch capabilities (has touch screen)
+
+Package: python-watchdog
+Version: 0.8.3-2
+Architecture: all
+Maintainer: Gustavo Panizzo <gfa@zumbi.com.ar>
+Installed-Size: 952
+Depends: python, python-pathtools, python-argh, python-yaml, python:any (<< 2.8), libjs-sphinxdoc (>= 1.0)
+Homepage: http://github.com/gorakhargosh/watchdog
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-watchdog/python-watchdog_0.8.3-2_all.deb
+Size: 182644
+SHA256: fe3cd8c25cc509ad9d2a7326a2d3c2848d55dde3a9d107c509f19c947fb284a9
+SHA1: 8b79d31d73d735fe0d609ae02f13e4463d6332c2
+MD5sum: 4209b2de9379e05b77e3e0306bed4781
+Description: Python API and shell utilities to monitor file system events - Python 2.x
+ Watchdog comes with a utility script called watchmedo. It can be used to
+ execute commands in response to events.
+ .
+ This is the Python 2.X version.
+
+Package: python-wcwidth
+Source: wcwidth
+Version: 0.1.8+dfsg1-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 74
+Depends: python2:any (<< 2.8)
+Homepage: https://pypi.python.org/pypi/wcwidth
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/w/wcwidth/python-wcwidth_0.1.8+dfsg1-1_all.deb
+Size: 15004
+SHA256: c97204a9edd065540ea825110618963925f4c75a31260dd3f0dc2a803480d6d6
+SHA1: 570558fc53bddc8ec0b877ca8497345b5bb4e3b2
+MD5sum: bd36f4f7fe876cba9ecf30d41c23d2fd
+Description: determine printable width of a string on a terminal (Python 2)
+ wcwidth allows one to determine the printable width of a string on a terminal.
+ It provides functions similar to wcwidth(3) and wcswidth(3) for Python
+ programs.
+ .
+ This package provides the module for Python 2.
+
+Package: python-werkzeug
+Version: 1.0.0+dfsg1-1
+Architecture: all
+Maintainer: Python Modules Packaging Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 799
+Depends: libjs-jquery, python2:any (<< 2.8), python2:any (>= 2.7~)
+Recommends: python-openssl, python-pyinotify
+Suggests: ipython, python-genshi, python-greenlet, python-lxml, python-pkg-resources, python-pylibmc | python-memcache, python-redis, python-watchdog, python-werkzeug-doc
+Homepage: http://werkzeug.pocoo.org/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-werkzeug/python-werkzeug_1.0.0+dfsg1-1_all.deb
+Size: 192848
+SHA256: b92cebde4c99becf62d205e0ff4940e3838281002a14a3d7d9c2d8b5285a328c
+SHA1: fa296af92fe5d5ca2fa69019e6a6240ab59a4a2f
+MD5sum: 1531357ef91239328d4473bd68c9c72f
+Description: collection of utilities for WSGI applications (Python 2.x)
+ The Web Server Gateway Interface (WSGI) is a standard interface between web
+ server software and web applications written in Python.
+ .
+ Werkzeug is a lightweight library for interfacing with WSGI. It features
+ request and response objects, an interactive debugging system and a powerful
+ URI dispatcher. Combine with your choice of third party libraries and
+ middleware to easily create a custom application framework.
+ .
+ This package contains the Python 2.x module.
+
+Package: python3-chardet
+Source: chardet
+Version: 3.1.9
+Architecture: all
+Maintainer: Piotr Ożarowski <piotr@debian.org>
+Installed-Size: 412
+Depends: python3:any, python3-pkg-resources
+Multi-Arch: foreign
+Homepage: https://github.com/chardet/chardet
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/c/chardet/python3-chardet_3.1.9_all.deb
+Size: 75860
+SHA256: 603137a3a952a4fbc02eab0467247f3a480b173ed081bf5a9324af301f12dc07
+SHA1: 17a6ff39fec5fac1e5b71a3b69897a86cad33294
+MD5sum: 6d983f9fa08049324a51be6bafa7192d
+Description: universal character encoding detector for Python3
+ Chardet takes a sequence of bytes in an unknown character encoding, and
+ attempts to determine the encoding.
+ .
+ Supported encodings:
+  * ASCII, UTF-8, UTF-16 (2 variants), UTF-32 (4 variants)
+  * Big5, GB2312, EUC-TW, HZ-GB-2312, ISO-2022-CN (Traditional and Simplified
+    Chinese)
+  * EUC-JP, SHIFT_JIS, ISO-2022-JP (Japanese)
+  * EUC-KR, ISO-2022-KR (Korean)
+  * KOI8-R, MacCyrillic, IBM855, IBM866, ISO-8859-5, windows-1251 (Cyrillic)
+  * ISO-8859-2, windows-1250 (Hungarian)
+  * ISO-8859-5, windows-1251 (Bulgarian)
+  * windows-1252 (English)
+  * ISO-8859-7, windows-1253 (Greek)
+  * ISO-8859-8, windows-1255 (Visual and Logical Hebrew)
+  * TIS-620 (Thai)
+ .
+ This library is a port of the auto-detection code in Mozilla.
+ .
+ This package contains the Python 3 version of the library.
+
+Package: python3-impacket
+Source: impacket
+Version: 9.9.21
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 5707
+Depends: python3-flask, python3-ldap3, python3-ldapdomaindump, python3-openssl, python3-pyasn1 (>= 0.2.3), python3-pycryptodome, python3-six, python3:any, python3-pkg-resources
+Homepage: https://github.com/CoreSecurity/impacket
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/i/impacket/python3-impacket_9.9.21_all.deb
+Size: 672972
+SHA256: ba83d3cafd0e18b16d84312113365f4034b5452c5a417e5fa2d3661f6cdb898c
+SHA1: c7cb6ba6df149de8568c534e2515c929241b2948
+MD5sum: 71b49428b1f1f56ed103dc4072d2c9d9
+Description: Python3 module to easily build and dissect network protocols
+ Impacket  is a  collection  of Python3  classes  focused on  providing
+ access  to network  packets.   Impacket allows  Python3 developers  to
+ craft and decode network packets in simple and consistent manner.  It
+ includes support for low-level protocols  such as IP, UDP and TCP, as
+ well as higher-level protocols such as NMB and SMB.
+ .
+ Impacket is highly  effective when used in conjunction  with a packet
+ capture utility or package such as Pcapy.  Packets can be constructed
+ from  scratch, as  well as  parsed from  raw data.   Furthermore, the
+ object  oriented API  makes  it  simple to  work  with deep  protocol
+ hierarchies.
+
+Package: python3-netaddr
+Source: python-netaddr
+Version: 9.7.19
+Architecture: all
+Maintainer: Vincent Bernat <bernat@debian.org>
+Installed-Size: 1056
+Depends: ieee-data, python3:any
+Suggests: ipython3, python-netaddr-docs
+Homepage: https://github.com/drkjam/netaddr/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/p/python-netaddr/python3-netaddr_9.7.19_all.deb
+Size: 232660
+SHA256: 6e57045218e54709a2ecbfc8649d0eb3bc8589c763ee9f9d316b43017921c86c
+SHA1: 31a927586b16252a27efac9345b310408b4f794e
+MD5sum: 713e03a79a9d5f79e7ffdaf2b3718639
+Description: manipulation of various common network address notations (Python 3)
+ netaddr is a Python library for the manipulation of various common
+ network address notations and representations.
+ .
+ It takes the hassle out of fiddling with enumerable variations of
+ network addresses presenting a consistent, extensible, easy-to-use
+ and (above all) Pythonic API.
+ .
+ With it you can validate, convert, categorise, iterate, generate,
+ slice (and dice):
+  - MAC (Media Access Control)
+  - IEEE EUI-48 and EUI-64
+  - IP version 4
+  - IP version 6
+  - CIDR (Classless Inter-Domain Routing)
+ .
+ This is the Python 3 version of the package.
+
+Package: python3-requests
+Source: requests
+Version: 2.24.3
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 232
+Depends: python3-certifi, python3-chardet, python3-idna, python3-urllib3, python3:any, ca-certificates, python3-urllib3
+Suggests: python3-cryptography, python3-idna, python3-openssl, python3-socks, python-requests-doc
+Breaks: awscli (<< 1.11.139)
+Homepage: http://python-requests.org
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/r/requests/python3-requests_2.24.3_all.deb
+Size: 70576
+SHA256: 71dc04aa71194adcb16f3dcdcbc3a09f1fe1fcf1e31af3718d6c7c0414c0b79d
+SHA1: 38472f6908508f447f22284a8f99eb34afd108b6
+MD5sum: a3c924a934babbb4c45add800e9a53b7
+Description: elegant and simple HTTP library for Python3, built for human beings
+ Requests allow you to send HTTP/1.1 requests. You can add headers, form data,
+ multipart files, and parameters with simple Python dictionaries, and access
+ the response data in the same way. It's powered by httplib and urllib3, but
+ it does all the hard work and crazy hacks for you.
+ .
+ Features
+ .
+   - International Domains and URLs
+   - Keep-Alive & Connection Pooling
+   - Sessions with Cookie Persistence
+   - Browser-style SSL Verification
+   - Basic/Digest Authentication
+   - Elegant Key/Value Cookies
+   - Automatic Decompression
+   - Unicode Response Bodies
+   - Multipart File Uploads
+   - Connection Timeouts
+ .
+ This package contains the Python 3 version of the library.
+
+Package: python3-scapy
+Source: scapy
+Version: 9.4.4
+Architecture: all
+Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
+Installed-Size: 38498
+Depends: python3:any, libjs-sphinxdoc (>= 2.4.3-5~), sphinx-rtd-theme-common (>= 0.5.0+dfsg)
+Recommends: ipython3, python3-cryptography, tcpdump
+Suggests: graphviz, python3-matplotlib, python3-pyx, sox, tcpreplay, wireshark
+Provides: scapy
+Homepage: https://scapy.net/
+Priority: optional
+Section: python
+Filename: pool/bleeding-edge/s/scapy/python3-scapy_9.4.4_all.deb
+Size: 774040
+SHA256: 2779be9271a72e577ed5e11ae839a4fe2274e5f10d80d5afc540e49b1ea1a24c
+SHA1: 04caad5fa723337544a33b975c63758f7a6aee7b
+MD5sum: 2c49154b033474ac91410646e5fd7424
+Description: Packet generator/sniffer and network scanner/discovery (Python 3)
+ Scapy is a powerful interactive packet manipulation tool, packet
+ generator, network scanner, network discovery, packet sniffer, etc. It
+ can for the moment replace hping, 85% of nmap, arpspoof, arp-sk, arping,
+ tcpdump, tethereal, p0f, ....
+ .
+ In scapy you define a set of packets, then it sends them, receives
+ answers, matches requests with answers and returns a list of packet couples
+ (request, answer) and a list of unmatched packets. This has the big advantage
+ over tools like nmap or hping that an answer is not reduced to
+ (open/closed/filtered), but is the whole packet.
+ .
+ This package contains the Python 3 version of the library and scapy executable.
+
+Package: sslstrip
+Version: 0.9-1kali3
+Architecture: all
+Maintainer: Chow Loong Jin <hyperair@ubuntu.com>
+Installed-Size: 89
+Depends: python-twisted-web, python (>= 2.7~)
+Homepage: http://www.thoughtcrime.org/software/sslstrip/
+Priority: optional
+Section: net
+Filename: pool/bleeding-edge/s/sslstrip/sslstrip_0.9-1kali3_all.deb
+Size: 11708
+SHA256: cd1a77a602bdb73f1f7f2663b6ab63056db133358cafb989b43df10d3968c8d4
+SHA1: 37b2101a71e175ef7277290b935fb7265d4452b7
+MD5sum: 8e6657eb4c9c3b068bf2655d87d4b91e
+Description: SSL/TLS man-in-the-middle attack tool
+ sslstrip is a tool that transparently hijacks HTTP traffic on a network, watch
+ for HTTPS links and redirects, and then map those links into look-alike HTTP
+ links or homograph-similar HTTPS links. It also supports modes for supplying a
+ favicon which looks like a lock icon, selective logging, and session
+ denial.
+

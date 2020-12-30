@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>watchdog.observers.polling &mdash; watchdog 0.8.3 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="watchdog 0.8.3 documentation" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../../../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">watchdog 0.8.3 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for watchdog.observers.polling</h1><div class="highlight"><pre>
+<span class="c">#!/usr/bin/env python</span>
+<span class="c"># -*- coding: utf-8 -*-</span>
+<span class="c">#</span>
+<span class="c"># Copyright 2011 Yesudeep Mangalapilly &lt;yesudeep@gmail.com&gt;</span>
+<span class="c"># Copyright 2012 Google, Inc.</span>
+<span class="c">#</span>
+<span class="c"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c"># you may not use this file except in compliance with the License.</span>
+<span class="c"># You may obtain a copy of the License at</span>
+<span class="c">#</span>
+<span class="c">#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c">#</span>
+<span class="c"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c"># See the License for the specific language governing permissions and</span>
+<span class="c"># limitations under the License.</span>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">:module: watchdog.observers.polling</span>
+<span class="sd">:synopsis: Polling emitter implementation.</span>
+<span class="sd">:author: yesudeep@google.com (Yesudeep Mangalapilly)</span>
+
+<span class="sd">Classes</span>
+<span class="sd">-------</span>
+<span class="sd">.. autoclass:: PollingObserver</span>
+<span class="sd">   :members:</span>
+<span class="sd">   :show-inheritance:</span>
+
+<span class="sd">.. autoclass:: PollingObserverVFS</span>
+<span class="sd">   :members:</span>
+<span class="sd">   :show-inheritance:</span>
+<span class="sd">   :special-members:</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">with_statement</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">from</span> <span class="nn">watchdog.utils</span> <span class="kn">import</span> <span class="n">stat</span> <span class="k">as</span> <span class="n">default_stat</span>
+<span class="kn">from</span> <span class="nn">watchdog.utils.dirsnapshot</span> <span class="kn">import</span> <span class="n">DirectorySnapshot</span><span class="p">,</span> <span class="n">DirectorySnapshotDiff</span>
+<span class="kn">from</span> <span class="nn">watchdog.observers.api</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">EventEmitter</span><span class="p">,</span>
+    <span class="n">BaseObserver</span><span class="p">,</span>
+    <span class="n">DEFAULT_OBSERVER_TIMEOUT</span><span class="p">,</span>
+    <span class="n">DEFAULT_EMITTER_TIMEOUT</span>
+<span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">watchdog.events</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">DirMovedEvent</span><span class="p">,</span>
+    <span class="n">DirDeletedEvent</span><span class="p">,</span>
+    <span class="n">DirCreatedEvent</span><span class="p">,</span>
+    <span class="n">DirModifiedEvent</span><span class="p">,</span>
+    <span class="n">FileMovedEvent</span><span class="p">,</span>
+    <span class="n">FileDeletedEvent</span><span class="p">,</span>
+    <span class="n">FileCreatedEvent</span><span class="p">,</span>
+    <span class="n">FileModifiedEvent</span>
+<span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">PollingEmitter</span><span class="p">(</span><span class="n">EventEmitter</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Platform-independent emitter that polls a directory to detect file</span>
+<span class="sd">    system changes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event_queue</span><span class="p">,</span> <span class="n">watch</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">DEFAULT_EMITTER_TIMEOUT</span><span class="p">,</span>
+                 <span class="n">stat</span><span class="o">=</span><span class="n">default_stat</span><span class="p">,</span> <span class="n">listdir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">):</span>
+        <span class="n">EventEmitter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event_queue</span><span class="p">,</span> <span class="n">watch</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snapshot</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_take_snapshot</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">DirectorySnapshot</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">watch</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">watch</span><span class="o">.</span><span class="n">is_recursive</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="n">stat</span><span class="p">,</span> <span class="n">listdir</span><span class="o">=</span><span class="n">listdir</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">on_thread_start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snapshot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_take_snapshot</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">queue_events</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
+        <span class="c"># We don&#39;t want to hit the disk continuously.</span>
+        <span class="c"># timeout behaves like an interval for polling emitters.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">stopped_event</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">timeout</span><span class="p">):</span>
+            <span class="k">return</span>
+
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">should_keep_running</span><span class="p">():</span>
+                <span class="k">return</span>
+
+            <span class="c"># Get event diff between fresh snapshot and previous snapshot.</span>
+            <span class="c"># Update snapshot.</span>
+            <span class="n">new_snapshot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_take_snapshot</span><span class="p">()</span>
+            <span class="n">events</span> <span class="o">=</span> <span class="n">DirectorySnapshotDiff</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_snapshot</span><span class="p">,</span> <span class="n">new_snapshot</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_snapshot</span> <span class="o">=</span> <span class="n">new_snapshot</span>
+
+            <span class="c"># Files.</span>
+            <span class="k">for</span> <span class="n">src_path</span> <span class="ow">in</span> <span class="n">events</span><span class="o">.</span><span class="n">files_deleted</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">queue_event</span><span class="p">(</span><span class="n">FileDeletedEvent</span><span class="p">(</span><span class="n">src_path</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">src_path</span> <span class="ow">in</span> <span class="n">events</span><span class="o">.</span><span class="n">files_modified</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">queue_event</span><span class="p">(</span><span class="n">FileModifiedEvent</span><span class="p">(</span><span class="n">src_path</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">src_path</span> <span class="ow">in</span> <span class="n">events</span><span class="o">.</span><span class="n">files_created</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">queue_event</span><span class="p">(</span><span class="n">FileCreatedEvent</span><span class="p">(</span><span class="n">src_path</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">src_path</span><span class="p">,</span> <span class="n">dest_path</span> <span class="ow">in</span> <span class="n">events</span><span class="o">.</span><span class="n">files_moved</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">queue_event</span><span class="p">(</span><span class="n">FileMovedEvent</span><span class="p">(</span><span class="n">src_path</span><span class="p">,</span> <span class="n">dest_path</span><span class="p">))</span>
+
+            <span class="c"># Directories.</span>
+            <span class="k">for</span> <span class="n">src_path</span> <span class="ow">in</span> <span class="n">events</span><span class="o">.</span><span class="n">dirs_deleted</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">queue_event</span><span class="p">(</span><span class="n">DirDeletedEvent</span><span class="p">(</span><span class="n">src_path</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">src_path</span> <span class="ow">in</span> <span class="n">events</span><span class="o">.</span><span class="n">dirs_modified</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">queue_event</span><span class="p">(</span><span class="n">DirModifiedEvent</span><span class="p">(</span><span class="n">src_path</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">src_path</span> <span class="ow">in</span> <span class="n">events</span><span class="o">.</span><span class="n">dirs_created</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">queue_event</span><span class="p">(</span><span class="n">DirCreatedEvent</span><span class="p">(</span><span class="n">src_path</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">src_path</span><span class="p">,</span> <span class="n">dest_path</span> <span class="ow">in</span> <span class="n">events</span><span class="o">.</span><span class="n">dirs_moved</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">queue_event</span><span class="p">(</span><span class="n">DirMovedEvent</span><span class="p">(</span><span class="n">src_path</span><span class="p">,</span> <span class="n">dest_path</span><span class="p">))</span>
+
+
+<div class="viewcode-block" id="PollingObserver"><a class="viewcode-back" href="../../../api.html#watchdog.observers.polling.PollingObserver">[docs]</a><span class="k">class</span> <span class="nc">PollingObserver</span><span class="p">(</span><span class="n">BaseObserver</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Platform-independent observer that polls a directory to detect file</span>
+<span class="sd">    system changes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">DEFAULT_OBSERVER_TIMEOUT</span><span class="p">):</span>
+        <span class="n">BaseObserver</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">emitter_class</span><span class="o">=</span><span class="n">PollingEmitter</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="PollingObserverVFS"><a class="viewcode-back" href="../../../api.html#watchdog.observers.polling.PollingObserverVFS">[docs]</a><span class="k">class</span> <span class="nc">PollingObserverVFS</span><span class="p">(</span><span class="n">BaseObserver</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    File system independent observer that polls a directory to detect changes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="PollingObserverVFS.__init__"><a class="viewcode-back" href="../../../api.html#watchdog.observers.polling.PollingObserverVFS.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stat</span><span class="p">,</span> <span class="n">listdir</span><span class="p">,</span> <span class="n">polling_interval</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param stat: stat function. See ``os.stat`` for details.</span>
+<span class="sd">        :param listdir: listdir function. See ``os.listdir`` for details.</span>
+<span class="sd">        :type polling_interval: float</span>
+<span class="sd">        :param polling_interval: interval in seconds between polling the file system.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">emitter_cls</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">PollingEmitter</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="n">stat</span><span class="p">,</span> <span class="n">listdir</span><span class="o">=</span><span class="n">listdir</span><span class="p">)</span>
+        <span class="n">BaseObserver</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">emitter_class</span><span class="o">=</span><span class="n">emitter_cls</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">polling_interval</span><span class="p">)</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">watchdog 0.8.3 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2010, Yesudeep Mangalapilly.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

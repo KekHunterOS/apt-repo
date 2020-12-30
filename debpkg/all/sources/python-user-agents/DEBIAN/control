@@ -1,0 +1,16 @@
+Package: python-user-agents
+Version: 0.3.2-0kali1
+Architecture: all
+Maintainer: Sophie Brun <sophie@freexian.com>
+Installed-Size: 39
+Depends: python (>= 2.7), python (<< 2.8), python-yaml, python-ua-parser
+Section: python
+Priority: optional
+Homepage: https://github.com/selwin/python-user-agents/
+Description: library to identify devices and their user agent
+ This package contains a Python library that provides an easy way to
+ identify/detect devices like mobile phones, tablets and their capabilities
+ by parsing (browser/HTTP) user agent strings. The goal is to reliably detect
+ whether:
+   * User agent is a mobile, tablet or PC based device
+   * User agent has touch capabilities (has touch screen)

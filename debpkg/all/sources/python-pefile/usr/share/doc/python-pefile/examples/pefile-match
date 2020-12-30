@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+
+import os
+import pefile
+import peutils
+import sys
+
+def dirwalk(path):
+    for f in os.listdir(path):
+        fullpath = os.path.join(path, f)
+        if os.path.isdir(fullpath) and not os.path.islink(fullpath):
+            for x in dirwalk(fullpath):
+                yield x
+        else:
+            yield fullpath
+
+def main(sigfile, path):
+    sigs = peutils.SignatureDatabase(sigfile)
+
+    def print_match(f):
+            try:
+                res = sigs.match_all(pefile.PE(f, fast_load=True), ep_only=True)
+                if not res:
+                    res = 'no match'
+                print '%s: %s' % (f, res)
+            except pefile.PEFormatError, e:
+                print '%s: %s' % (f, str(e).strip("'"))
+            except KeyboardInterrupt:
+                sys.exit(1)
+    
+    if os.path.isfile(path):
+        print_match(path)
+    elif os.path.isdir(path):
+        for f in dirwalk(path):
+            if os.path.isfile(f):
+                print_match(f)
+
+if __name__ == '__main__':
+    if len(sys.argv) != 3:
+        print >>sys.stderr, 'usage: %s <signature file> <file or directory>' % sys.argv[0]
+        sys.exit(1)
+    main(sys.argv[1], sys.argv[2])

@@ -1,0 +1,17 @@
+Package: python-ipython-genutils
+Source: ipython-genutils
+Version: 0.2.0-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 84
+Depends: python:any (<< 2.8)
+Section: python
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://github.com/ipython/ipython_genutils
+Description: IPython vestigial utilities for Python 2
+ Contains some utilities shared by the IPython and Jupyter projects.
+ .
+ No new code should be written against those utilities.
+ .
+ This package installs the library for Python 2.

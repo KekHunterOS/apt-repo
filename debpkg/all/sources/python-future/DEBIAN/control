@@ -1,0 +1,20 @@
+Package: python-future
+Version: 0.15.2-4
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 1710
+Depends: python:any (<< 2.8), python-configparser
+Suggests: python-future-doc
+Section: python
+Priority: optional
+Homepage: https://python-future.org
+Description: single-source support for Python 3 and 2 - Python 2.x
+ Future is the missing compatibility layer between Python 2 and Python 3. It
+ allows one to use a single, clean Python 3.x-compatible codebase to support
+ both Python 2 and Python 3 with minimal overhead.
+ .
+ The imports have no effect on Python 3. On Python 2, they shadow the
+ corresponding builtins, which normally have different semantics on Python 3
+ versus 2, to provide their Python 3 semantics.
+ .
+ This package contains the Python 2.x module.

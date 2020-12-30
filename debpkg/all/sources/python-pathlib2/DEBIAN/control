@@ -1,0 +1,16 @@
+Package: python-pathlib2
+Version: 2.3.5-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 83
+Depends: python-six, python2:any (<< 2.8), python-scandir
+Section: python
+Priority: optional
+Homepage: https://pypi.org/project/pathlib2
+Description: Backport of the "pathlib" stdlib module (Python 2)
+ The old pathlib module on bitbucket is in bugfix-only mode. The goal of
+ pathlib2 is to provide a backport of standard pathlib module which tracks
+ the standard library module, so all the newest features of the standard
+ pathlib can be used also on older Python versions.
+ .
+ This package is (obviously) for Python 2.

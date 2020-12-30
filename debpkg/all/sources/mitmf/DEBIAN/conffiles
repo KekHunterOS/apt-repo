@@ -1,0 +1,13 @@
+/etc/mitmf/app_cache_poison_templates/default.append
+/etc/mitmf/app_cache_poison_templates/default.manifest
+/etc/mitmf/app_cache_poison_templates/facebook.append
+/etc/mitmf/app_cache_poison_templates/facebook.manifest
+/etc/mitmf/app_cache_poison_templates/script.append
+/etc/mitmf/app_cache_poison_templates/test.replace
+/etc/mitmf/hta_driveby/flash_setup.hta
+/etc/mitmf/mitmf.conf
+/etc/mitmf/responder/AccessDenied.html
+/etc/mitmf/responder/BindShell.exe
+/etc/mitmf/responder/gen-self-signed-cert.sh
+/etc/mitmf/responder/responder.crt
+/etc/mitmf/responder/responder.key

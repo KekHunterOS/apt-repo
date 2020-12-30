@@ -1,0 +1,2 @@
+# this gets copied to newly created profile directories
+package-contains-documentation-outside-usr-share-doc usr/lib/python2.7/dist-packages/IPython/core/profile/README_STARTUP

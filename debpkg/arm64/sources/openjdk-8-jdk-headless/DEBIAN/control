@@ -1,0 +1,20 @@
+Package: openjdk-8-jdk-headless
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: arm64
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 38471
+Depends: openjdk-8-jre-headless (= 8u212-b01-1), libc6 (>= 2.17), zlib1g (>= 1:1.1.4)
+Suggests: openjdk-8-demo, openjdk-8-source
+Replaces: openjdk-8-jdk (<< 8u72-b15-4)
+Provides: java-sdk-headless, java2-sdk-headless, java5-sdk-headless, java6-sdk-headless, java7-sdk-headless, java8-sdk-headless
+Section: java
+Priority: optional
+Multi-Arch: same
+Homepage: http://openjdk.java.net/
+Description: OpenJDK Development Kit (JDK) (headless)
+ OpenJDK is a development environment for building applications,
+ applets, and components using the Java programming language.
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.

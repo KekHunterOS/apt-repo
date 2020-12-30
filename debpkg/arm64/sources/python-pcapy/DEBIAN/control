@@ -1,0 +1,21 @@
+Package: python-pcapy
+Source: pcapy (0.10.8-1)
+Version: 0.10.8-1+b1
+Architecture: arm64
+Maintainer: Arnaud Fontaine <arnau@debian.org>
+Installed-Size: 90
+Depends: python (>= 2.7), python (<< 2.8), libgcc1 (>= 1:4.7), libpcap0.8 (>= 0.9.8), libstdc++6 (>= 4.1.1)
+Recommends: python-impacket
+Suggests: doc-base
+Provides: python2.7-pcapy
+Section: python
+Priority: optional
+Homepage: http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=tool&name=Pcapy
+Description: Python interface to the libpcap packet capture library
+ Pcapy is a  Python extension module that interfaces  with the libpcap
+ packet capture library.
+ .
+ Pcapy enables Python scripts to capture packets on the network. Pcapy
+ is highly  effective when used in conjunction  with a packet-handling
+ package such as Impacket, which is a collection of Python classes for
+ constructing and dissecting network packets.

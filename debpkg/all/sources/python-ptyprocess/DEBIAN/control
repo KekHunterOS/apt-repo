@@ -1,0 +1,21 @@
+Package: python-ptyprocess
+Source: ptyprocess
+Version: 0.6.0-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 53
+Depends: python:any (<< 2.8)
+Section: python
+Priority: optional
+Homepage: https://github.com/pexpect/ptyprocess
+Description: Run a subprocess in a pseudo terminal from Python 2
+ Launch a subprocess in a pseudo terminal (pty), and interact with both
+ the process and its pty.
+ .
+ Sometimes, piping stdin and stdout is not enough. There might be a password
+ prompt that doesn't read from stdin, output that changes when it's going to
+ a pipe rather than a terminal, or curses-style interfaces that rely on a
+ terminal. If you need to automate these things, running the process in a
+ pseudo terminal (pty) is the answer.
+ .
+ This package installs the library for Python 2.

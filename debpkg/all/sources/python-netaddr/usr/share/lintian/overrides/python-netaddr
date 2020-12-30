@@ -1,0 +1,2 @@
+python-netaddr: package-install-ieee-data usr/lib/python2.7/dist-packages/netaddr/eui/iab.idx
+python-netaddr: package-install-ieee-data usr/lib/python2.7/dist-packages/netaddr/eui/oui.idx

@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: file-magic
+Version: 0.3.0
+Summary: (official) libmagic Python bindings
+Home-page: https://github.com/file/file
+Author: Reuben Thomas, Álvaro Justen
+Author-email: rrt@sc3d.org, alvarojusten@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

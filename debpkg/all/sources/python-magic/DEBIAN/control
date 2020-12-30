@@ -1,0 +1,14 @@
+Package: python-magic
+Source: file
+Version: 1:5.32-1
+Architecture: all
+Maintainer: Christoph Biedl <debian.axhn@manchmal.in-ulm.de>
+Installed-Size: 75
+Depends: python:any (<< 2.8), libmagic1, libmagic1
+Provides: python2.7-magic
+Section: python
+Priority: optional
+Homepage: http://www.darwinsys.com/file/
+Description: Recognize the type of data in a file using "magic" numbers - Python bindings
+ This package contains the Python bindings for the libmagic file type
+ detection library.

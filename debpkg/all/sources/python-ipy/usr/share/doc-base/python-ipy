@@ -1,0 +1,9 @@
+Document: python-ipy
+Title: python-IPy Manual
+Author: Victor Stinner
+Abstract: This manual describes what python-IPy is, and how it can be used.
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-ipy/IPy.html
+Files: /usr/share/doc/python-ipy/*.html

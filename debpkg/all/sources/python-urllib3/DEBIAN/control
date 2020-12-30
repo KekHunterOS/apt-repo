@@ -1,0 +1,23 @@
+Package: python-urllib3
+Version: 1.21.1-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 398
+Depends: python:any (<< 2.8), python-six
+Recommends: ca-certificates, python-cryptography, python-idna, python-ipaddress, python-openssl
+Suggests: python-ntlm, python-socks
+Section: python
+Priority: optional
+Homepage: http://urllib3.readthedocs.org
+Description: HTTP library with thread-safe connection pooling for Python
+ urllib3 supports features left out of urllib and urllib2 libraries.
+ .
+   - Re-use the same socket connection for multiple requests (HTTPConnectionPool
+     and HTTPSConnectionPool) (with optional client-side certificate
+     verification).
+   - File posting (encode_multipart_formdata).
+   - Built-in redirection and retries (optional).
+   - Supports gzip and deflate decoding.
+   - Thread-safe and sanity-safe.
+   - Small and easy to understand codebase perfect for extending and
+     building upon.

@@ -1,0 +1,19 @@
+Package: python-nfqueue
+Source: nfqueue-bindings (0.6-1)
+Version: 0.6-1+b3
+Architecture: arm64
+Maintainer: Pierre Chifflier <pollux@debian.org>
+Installed-Size: 101
+Depends: python (<< 2.8), python (>= 2.7~), python:any (<< 2.8), libnetfilter-queue1, libnfnetlink0, libpython2.7 (>= 2.7)
+Replaces: nfqueue-bindings-python
+Provides: python2.7-nfqueue
+Section: python
+Priority: extra
+Homepage: https://www.wzdftpd.net/redmine/projects/nfqueue-bindings/wiki/
+Description: Python bindings for nfqueue
+ nfqueue-bindings is a set of high-level modules for several languages
+ (Python and Perl, for the moment), for libnetfilter_queue.
+ It provides a userspace API to access packets that have been queued by
+ the kernel packet filter using the NFQUEUE target.
+ .
+ This package contains the Python bindings for nfqueue.

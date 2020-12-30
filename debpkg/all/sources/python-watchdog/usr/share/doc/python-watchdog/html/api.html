@@ -1,0 +1,1159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>API Reference &mdash; watchdog 0.8.3 documentation</title>
+    
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.8.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="watchdog 0.8.3 documentation" href="index.html" />
+    <link rel="next" title="Contributing" href="hacking.html" />
+    <link rel="prev" title="Quickstart" href="quickstart.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="hacking.html" title="Contributing"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="quickstart.html" title="Quickstart"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">watchdog 0.8.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-watchdog.events">
+<span id="watchdog-events"></span><h2><cite>watchdog.events</cite><a class="headerlink" href="#module-watchdog.events" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">watchdog.events</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">File system events and event handlers.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body"><a class="reference external" href="mailto:yesudeep&#37;&#52;&#48;google&#46;com">yesudeep<span>&#64;</span>google<span>&#46;</span>com</a> (Yesudeep Mangalapilly)</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="event-classes">
+<h3>Event Classes<a class="headerlink" href="#event-classes" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="watchdog.events.FileSystemEvent">
+<em class="property">class </em><code class="descclassname">watchdog.events.</code><code class="descname">FileSystemEvent</code><span class="sig-paren">(</span><em>src_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#FileSystemEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.FileSystemEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Immutable type that represents a file system event that is triggered
+when a change occurs on the monitored file system.</p>
+<p>All FileSystemEvent objects are required to be immutable and hence
+can be used as keys in dictionaries or be added to sets.</p>
+<dl class="attribute">
+<dt id="watchdog.events.FileSystemEvent.event_type">
+<code class="descname">event_type</code><em class="property"> = None</em><a class="headerlink" href="#watchdog.events.FileSystemEvent.event_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the event as a string.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.events.FileSystemEvent.is_directory">
+<code class="descname">is_directory</code><em class="property"> = False</em><a class="headerlink" href="#watchdog.events.FileSystemEvent.is_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if event was emitted for a directory; False otherwise.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.events.FileSystemEvent.src_path">
+<code class="descname">src_path</code><a class="headerlink" href="#watchdog.events.FileSystemEvent.src_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source path of the file system object that triggered this event.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.events.FileSystemMovedEvent">
+<em class="property">class </em><code class="descclassname">watchdog.events.</code><code class="descname">FileSystemMovedEvent</code><span class="sig-paren">(</span><em>src_path</em>, <em>dest_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#FileSystemMovedEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.FileSystemMovedEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.events.FileSystemEvent" title="watchdog.events.FileSystemEvent"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemEvent</span></code></a></p>
+<p>File system event representing any kind of file system movement.</p>
+<dl class="attribute">
+<dt id="watchdog.events.FileSystemMovedEvent.dest_path">
+<code class="descname">dest_path</code><a class="headerlink" href="#watchdog.events.FileSystemMovedEvent.dest_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The destination path of the move event.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.events.FileMovedEvent">
+<em class="property">class </em><code class="descclassname">watchdog.events.</code><code class="descname">FileMovedEvent</code><span class="sig-paren">(</span><em>src_path</em>, <em>dest_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#FileMovedEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.FileMovedEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.events.FileSystemMovedEvent" title="watchdog.events.FileSystemMovedEvent"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemMovedEvent</span></code></a></p>
+<p>File system event representing file movement on the file system.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.events.DirMovedEvent">
+<em class="property">class </em><code class="descclassname">watchdog.events.</code><code class="descname">DirMovedEvent</code><span class="sig-paren">(</span><em>src_path</em>, <em>dest_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#DirMovedEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.DirMovedEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.events.FileSystemMovedEvent" title="watchdog.events.FileSystemMovedEvent"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemMovedEvent</span></code></a></p>
+<p>File system event representing directory movement on the file system.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.events.FileModifiedEvent">
+<em class="property">class </em><code class="descclassname">watchdog.events.</code><code class="descname">FileModifiedEvent</code><span class="sig-paren">(</span><em>src_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#FileModifiedEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.FileModifiedEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.events.FileSystemEvent" title="watchdog.events.FileSystemEvent"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemEvent</span></code></a></p>
+<p>File system event representing file modification on the file system.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.events.DirModifiedEvent">
+<em class="property">class </em><code class="descclassname">watchdog.events.</code><code class="descname">DirModifiedEvent</code><span class="sig-paren">(</span><em>src_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#DirModifiedEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.DirModifiedEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.events.FileSystemEvent" title="watchdog.events.FileSystemEvent"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemEvent</span></code></a></p>
+<p>File system event representing directory modification on the file system.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.events.FileCreatedEvent">
+<em class="property">class </em><code class="descclassname">watchdog.events.</code><code class="descname">FileCreatedEvent</code><span class="sig-paren">(</span><em>src_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#FileCreatedEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.FileCreatedEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.events.FileSystemEvent" title="watchdog.events.FileSystemEvent"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemEvent</span></code></a></p>
+<p>File system event representing file creation on the file system.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.events.DirCreatedEvent">
+<em class="property">class </em><code class="descclassname">watchdog.events.</code><code class="descname">DirCreatedEvent</code><span class="sig-paren">(</span><em>src_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#DirCreatedEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.DirCreatedEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.events.FileSystemEvent" title="watchdog.events.FileSystemEvent"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemEvent</span></code></a></p>
+<p>File system event representing directory creation on the file system.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.events.FileDeletedEvent">
+<em class="property">class </em><code class="descclassname">watchdog.events.</code><code class="descname">FileDeletedEvent</code><span class="sig-paren">(</span><em>src_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#FileDeletedEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.FileDeletedEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.events.FileSystemEvent" title="watchdog.events.FileSystemEvent"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemEvent</span></code></a></p>
+<p>File system event representing file deletion on the file system.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.events.DirDeletedEvent">
+<em class="property">class </em><code class="descclassname">watchdog.events.</code><code class="descname">DirDeletedEvent</code><span class="sig-paren">(</span><em>src_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#DirDeletedEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.DirDeletedEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.events.FileSystemEvent" title="watchdog.events.FileSystemEvent"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemEvent</span></code></a></p>
+<p>File system event representing directory deletion on the file system.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="event-handler-classes">
+<h3>Event Handler Classes<a class="headerlink" href="#event-handler-classes" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="watchdog.events.FileSystemEventHandler">
+<em class="property">class </em><code class="descclassname">watchdog.events.</code><code class="descname">FileSystemEventHandler</code><a class="reference internal" href="_modules/watchdog/events.html#FileSystemEventHandler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.FileSystemEventHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Base file system event handler that you can override methods from.</p>
+<dl class="method">
+<dt id="watchdog.events.FileSystemEventHandler.dispatch">
+<code class="descname">dispatch</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#FileSystemEventHandler.dispatch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.FileSystemEventHandler.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches events to the appropriate methods.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<a class="reference internal" href="#watchdog.events.FileSystemEvent" title="watchdog.events.FileSystemEvent"><code class="xref py py-class docutils literal"><span class="pre">FileSystemEvent</span></code></a>) &#8211; The event object representing the file system event.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.events.FileSystemEventHandler.on_any_event">
+<code class="descname">on_any_event</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#FileSystemEventHandler.on_any_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.FileSystemEventHandler.on_any_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Catch-all event handler.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<a class="reference internal" href="#watchdog.events.FileSystemEvent" title="watchdog.events.FileSystemEvent"><code class="xref py py-class docutils literal"><span class="pre">FileSystemEvent</span></code></a>) &#8211; The event object representing the file system event.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.events.FileSystemEventHandler.on_created">
+<code class="descname">on_created</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#FileSystemEventHandler.on_created"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.FileSystemEventHandler.on_created" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a file or directory is created.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<a class="reference internal" href="#watchdog.events.DirCreatedEvent" title="watchdog.events.DirCreatedEvent"><code class="xref py py-class docutils literal"><span class="pre">DirCreatedEvent</span></code></a> or <a class="reference internal" href="#watchdog.events.FileCreatedEvent" title="watchdog.events.FileCreatedEvent"><code class="xref py py-class docutils literal"><span class="pre">FileCreatedEvent</span></code></a>) &#8211; Event representing file/directory creation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.events.FileSystemEventHandler.on_deleted">
+<code class="descname">on_deleted</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#FileSystemEventHandler.on_deleted"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.FileSystemEventHandler.on_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a file or directory is deleted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<a class="reference internal" href="#watchdog.events.DirDeletedEvent" title="watchdog.events.DirDeletedEvent"><code class="xref py py-class docutils literal"><span class="pre">DirDeletedEvent</span></code></a> or <a class="reference internal" href="#watchdog.events.FileDeletedEvent" title="watchdog.events.FileDeletedEvent"><code class="xref py py-class docutils literal"><span class="pre">FileDeletedEvent</span></code></a>) &#8211; Event representing file/directory deletion.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.events.FileSystemEventHandler.on_modified">
+<code class="descname">on_modified</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#FileSystemEventHandler.on_modified"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.FileSystemEventHandler.on_modified" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a file or directory is modified.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<a class="reference internal" href="#watchdog.events.DirModifiedEvent" title="watchdog.events.DirModifiedEvent"><code class="xref py py-class docutils literal"><span class="pre">DirModifiedEvent</span></code></a> or <a class="reference internal" href="#watchdog.events.FileModifiedEvent" title="watchdog.events.FileModifiedEvent"><code class="xref py py-class docutils literal"><span class="pre">FileModifiedEvent</span></code></a>) &#8211; Event representing file/directory modification.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.events.FileSystemEventHandler.on_moved">
+<code class="descname">on_moved</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#FileSystemEventHandler.on_moved"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.FileSystemEventHandler.on_moved" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a file or a directory is moved or renamed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<a class="reference internal" href="#watchdog.events.DirMovedEvent" title="watchdog.events.DirMovedEvent"><code class="xref py py-class docutils literal"><span class="pre">DirMovedEvent</span></code></a> or <a class="reference internal" href="#watchdog.events.FileMovedEvent" title="watchdog.events.FileMovedEvent"><code class="xref py py-class docutils literal"><span class="pre">FileMovedEvent</span></code></a>) &#8211; Event representing file/directory movement.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.events.PatternMatchingEventHandler">
+<em class="property">class </em><code class="descclassname">watchdog.events.</code><code class="descname">PatternMatchingEventHandler</code><span class="sig-paren">(</span><em>patterns=None</em>, <em>ignore_patterns=None</em>, <em>ignore_directories=False</em>, <em>case_sensitive=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#PatternMatchingEventHandler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.PatternMatchingEventHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.events.FileSystemEventHandler" title="watchdog.events.FileSystemEventHandler"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemEventHandler</span></code></a></p>
+<p>Matches given patterns with file paths associated with occurring events.</p>
+<dl class="attribute">
+<dt id="watchdog.events.PatternMatchingEventHandler.case_sensitive">
+<code class="descname">case_sensitive</code><a class="headerlink" href="#watchdog.events.PatternMatchingEventHandler.case_sensitive" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Read-only)
+<code class="docutils literal"><span class="pre">True</span></code> if path names should be matched sensitive to case; <code class="docutils literal"><span class="pre">False</span></code>
+otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.events.PatternMatchingEventHandler.dispatch">
+<code class="descname">dispatch</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#PatternMatchingEventHandler.dispatch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.PatternMatchingEventHandler.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches events to the appropriate methods.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<a class="reference internal" href="#watchdog.events.FileSystemEvent" title="watchdog.events.FileSystemEvent"><code class="xref py py-class docutils literal"><span class="pre">FileSystemEvent</span></code></a>) &#8211; The event object representing the file system event.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.events.PatternMatchingEventHandler.ignore_directories">
+<code class="descname">ignore_directories</code><a class="headerlink" href="#watchdog.events.PatternMatchingEventHandler.ignore_directories" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Read-only)
+<code class="docutils literal"><span class="pre">True</span></code> if directories should be ignored; <code class="docutils literal"><span class="pre">False</span></code> otherwise.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.events.PatternMatchingEventHandler.ignore_patterns">
+<code class="descname">ignore_patterns</code><a class="headerlink" href="#watchdog.events.PatternMatchingEventHandler.ignore_patterns" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Read-only)
+Patterns to ignore matching event paths.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.events.PatternMatchingEventHandler.patterns">
+<code class="descname">patterns</code><a class="headerlink" href="#watchdog.events.PatternMatchingEventHandler.patterns" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Read-only)
+Patterns to allow matching event paths.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.events.RegexMatchingEventHandler">
+<em class="property">class </em><code class="descclassname">watchdog.events.</code><code class="descname">RegexMatchingEventHandler</code><span class="sig-paren">(</span><em>regexes=['.*'], ignore_regexes=[], ignore_directories=False, case_sensitive=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#RegexMatchingEventHandler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.RegexMatchingEventHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.events.FileSystemEventHandler" title="watchdog.events.FileSystemEventHandler"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemEventHandler</span></code></a></p>
+<p>Matches given regexes with file paths associated with occurring events.</p>
+<dl class="attribute">
+<dt id="watchdog.events.RegexMatchingEventHandler.case_sensitive">
+<code class="descname">case_sensitive</code><a class="headerlink" href="#watchdog.events.RegexMatchingEventHandler.case_sensitive" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Read-only)
+<code class="docutils literal"><span class="pre">True</span></code> if path names should be matched sensitive to case; <code class="docutils literal"><span class="pre">False</span></code>
+otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.events.RegexMatchingEventHandler.dispatch">
+<code class="descname">dispatch</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/events.html#RegexMatchingEventHandler.dispatch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.RegexMatchingEventHandler.dispatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dispatches events to the appropriate methods.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<a class="reference internal" href="#watchdog.events.FileSystemEvent" title="watchdog.events.FileSystemEvent"><code class="xref py py-class docutils literal"><span class="pre">FileSystemEvent</span></code></a>) &#8211; The event object representing the file system event.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.events.RegexMatchingEventHandler.ignore_directories">
+<code class="descname">ignore_directories</code><a class="headerlink" href="#watchdog.events.RegexMatchingEventHandler.ignore_directories" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Read-only)
+<code class="docutils literal"><span class="pre">True</span></code> if directories should be ignored; <code class="docutils literal"><span class="pre">False</span></code> otherwise.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.events.RegexMatchingEventHandler.ignore_regexes">
+<code class="descname">ignore_regexes</code><a class="headerlink" href="#watchdog.events.RegexMatchingEventHandler.ignore_regexes" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Read-only)
+Regexes to ignore matching event paths.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.events.RegexMatchingEventHandler.regexes">
+<code class="descname">regexes</code><a class="headerlink" href="#watchdog.events.RegexMatchingEventHandler.regexes" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Read-only)
+Regexes to allow matching event paths.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.events.LoggingEventHandler">
+<em class="property">class </em><code class="descclassname">watchdog.events.</code><code class="descname">LoggingEventHandler</code><a class="reference internal" href="_modules/watchdog/events.html#LoggingEventHandler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.events.LoggingEventHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.events.FileSystemEventHandler" title="watchdog.events.FileSystemEventHandler"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemEventHandler</span></code></a></p>
+<p>Logs all the events captured.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-watchdog.observers.api">
+<span id="watchdog-observers-api"></span><h2><cite>watchdog.observers.api</cite><a class="headerlink" href="#module-watchdog.observers.api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="immutables">
+<h3>Immutables<a class="headerlink" href="#immutables" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="watchdog.observers.api.ObservedWatch">
+<em class="property">class </em><code class="descclassname">watchdog.observers.api.</code><code class="descname">ObservedWatch</code><span class="sig-paren">(</span><em>path</em>, <em>recursive</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/api.html#ObservedWatch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.api.ObservedWatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>An scheduled watch.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> &#8211; Path string.</li>
+<li><strong>recursive</strong> &#8211; <code class="docutils literal"><span class="pre">True</span></code> if watch is recursive; <code class="docutils literal"><span class="pre">False</span></code> otherwise.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="watchdog.observers.api.ObservedWatch.is_recursive">
+<code class="descname">is_recursive</code><a class="headerlink" href="#watchdog.observers.api.ObservedWatch.is_recursive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether subdirectories are watched for the path.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.observers.api.ObservedWatch.path">
+<code class="descname">path</code><a class="headerlink" href="#watchdog.observers.api.ObservedWatch.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path that this watch monitors.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="collections">
+<h3>Collections<a class="headerlink" href="#collections" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="watchdog.observers.api.EventQueue">
+<em class="property">class </em><code class="descclassname">watchdog.observers.api.</code><code class="descname">EventQueue</code><span class="sig-paren">(</span><em>maxsize=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/api.html#EventQueue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.api.EventQueue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">watchdog.utils.bricks.SkipRepeatsQueue</span></code></p>
+<p>Thread-safe event queue based on a special queue that skips adding
+the same event (<code class="xref py py-class docutils literal"><span class="pre">FileSystemEvent</span></code>) multiple times consecutively.
+Thus avoiding dispatching multiple event handling
+calls when multiple identical events are produced quicker than an observer
+can consume them.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="watchdog.observers.api.EventEmitter">
+<em class="property">class </em><code class="descclassname">watchdog.observers.api.</code><code class="descname">EventEmitter</code><span class="sig-paren">(</span><em>event_queue</em>, <em>watch</em>, <em>timeout=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/api.html#EventEmitter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.api.EventEmitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.utils.BaseThread" title="watchdog.utils.BaseThread"><code class="xref py py-class docutils literal"><span class="pre">watchdog.utils.BaseThread</span></code></a></p>
+<p>Producer thread base class subclassed by event emitters
+that generate events and populate a queue with them.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>event_queue</strong> (<code class="xref py py-class docutils literal"><span class="pre">watchdog.events.EventQueue</span></code>) &#8211; The event queue to populate with generated events.</li>
+<li><strong>watch</strong> (<a class="reference internal" href="#watchdog.observers.api.ObservedWatch" title="watchdog.observers.api.ObservedWatch"><code class="xref py py-class docutils literal"><span class="pre">ObservedWatch</span></code></a>) &#8211; The watch to observe and produce events for.</li>
+<li><strong>timeout</strong> (<code class="docutils literal"><span class="pre">float</span></code>) &#8211; Timeout (in seconds) between successive attempts at reading events.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="watchdog.observers.api.EventEmitter.queue_event">
+<code class="descname">queue_event</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/api.html#EventEmitter.queue_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.api.EventEmitter.queue_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queues a single event.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (An instance of <a class="reference internal" href="#watchdog.events.FileSystemEvent" title="watchdog.events.FileSystemEvent"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemEvent</span></code></a>
+or a subclass.) &#8211; Event to be queued.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.observers.api.EventEmitter.queue_events">
+<code class="descname">queue_events</code><span class="sig-paren">(</span><em>timeout</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/api.html#EventEmitter.queue_events"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.api.EventEmitter.queue_events" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override this method to populate the event queue with events
+per interval period.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timeout</strong> (<code class="docutils literal"><span class="pre">float</span></code>) &#8211; Timeout (in seconds) between successive attempts at
+reading events.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.observers.api.EventEmitter.timeout">
+<code class="descname">timeout</code><a class="headerlink" href="#watchdog.observers.api.EventEmitter.timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blocking timeout for reading events.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.observers.api.EventEmitter.watch">
+<code class="descname">watch</code><a class="headerlink" href="#watchdog.observers.api.EventEmitter.watch" title="Permalink to this definition">¶</a></dt>
+<dd><p>The watch associated with this emitter.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.observers.api.EventDispatcher">
+<em class="property">class </em><code class="descclassname">watchdog.observers.api.</code><code class="descname">EventDispatcher</code><span class="sig-paren">(</span><em>timeout=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/api.html#EventDispatcher"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.api.EventDispatcher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.utils.BaseThread" title="watchdog.utils.BaseThread"><code class="xref py py-class docutils literal"><span class="pre">watchdog.utils.BaseThread</span></code></a></p>
+<p>Consumer thread base class subclassed by event observer threads
+that dispatch events from an event queue to appropriate event handlers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timeout</strong> (<code class="docutils literal"><span class="pre">float</span></code>) &#8211; Event queue blocking timeout (in seconds).</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="watchdog.observers.api.EventDispatcher.dispatch_events">
+<code class="descname">dispatch_events</code><span class="sig-paren">(</span><em>event_queue</em>, <em>timeout</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/api.html#EventDispatcher.dispatch_events"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.api.EventDispatcher.dispatch_events" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override this method to consume events from an event queue, blocking
+on the queue for the specified timeout before raising <code class="xref py py-class docutils literal"><span class="pre">queue.Empty</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>event_queue</strong> (<a class="reference internal" href="#watchdog.observers.api.EventQueue" title="watchdog.observers.api.EventQueue"><code class="xref py py-class docutils literal"><span class="pre">EventQueue</span></code></a>) &#8211; Event queue to populate with one set of events.</li>
+<li><strong>timeout</strong> (<code class="docutils literal"><span class="pre">float</span></code>) &#8211; Interval period (in seconds) to wait before timing out on the
+event queue.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><code class="xref py py-class docutils literal"><span class="pre">queue.Empty</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.observers.api.EventDispatcher.event_queue">
+<code class="descname">event_queue</code><a class="headerlink" href="#watchdog.observers.api.EventDispatcher.event_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>The event queue which is populated with file system events
+by emitters and from which events are dispatched by a dispatcher
+thread.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.observers.api.EventDispatcher.timeout">
+<code class="descname">timeout</code><a class="headerlink" href="#watchdog.observers.api.EventDispatcher.timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event queue block timeout.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.observers.api.BaseObserver">
+<em class="property">class </em><code class="descclassname">watchdog.observers.api.</code><code class="descname">BaseObserver</code><span class="sig-paren">(</span><em>emitter_class</em>, <em>timeout=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/api.html#BaseObserver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.api.BaseObserver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.observers.api.EventDispatcher" title="watchdog.observers.api.EventDispatcher"><code class="xref py py-class docutils literal"><span class="pre">watchdog.observers.api.EventDispatcher</span></code></a></p>
+<p>Base observer.</p>
+<dl class="method">
+<dt id="watchdog.observers.api.BaseObserver.add_handler_for_watch">
+<code class="descname">add_handler_for_watch</code><span class="sig-paren">(</span><em>event_handler</em>, <em>watch</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/api.html#BaseObserver.add_handler_for_watch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.api.BaseObserver.add_handler_for_watch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a handler for the given watch.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>event_handler</strong> (<a class="reference internal" href="#watchdog.events.FileSystemEventHandler" title="watchdog.events.FileSystemEventHandler"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemEventHandler</span></code></a> or a subclass) &#8211; An event handler instance that has appropriate event handling
+methods which will be called by the observer in response to
+file system events.</li>
+<li><strong>watch</strong> (An instance of <a class="reference internal" href="#watchdog.observers.api.ObservedWatch" title="watchdog.observers.api.ObservedWatch"><code class="xref py py-class docutils literal"><span class="pre">ObservedWatch</span></code></a> or a subclass of
+<a class="reference internal" href="#watchdog.observers.api.ObservedWatch" title="watchdog.observers.api.ObservedWatch"><code class="xref py py-class docutils literal"><span class="pre">ObservedWatch</span></code></a>) &#8211; The watch to add a handler for.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.observers.api.BaseObserver.emitters">
+<code class="descname">emitters</code><a class="headerlink" href="#watchdog.observers.api.BaseObserver.emitters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns event emitter created by this observer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.observers.api.BaseObserver.remove_handler_for_watch">
+<code class="descname">remove_handler_for_watch</code><span class="sig-paren">(</span><em>event_handler</em>, <em>watch</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/api.html#BaseObserver.remove_handler_for_watch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.api.BaseObserver.remove_handler_for_watch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes a handler for the given watch.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>event_handler</strong> (<a class="reference internal" href="#watchdog.events.FileSystemEventHandler" title="watchdog.events.FileSystemEventHandler"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemEventHandler</span></code></a> or a subclass) &#8211; An event handler instance that has appropriate event handling
+methods which will be called by the observer in response to
+file system events.</li>
+<li><strong>watch</strong> (An instance of <a class="reference internal" href="#watchdog.observers.api.ObservedWatch" title="watchdog.observers.api.ObservedWatch"><code class="xref py py-class docutils literal"><span class="pre">ObservedWatch</span></code></a> or a subclass of
+<a class="reference internal" href="#watchdog.observers.api.ObservedWatch" title="watchdog.observers.api.ObservedWatch"><code class="xref py py-class docutils literal"><span class="pre">ObservedWatch</span></code></a>) &#8211; The watch to remove a handler for.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.observers.api.BaseObserver.schedule">
+<code class="descname">schedule</code><span class="sig-paren">(</span><em>event_handler</em>, <em>path</em>, <em>recursive=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/api.html#BaseObserver.schedule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.api.BaseObserver.schedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Schedules watching a path and calls appropriate methods specified
+in the given event handler in response to file system events.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>event_handler</strong> (<a class="reference internal" href="#watchdog.events.FileSystemEventHandler" title="watchdog.events.FileSystemEventHandler"><code class="xref py py-class docutils literal"><span class="pre">watchdog.events.FileSystemEventHandler</span></code></a> or a subclass) &#8211; An event handler instance that has appropriate event handling
+methods which will be called by the observer in response to
+file system events.</li>
+<li><strong>path</strong> (<code class="docutils literal"><span class="pre">str</span></code>) &#8211; Directory path that will be monitored.</li>
+<li><strong>recursive</strong> (<code class="docutils literal"><span class="pre">bool</span></code>) &#8211; <code class="docutils literal"><span class="pre">True</span></code> if events will be emitted for sub-directories
+traversed recursively; <code class="docutils literal"><span class="pre">False</span></code> otherwise.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">An <a class="reference internal" href="#watchdog.observers.api.ObservedWatch" title="watchdog.observers.api.ObservedWatch"><code class="xref py py-class docutils literal"><span class="pre">ObservedWatch</span></code></a> object instance representing
+a watch.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.observers.api.BaseObserver.unschedule">
+<code class="descname">unschedule</code><span class="sig-paren">(</span><em>watch</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/api.html#BaseObserver.unschedule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.api.BaseObserver.unschedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unschedules a watch.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>watch</strong> (An instance of <a class="reference internal" href="#watchdog.observers.api.ObservedWatch" title="watchdog.observers.api.ObservedWatch"><code class="xref py py-class docutils literal"><span class="pre">ObservedWatch</span></code></a> or a subclass of
+<a class="reference internal" href="#watchdog.observers.api.ObservedWatch" title="watchdog.observers.api.ObservedWatch"><code class="xref py py-class docutils literal"><span class="pre">ObservedWatch</span></code></a>) &#8211; The watch to unschedule.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.observers.api.BaseObserver.unschedule_all">
+<code class="descname">unschedule_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/api.html#BaseObserver.unschedule_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.api.BaseObserver.unschedule_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unschedules all watches and detaches all associated event
+handlers.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-watchdog.observers">
+<span id="watchdog-observers"></span><h2><cite>watchdog.observers</cite><a class="headerlink" href="#module-watchdog.observers" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">watchdog.observers</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">Observer that picks a native implementation if available.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body"><a class="reference external" href="mailto:yesudeep&#37;&#52;&#48;google&#46;com">yesudeep<span>&#64;</span>google<span>&#46;</span>com</a> (Yesudeep Mangalapilly)</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id1">
+<h3>Classes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="attribute">
+<dt id="watchdog.observers.Observer">
+<code class="descclassname">watchdog.observers.</code><code class="descname">Observer</code><a class="headerlink" href="#watchdog.observers.Observer" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">InotifyObserver</span></code></p>
+</dd></dl>
+
+<p>Observer thread that schedules watching directories and dispatches
+calls to event handlers.</p>
+<p>You can also import platform specific classes directly and use it instead
+of <a class="reference internal" href="#watchdog.observers.Observer" title="watchdog.observers.Observer"><code class="xref py py-class docutils literal"><span class="pre">Observer</span></code></a>.  Here is a list of implemented observer classes.:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="42%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Class</th>
+<th class="head">Platforms</th>
+<th class="head">Note</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="xref py py-class docutils literal"><span class="pre">inotify.InotifyObserver</span></code></td>
+<td>Linux 2.6.13+</td>
+<td><code class="docutils literal"><span class="pre">inotify(7)</span></code> based observer</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-class docutils literal"><span class="pre">fsevents.FSEventsObserver</span></code></td>
+<td>Mac OS X</td>
+<td>FSEvents based observer</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-class docutils literal"><span class="pre">kqueue.KqueueObserver</span></code></td>
+<td>Mac OS X and BSD with kqueue(2)</td>
+<td><code class="docutils literal"><span class="pre">kqueue(2)</span></code> based observer</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-class docutils literal"><span class="pre">read_directory_changes.WindowsApiObserver</span></code></td>
+<td>MS Windows</td>
+<td>Windows API-based observer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#watchdog.observers.polling.PollingObserver" title="watchdog.observers.polling.PollingObserver"><code class="xref py py-class docutils literal"><span class="pre">polling.PollingObserver</span></code></a></td>
+<td>Any</td>
+<td>fallback implementation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-watchdog.observers.polling">
+<span id="watchdog-observers-polling"></span><h2><cite>watchdog.observers.polling</cite><a class="headerlink" href="#module-watchdog.observers.polling" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">watchdog.observers.polling</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">Polling emitter implementation.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body"><a class="reference external" href="mailto:yesudeep&#37;&#52;&#48;google&#46;com">yesudeep<span>&#64;</span>google<span>&#46;</span>com</a> (Yesudeep Mangalapilly)</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id2">
+<h3>Classes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="watchdog.observers.polling.PollingObserver">
+<em class="property">class </em><code class="descclassname">watchdog.observers.polling.</code><code class="descname">PollingObserver</code><span class="sig-paren">(</span><em>timeout=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/polling.html#PollingObserver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.polling.PollingObserver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.observers.api.BaseObserver" title="watchdog.observers.api.BaseObserver"><code class="xref py py-class docutils literal"><span class="pre">watchdog.observers.api.BaseObserver</span></code></a></p>
+<p>Platform-independent observer that polls a directory to detect file
+system changes.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.observers.polling.PollingObserverVFS">
+<em class="property">class </em><code class="descclassname">watchdog.observers.polling.</code><code class="descname">PollingObserverVFS</code><span class="sig-paren">(</span><em>stat</em>, <em>listdir</em>, <em>polling_interval=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/polling.html#PollingObserverVFS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.polling.PollingObserverVFS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#watchdog.observers.api.BaseObserver" title="watchdog.observers.api.BaseObserver"><code class="xref py py-class docutils literal"><span class="pre">watchdog.observers.api.BaseObserver</span></code></a></p>
+<p>File system independent observer that polls a directory to detect changes.</p>
+<dl class="method">
+<dt id="watchdog.observers.polling.PollingObserverVFS.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>stat</em>, <em>listdir</em>, <em>polling_interval=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/observers/polling.html#PollingObserverVFS.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.observers.polling.PollingObserverVFS.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stat</strong> &#8211; stat function. See <code class="docutils literal"><span class="pre">os.stat</span></code> for details.</li>
+<li><strong>listdir</strong> &#8211; listdir function. See <code class="docutils literal"><span class="pre">os.listdir</span></code> for details.</li>
+<li><strong>polling_interval</strong> (<em>float</em>) &#8211; interval in seconds between polling the file system.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-watchdog.utils">
+<span id="watchdog-utils"></span><h2><cite>watchdog.utils</cite><a class="headerlink" href="#module-watchdog.utils" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">watchdog.utils</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">Utility classes and functions.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body"><a class="reference external" href="mailto:yesudeep&#37;&#52;&#48;google&#46;com">yesudeep<span>&#64;</span>google<span>&#46;</span>com</a> (Yesudeep Mangalapilly)</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id3">
+<h3>Classes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="watchdog.utils.BaseThread">
+<em class="property">class </em><code class="descclassname">watchdog.utils.</code><code class="descname">BaseThread</code><a class="reference internal" href="_modules/watchdog/utils.html#BaseThread"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.utils.BaseThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></code></p>
+<p>Convenience class for creating stoppable threads.</p>
+<dl class="attribute">
+<dt id="watchdog.utils.BaseThread.daemon">
+<code class="descname">daemon</code><a class="headerlink" href="#watchdog.utils.BaseThread.daemon" title="Permalink to this definition">¶</a></dt>
+<dd><p>A boolean value indicating whether this thread is a daemon thread (True) or not (False).</p>
+<p>This must be set before start() is called, otherwise RuntimeError is
+raised. Its initial value is inherited from the creating thread; the
+main thread is not a daemon thread and therefore all threads created in
+the main thread default to daemon = False.</p>
+<p>The entire Python program exits when no alive non-daemon threads are
+left.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.utils.BaseThread.ident">
+<code class="descname">ident</code><a class="headerlink" href="#watchdog.utils.BaseThread.ident" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thread identifier of this thread or None if it has not been started.</p>
+<p>This is a nonzero integer. See the thread.get_ident() function. Thread
+identifiers may be recycled when a thread exits and another thread is
+created. The identifier is available even after the thread has exited.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.utils.BaseThread.isAlive">
+<code class="descname">isAlive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#watchdog.utils.BaseThread.isAlive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the thread is alive.</p>
+<p>This method returns True just before the run() method starts until just
+after the run() method terminates. The module function enumerate()
+returns a list of all alive threads.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.utils.BaseThread.is_alive">
+<code class="descname">is_alive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#watchdog.utils.BaseThread.is_alive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the thread is alive.</p>
+<p>This method returns True just before the run() method starts until just
+after the run() method terminates. The module function enumerate()
+returns a list of all alive threads.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.utils.BaseThread.join">
+<code class="descname">join</code><span class="sig-paren">(</span><em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#watchdog.utils.BaseThread.join" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait until the thread terminates.</p>
+<p>This blocks the calling thread until the thread whose join() method is
+called terminates &#8211; either normally or through an unhandled exception
+or until the optional timeout occurs.</p>
+<p>When the timeout argument is present and not None, it should be a
+floating point number specifying a timeout for the operation in seconds
+(or fractions thereof). As join() always returns None, you must call
+isAlive() after join() to decide whether a timeout happened &#8211; if the
+thread is still alive, the join() call timed out.</p>
+<p>When the timeout argument is not present or None, the operation will
+block until the thread terminates.</p>
+<p>A thread can be join()ed many times.</p>
+<p>join() raises a RuntimeError if an attempt is made to join the current
+thread as that would cause a deadlock. It is also an error to join() a
+thread before it has been started and attempts to do so raises the same
+exception.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.utils.BaseThread.name">
+<code class="descname">name</code><a class="headerlink" href="#watchdog.utils.BaseThread.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A string used for identification purposes only.</p>
+<p>It has no semantics. Multiple threads may be given the same name. The
+initial name is set by the constructor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.utils.BaseThread.on_thread_start">
+<code class="descname">on_thread_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/utils.html#BaseThread.on_thread_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.utils.BaseThread.on_thread_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override this method instead of <code class="xref py py-meth docutils literal"><span class="pre">start()</span></code>. <code class="xref py py-meth docutils literal"><span class="pre">start()</span></code>
+calls this method.</p>
+<p>This method is called right before this thread is started and this
+object’s run() method is invoked.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.utils.BaseThread.on_thread_stop">
+<code class="descname">on_thread_stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/utils.html#BaseThread.on_thread_stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.utils.BaseThread.on_thread_stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override this method instead of <a class="reference internal" href="#watchdog.utils.BaseThread.stop" title="watchdog.utils.BaseThread.stop"><code class="xref py py-meth docutils literal"><span class="pre">stop()</span></code></a>.
+<a class="reference internal" href="#watchdog.utils.BaseThread.stop" title="watchdog.utils.BaseThread.stop"><code class="xref py py-meth docutils literal"><span class="pre">stop()</span></code></a> calls this method.</p>
+<p>This method is called immediately after the thread is signaled to stop.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.utils.BaseThread.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#watchdog.utils.BaseThread.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method representing the thread&#8217;s activity.</p>
+<p>You may override this method in a subclass. The standard run() method
+invokes the callable object passed to the object&#8217;s constructor as the
+target argument, if any, with sequential and keyword arguments taken
+from the args and kwargs arguments, respectively.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.utils.BaseThread.should_keep_running">
+<code class="descname">should_keep_running</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/utils.html#BaseThread.should_keep_running"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.utils.BaseThread.should_keep_running" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether the thread should continue running.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.utils.BaseThread.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/utils.html#BaseThread.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.utils.BaseThread.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signals the thread to stop.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-watchdog.utils.dirsnapshot">
+<span id="watchdog-utils-dirsnapshot"></span><h2><cite>watchdog.utils.dirsnapshot</cite><a class="headerlink" href="#module-watchdog.utils.dirsnapshot" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">watchdog.utils.dirsnapshot</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">Directory snapshots and comparison.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body"><a class="reference external" href="mailto:yesudeep&#37;&#52;&#48;google&#46;com">yesudeep<span>&#64;</span>google<span>&#46;</span>com</a> (Yesudeep Mangalapilly)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-where-are-the-moved-events-they-disappeared admonition">
+<p class="first admonition-title">Where are the moved events? They &#8220;disappeared&#8221;</p>
+<p class="last">This implementation does not take partition boundaries
+into consideration. It will only work when the directory
+tree is entirely on the same file system. More specifically,
+any part of the code that depends on inode numbers can
+break if partition boundaries are crossed. In these cases,
+the snapshot diff will represent file/directory movement as
+created and deleted events.</p>
+</div>
+<div class="section" id="id4">
+<h3>Classes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="watchdog.utils.dirsnapshot.DirectorySnapshot">
+<em class="property">class </em><code class="descclassname">watchdog.utils.dirsnapshot.</code><code class="descname">DirectorySnapshot</code><span class="sig-paren">(</span><em>path</em>, <em>recursive=True</em>, <em>walker_callback=&lt;function &lt;lambda&gt;&gt;</em>, <em>stat=&lt;built-in function stat&gt;</em>, <em>listdir=&lt;built-in function listdir&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/utils/dirsnapshot.html#DirectorySnapshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.utils.dirsnapshot.DirectorySnapshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A snapshot of stat information of files in a directory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> (<code class="docutils literal"><span class="pre">str</span></code>) &#8211; The directory path for which a snapshot should be taken.</li>
+<li><strong>recursive</strong> (<code class="docutils literal"><span class="pre">bool</span></code>) &#8211; <code class="docutils literal"><span class="pre">True</span></code> if the entire directory tree should be included in the
+snapshot; <code class="docutils literal"><span class="pre">False</span></code> otherwise.</li>
+<li><strong>walker_callback</strong> &#8211; <div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 0.7.2.</span></p>
+</div>
+</li>
+<li><strong>stat</strong> &#8211; <p>Use custom stat function that returns a stat structure for path.
+Currently only st_dev, st_ino, st_mode and st_mtime are needed.</p>
+<p>A function with the signature <code class="docutils literal"><span class="pre">walker_callback(path,</span> <span class="pre">stat_info)</span></code>
+which will be called for every entry in the directory tree.</p>
+</li>
+<li><strong>listdir</strong> &#8211; Use custom listdir function. See <code class="docutils literal"><span class="pre">os.listdir</span></code> for details.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="watchdog.utils.dirsnapshot.DirectorySnapshot.inode">
+<code class="descname">inode</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/utils/dirsnapshot.html#DirectorySnapshot.inode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.utils.dirsnapshot.DirectorySnapshot.inode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an id for path.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.utils.dirsnapshot.DirectorySnapshot.path">
+<code class="descname">path</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/utils/dirsnapshot.html#DirectorySnapshot.path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.utils.dirsnapshot.DirectorySnapshot.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns path for id. None if id is unknown to this snapshot.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.utils.dirsnapshot.DirectorySnapshot.paths">
+<code class="descname">paths</code><a class="headerlink" href="#watchdog.utils.dirsnapshot.DirectorySnapshot.paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of file/directory paths in the snapshot.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="watchdog.utils.dirsnapshot.DirectorySnapshot.stat_info">
+<code class="descname">stat_info</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/utils/dirsnapshot.html#DirectorySnapshot.stat_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.utils.dirsnapshot.DirectorySnapshot.stat_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a stat information object for the specified path from
+the snapshot.</p>
+<p>Attached information is subject to change. Do not use unless
+you specify <cite>stat</cite> in constructor. Use <a class="reference internal" href="#watchdog.utils.dirsnapshot.DirectorySnapshot.inode" title="watchdog.utils.dirsnapshot.DirectorySnapshot.inode"><code class="xref py py-func docutils literal"><span class="pre">inode()</span></code></a>, <code class="xref py py-func docutils literal"><span class="pre">mtime()</span></code>,
+<code class="xref py py-func docutils literal"><span class="pre">isdir()</span></code> instead.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> &#8211; The path for which stat information should be obtained
+from a snapshot.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="watchdog.utils.dirsnapshot.DirectorySnapshotDiff">
+<em class="property">class </em><code class="descclassname">watchdog.utils.dirsnapshot.</code><code class="descname">DirectorySnapshotDiff</code><span class="sig-paren">(</span><em>ref</em>, <em>snapshot</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/watchdog/utils/dirsnapshot.html#DirectorySnapshotDiff"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#watchdog.utils.dirsnapshot.DirectorySnapshotDiff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Compares two directory snapshots and creates an object that represents
+the difference between the two snapshots.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ref</strong> (<a class="reference internal" href="#watchdog.utils.dirsnapshot.DirectorySnapshot" title="watchdog.utils.dirsnapshot.DirectorySnapshot"><code class="xref py py-class docutils literal"><span class="pre">DirectorySnapshot</span></code></a>) &#8211; The reference directory snapshot.</li>
+<li><strong>snapshot</strong> (<a class="reference internal" href="#watchdog.utils.dirsnapshot.DirectorySnapshot" title="watchdog.utils.dirsnapshot.DirectorySnapshot"><code class="xref py py-class docutils literal"><span class="pre">DirectorySnapshot</span></code></a>) &#8211; The directory snapshot which will be compared
+with the reference snapshot.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="watchdog.utils.dirsnapshot.DirectorySnapshotDiff.dirs_created">
+<code class="descname">dirs_created</code><a class="headerlink" href="#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.dirs_created" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of directories that were created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.utils.dirsnapshot.DirectorySnapshotDiff.dirs_deleted">
+<code class="descname">dirs_deleted</code><a class="headerlink" href="#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.dirs_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of directories that were deleted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.utils.dirsnapshot.DirectorySnapshotDiff.dirs_modified">
+<code class="descname">dirs_modified</code><a class="headerlink" href="#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.dirs_modified" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of directories that were modified.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.utils.dirsnapshot.DirectorySnapshotDiff.dirs_moved">
+<code class="descname">dirs_moved</code><a class="headerlink" href="#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.dirs_moved" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of directories that were moved.</p>
+<p>Each event is a two-tuple the first item of which is the path
+that has been renamed to the second item in the tuple.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.utils.dirsnapshot.DirectorySnapshotDiff.files_created">
+<code class="descname">files_created</code><a class="headerlink" href="#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.files_created" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of files that were created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.utils.dirsnapshot.DirectorySnapshotDiff.files_deleted">
+<code class="descname">files_deleted</code><a class="headerlink" href="#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.files_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of files that were deleted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.utils.dirsnapshot.DirectorySnapshotDiff.files_modified">
+<code class="descname">files_modified</code><a class="headerlink" href="#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.files_modified" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of files that were modified.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="watchdog.utils.dirsnapshot.DirectorySnapshotDiff.files_moved">
+<code class="descname">files_moved</code><a class="headerlink" href="#watchdog.utils.dirsnapshot.DirectorySnapshotDiff.files_moved" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of files that were moved.</p>
+<p>Each event is a two-tuple the first item of which is the path
+that has been renamed to the second item in the tuple.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">API Reference</a><ul>
+<li><a class="reference internal" href="#module-watchdog.events"><cite>watchdog.events</cite></a><ul>
+<li><a class="reference internal" href="#event-classes">Event Classes</a></li>
+<li><a class="reference internal" href="#event-handler-classes">Event Handler Classes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-watchdog.observers.api"><cite>watchdog.observers.api</cite></a><ul>
+<li><a class="reference internal" href="#immutables">Immutables</a></li>
+<li><a class="reference internal" href="#collections">Collections</a></li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-watchdog.observers"><cite>watchdog.observers</cite></a><ul>
+<li><a class="reference internal" href="#id1">Classes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-watchdog.observers.polling"><cite>watchdog.observers.polling</cite></a><ul>
+<li><a class="reference internal" href="#id2">Classes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-watchdog.utils"><cite>watchdog.utils</cite></a><ul>
+<li><a class="reference internal" href="#id3">Classes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-watchdog.utils.dirsnapshot"><cite>watchdog.utils.dirsnapshot</cite></a><ul>
+<li><a class="reference internal" href="#id4">Classes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="quickstart.html"
+                        title="previous chapter">Quickstart</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="hacking.html"
+                        title="next chapter">Contributing</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="hacking.html" title="Contributing"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="quickstart.html" title="Quickstart"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">watchdog 0.8.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2010, Yesudeep Mangalapilly.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

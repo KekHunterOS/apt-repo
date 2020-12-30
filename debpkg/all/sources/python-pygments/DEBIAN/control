@@ -1,0 +1,24 @@
+Package: python-pygments
+Source: pygments
+Version: 2.3.1+dfsg-3
+Architecture: all
+Maintainer: Piotr Ożarowski <piotr@debian.org>
+Installed-Size: 3173
+Depends: python2:any (<< 2.8)
+Suggests: python-pygments-doc, ttf-bitstream-vera
+Breaks: python3-pygments (<< 2.3.1+dfsg-1~)
+Section: python
+Priority: optional
+Multi-Arch: foreign
+Homepage: http://pygments.org/
+Description: syntax highlighting package written in Python
+ Pygments aims to be a generic syntax highlighter for general use in all kinds
+ of software such as forum systems, wikis or other applications that need to
+ prettify source code.
+ .
+ Highlights are:
+   * a wide range of common languages and markup formats is supported
+   * special attention is paid to details, increasing quality by a fair amount
+   * support for new languages and formats are added easily
+   * a number of output formats, presently HTML, LaTeX and ANSI sequences
+   * it is usable as a command-line tool and as a library

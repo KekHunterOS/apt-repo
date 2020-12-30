@@ -1,0 +1,6 @@
+#!/bin/sh
+
+name_script=$(basename $0)
+example_name=${name_script##impacket-}
+
+exec python /usr/share/doc/python-impacket/examples/$example_name.py "$@"

@@ -1,0 +1,18 @@
+Package: python-asn1crypto
+Source: asn1crypto
+Version: 0.22.0-1
+Architecture: all
+Maintainer: Tristan Seligmann <mithrandi@debian.org>
+Installed-Size: 478
+Depends: python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Section: python
+Priority: optional
+Homepage: https://github.com/wbond/asn1crypto
+Description: Fast ASN.1 parser and serializer (Python 2)
+ asn1crypto focuses on:
+  - Delayed parsing of byte string values
+  - Persistence of original ASN.1 encoded data until a value is changed
+  - Lazy loading of child fields
+  - Utilization of high-level Python stdlib modules
+ .
+ This package contains the Python 2 version of asn1crypto.

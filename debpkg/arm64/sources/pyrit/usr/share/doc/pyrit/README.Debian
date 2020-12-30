@@ -1,0 +1,22 @@
+pyrit for Debian
+----------------
+
+Pyrit consists of a standalone application and optional extensions for various
+GPGPU-technologies.
+
+This package provides the full-featured application, which will run on any
+system. It has built-in support for MMX, SSE2 and VIA PADLOCK; these are
+detected at runtime.
+
+python-scapy and python-sqlalchemy (as well as a back-end, e.g. python-sqlite)
+aren't strictly required, but you really want them if you're only going to use
+Pyrit on a single node.
+
+The optional extensions might be available as packages in the contrib section.
+These should be named "pyrit-*". The availability of these packages depends
+on whether they were released in time for the current Debian release, and
+whether your architecture is supported by these packages. If your system does
+not have these packages, you can alternatively get the source directly from
+upstream's homepage instead.
+
+ -- Christian Kastner <ckk@debian.org>  Mon, 21 Mar 2016 22:08:20 +0100

@@ -1,0 +1,12 @@
+python-pefile for Debian
+------------------------
+
+You'll probably want to consult the online documentation for usage examples:
+
+    http://code.google.com/p/pefile/w/list
+
+Some functions require a signature database, for example:
+
+    http://www.peid.info/BobSoft/Downloads/UserDB.zip
+
+ -- Robert S. Edmonds <edmonds@debian.org>

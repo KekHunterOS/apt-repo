@@ -1,0 +1,27 @@
+Package: python-flask
+Source: flask
+Version: 0.12.2-2
+Architecture: all
+Maintainer: Piotr Ożarowski <piotr@debian.org>
+Installed-Size: 286
+Depends: python-click, python-itsdangerous, python-jinja2, python-werkzeug, python:any (<< 2.8)
+Recommends: python-pkg-resources, python-blinker
+Suggests: python-flask-doc
+Section: python
+Priority: optional
+Homepage: http://flask.pocoo.org/
+Description: micro web framework based on Werkzeug and Jinja2 - Python 2.7
+ Flask is a micro web framework for Python based on Werkzeug, Jinja 2 and good
+ intentions. A minimal Flask application looks like that:
+ .
+   from flask import Flask
+   app = Flask(__name__)
+ .
+   @app.route("/")
+   def hello():
+       return "Hello World!"
+ .
+   if __name__ == '__main__':
+       app.run()
+ .
+ This package contains the Python 2.7 module.

@@ -1,0 +1,13 @@
+Concerning upstream sources
+---------------------------
+
+No TODOs at this time.
+
+
+
+Concerning Debian packaging
+---------------------------
+
+2010-07-04 (CK):
+  At a later point, revisit the issue of whether the Python modules could be
+  made private.

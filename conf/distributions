@@ -1,6 +1,6 @@
 Origin: kekhunter
 Label: kekhunter-420
-Codename: rolling
-Architectures: arm64 amd64
-Components: main
+Codename: kek
+Architectures: arm64 amd64 armhf
+Components: bleeding-edge
 Description: Apt repository for kekhunter-420

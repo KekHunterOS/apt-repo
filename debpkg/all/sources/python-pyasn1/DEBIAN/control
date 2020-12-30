@@ -1,0 +1,18 @@
+Package: python-pyasn1
+Source: pyasn1
+Version: 0.1.9-2
+Architecture: all
+Maintainer: Jan Lübbe <jluebbe@debian.org>
+Installed-Size: 340
+Depends: python:any (<< 2.8)
+Suggests: doc-base
+Section: python
+Priority: optional
+Homepage: http://pyasn1.sourceforge.net/
+Description: ASN.1 library for Python (Python 2 module)
+ This  is  an implementation  of  ASN.1  types  and codecs  in  Python
+ programming language. It has been first written to support particular
+ protocol (SNMP) but then generalized  to be suitable for a wide range
+ of protocols based on ASN.1 specification.
+ .
+ This package contains the Python 2 module.

@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Contributing &mdash; watchdog 0.8.3 documentation</title>
+    
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.8.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="watchdog 0.8.3 documentation" href="index.html" />
+    <link rel="prev" title="API Reference" href="api.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="API Reference"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">watchdog 0.8.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="contributing">
+<span id="hacking"></span><h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h1>
+<p>Welcome hacker! So you have got something you would like to see in
+<code class="docutils literal"><span class="pre">watchdog</span></code>? Whee. This document will help you get started.</p>
+<div class="section" id="important-urls">
+<h2>Important URLs<a class="headerlink" href="#important-urls" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">watchdog</span></code> uses <a class="reference external" href="http://git-scm.org/">git</a> to track code history and hosts its <a class="reference external" href="http://github.com/gorakhargosh/watchdog">code repository</a>
+at <a class="reference external" href="http://github.com/">github</a>. The <a class="reference external" href="http://github.com/gorakhargosh/watchdog/issues">issue tracker</a> is where you can file bug reports and request
+features or enhancements to <code class="docutils literal"><span class="pre">watchdog</span></code>.</p>
+</div>
+<div class="section" id="before-you-start">
+<h2>Before you start<a class="headerlink" href="#before-you-start" title="Permalink to this headline">¶</a></h2>
+<p>Ensure your system has the following programs and libraries installed before
+beginning to hack:</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="http://python.org">Python</a></li>
+<li><a class="reference external" href="http://git-scm.org/">git</a></li>
+<li>ssh</li>
+<li><a class="reference external" href="http://developer.apple.com/technologies/tools/xcode.html">XCode</a> (on Mac OS X)</li>
+<li><a class="reference external" href="http://pypi.python.org/pypi/select_backport/">select_backport</a> (on BSD/Mac OS X if you&#8217;re using Python 2.6)</li>
+</ol>
+</div>
+<div class="section" id="setting-up-the-work-environment">
+<h2>Setting up the Work Environment<a class="headerlink" href="#setting-up-the-work-environment" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">watchdog</span></code> makes extensive use of <a class="reference external" href="http://www.buildout.org/">zc.buildout</a> to set up its work
+environment. You should get familiar with it.</p>
+<p>Steps to setting up a clean environment:</p>
+<ol class="arabic">
+<li><p class="first">Fork the <a class="reference external" href="http://github.com/gorakhargosh/watchdog">code repository</a> into your <a class="reference external" href="http://github.com/">github</a> account. Let us call you
+<code class="docutils literal"><span class="pre">hackeratti</span></code> for the sake of this example. Replace <code class="docutils literal"><span class="pre">hackeratti</span></code>
+with your own username below.</p>
+</li>
+<li><p class="first">Clone your fork and setup your environment:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ git clone --recursive git@github.com:hackeratti/watchdog.git
+$ cd watchdog
+$ python tools/bootstrap.py --distribute
+$ bin/buildout
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Re-run <code class="docutils literal"><span class="pre">bin/buildout</span></code> every time you make a change to the
+<code class="docutils literal"><span class="pre">buildout.cfg</span></code> file.</p>
+</div>
+<p>That&#8217;s it with the setup. Now you&#8217;re ready to hack on <code class="docutils literal"><span class="pre">watchdog</span></code>.</p>
+</div>
+<div class="section" id="enabling-continuous-integration">
+<h2>Enabling Continuous Integration<a class="headerlink" href="#enabling-continuous-integration" title="Permalink to this headline">¶</a></h2>
+<p>The repository checkout contains a script called <code class="docutils literal"><span class="pre">autobuild.sh</span></code>
+which you must run prior to making changes. It will detect changes to
+Python source code or restructuredText documentation files anywhere
+in the directory tree and rebuild <a class="reference external" href="http://sphinx.pocoo.org/">sphinx</a> documentation, run all tests using
+<a class="reference external" href="http://somethingaboutorange.com/mrl/projects/nose/0.11.2/">nose</a>, and generate <a class="reference external" href="http://nedbatchelder.com/code/coverage/">coverage</a> reports.</p>
+<p>Start it by issuing this command in the <code class="docutils literal"><span class="pre">watchdog</span></code> directory
+checked out earlier:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ tools/autobuild.sh
+...
+</pre></div>
+</div>
+<p>Happy hacking!</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Contributing</a><ul>
+<li><a class="reference internal" href="#important-urls">Important URLs</a></li>
+<li><a class="reference internal" href="#before-you-start">Before you start</a></li>
+<li><a class="reference internal" href="#setting-up-the-work-environment">Setting up the Work Environment</a></li>
+<li><a class="reference internal" href="#enabling-continuous-integration">Enabling Continuous Integration</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="api.html"
+                        title="previous chapter">API Reference</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="API Reference"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">watchdog 0.8.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2010, Yesudeep Mangalapilly.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+Package: python-markupsafe
+Source: markupsafe (1.0-1)
+Version: 1.0-1+b1
+Architecture: arm64
+Maintainer: Piotr Ożarowski <piotr@debian.org>
+Installed-Size: 57
+Depends: python (<< 2.8), python (>= 2.7~), python:any (<< 2.8)
+Provides: python2.7-markupsafe
+Section: python
+Priority: optional
+Homepage: https://pypi.python.org/pypi/MarkupSafe
+Description: HTML/XHTML/XML string library for Python
+ MarkupSafe is a Python library implementing a unicode subclass that is
+ aware of HTML escaping rules. It can be used to implement automatic
+ string escaping.

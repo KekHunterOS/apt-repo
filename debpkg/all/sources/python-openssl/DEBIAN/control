@@ -1,0 +1,22 @@
+Package: python-openssl
+Source: pyopenssl
+Version: 16.2.0-1
+Architecture: all
+Maintainer: Sandro Tosi <morph@debian.org>
+Installed-Size: 198
+Depends: python-cryptography (>= 1.3.4), python-six (>= 1.5.2), python:any (<< 2.8)
+Suggests: python-openssl-doc, python-openssl-dbg
+Section: python
+Priority: optional
+Homepage: https://github.com/pyca/pyopenssl
+Description: Python 2 wrapper around the OpenSSL library
+ High-level wrapper around a subset of the OpenSSL library, includes
+ .
+   * SSL.Connection objects, wrapping the methods of Python's portable
+     sockets
+   * Callbacks written in Python
+   * Extensive error-handling mechanism, mirroring OpenSSL's error
+     codes
+ .
+ A lot of the object methods do nothing more than calling a
+ corresponding function in the OpenSSL library.

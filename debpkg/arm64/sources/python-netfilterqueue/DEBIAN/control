@@ -1,0 +1,11 @@
+Package: python-netfilterqueue
+Version: 0.6+git20150907-0kali1
+Architecture: arm64
+Maintainer: Sophie Brun <sophie@freexian.com>
+Installed-Size: 91
+Depends: libnetfilter-queue1
+Section: python
+Priority: optional
+Homepage: https://github.com/kti/python-netfilterqueue
+Description: Python bindings for libnetfilter_queue
+ This package provides Python bindings for libnetfilter_queue.

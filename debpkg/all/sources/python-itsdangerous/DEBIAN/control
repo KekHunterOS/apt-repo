@@ -1,0 +1,21 @@
+Package: python-itsdangerous
+Version: 0.24+dfsg1-2
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 54
+Depends: python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Recommends: python-simplejson
+Section: python
+Priority: optional
+Homepage: http://pythonhosted.org/itsdangerous/
+Description: Various helpers to pass trusted data to untrusted environment - Python 2.x
+ itsdangerous provides a module that is a port of the django signing
+ module.  It's not directly copied but some changes were applied to
+ make it work better on its own.
+ .
+ itsdangerous allows web applications to use a key only it knows to
+ cryptographically sign data and hand it over to someone else (e.g. a
+ user).  When it gets the data back it can easily ensure that nobody
+ tampered with it.
+ .
+ This package provides the itsdangerous Python module for Python 2.x.

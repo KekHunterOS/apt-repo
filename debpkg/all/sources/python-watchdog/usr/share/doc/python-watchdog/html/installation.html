@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation &mdash; watchdog 0.8.3 documentation</title>
+    
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.8.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="watchdog 0.8.3 documentation" href="index.html" />
+    <link rel="next" title="Quickstart" href="quickstart.html" />
+    <link rel="prev" title="Watchdog" href="index.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="quickstart.html" title="Quickstart"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Watchdog"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">watchdog 0.8.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="installation">
+<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal"><span class="pre">watchdog</span></code> requires Python 2.6 or above to work. If you are using a
+Linux/FreeBSD/Mac OS X system, you already have Python installed. However,
+you may wish to upgrade your system to Python 2.7 at least, because this
+version comes with updates that can reduce compatibility
+problems. See a list of <a class="reference internal" href="#installation-dependencies"><span>Dependencies</span></a>.</p>
+<div class="section" id="installing-from-pypi-using-pip">
+<h2>Installing from PyPI using pip<a class="headerlink" href="#installing-from-pypi-using-pip" title="Permalink to this headline">¶</a></h2>
+<pre class="literal-block">
+$ pip install <code class="docutils literal"><span class="pre">watchdog</span></code>
+</pre>
+</div>
+<div class="section" id="installing-from-source-tarballs">
+<h2>Installing from source tarballs<a class="headerlink" href="#installing-from-source-tarballs" title="Permalink to this headline">¶</a></h2>
+<pre class="literal-block">
+$ wget -c <a class="reference external" href="http://pypi.python.org/packages/source/w/watchdog/watchdog">http://pypi.python.org/packages/source/w/watchdog/watchdog</a>-0.8.3.tar.gz
+$ tar zxvf <code class="docutils literal"><span class="pre">watchdog</span></code>-0.8.3.tar.gz
+$ cd <code class="docutils literal"><span class="pre">watchdog</span></code>-0.8.3
+$ python setup.py install
+</pre>
+</div>
+<div class="section" id="installing-from-the-code-repository">
+<h2>Installing from the code repository<a class="headerlink" href="#installing-from-the-code-repository" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>$ git clone --recursive git://github.com/gorakhargosh/watchdog.git
+$ cd watchdog
+$ python setup.py install
+</pre></div>
+</div>
+</div>
+<div class="section" id="dependencies">
+<span id="installation-dependencies"></span><h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">watchdog</span></code> depends on many libraries to do its job. The following is
+a list of dependencies you need based on the operating system you are
+using.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="18%" />
+<col width="18%" />
+<col width="18%" />
+<col width="18%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Operating system
+Dependency (row)</th>
+<th class="head">Windows</th>
+<th class="head">Linux 2.6</th>
+<th class="head"><dl class="first last docutils">
+<dt>Mac OS X/</dt>
+<dd>Darwin</dd>
+</dl>
+</th>
+<th class="head">BSD</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="http://developer.apple.com/technologies/tools/xcode.html">XCode</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Yes</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://www.pyyaml.org/">PyYAML</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://pypi.python.org/pypi/argh">argh</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://pypi.python.org/pypi/argparse">argparse</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://pypi.python.org/pypi/select_backport/">select_backport</a>
+(Python 2.6)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://github.com/gorakhargosh/pathtools">pathtools</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="installing-dependencies">
+<h3>Installing Dependencies<a class="headerlink" href="#installing-dependencies" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">watchmedo</span></code> script depends on <a class="reference external" href="http://www.pyyaml.org/">PyYAML</a> which links with <a class="reference external" href="http://pyyaml.org/wiki/LibYAML">LibYAML</a>.
+On Mac OS X, you can use <a class="reference external" href="http://mxcl.github.com/homebrew/">homebrew</a> to install LibYAML:</p>
+<div class="highlight-python"><div class="highlight"><pre>brew install libyaml
+</pre></div>
+</div>
+<p>On Linux, use your favorite package manager to install LibYAML. Here&#8217;s how you
+do it on Ubuntu:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo aptitude install libyaml-dev
+</pre></div>
+</div>
+<p>On Windows, please install <a class="reference external" href="http://www.pyyaml.org/">PyYAML</a> using the binaries they provide.</p>
+</div>
+</div>
+<div class="section" id="supported-platforms-and-caveats">
+<h2>Supported Platforms (and Caveats)<a class="headerlink" href="#supported-platforms-and-caveats" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">watchdog</span></code> uses native APIs as much as possible falling back
+to polling the disk periodically to compare directory snapshots
+only when it cannot use an API natively-provided by the underlying
+operating system. The following operating systems are currently
+supported:</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Differences between behaviors of these native API
+are noted below.</p>
+</div>
+<dl class="docutils">
+<dt>Linux 2.6+</dt>
+<dd><p class="first">Linux kernel version 2.6 and later come with an API called <a class="reference external" href="http://linux.die.net/man/7/inotify">inotify</a>
+that programs can use to monitor file system events.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p>On most systems the maximum number of watches that can be
+created per user is limited to <code class="docutils literal"><span class="pre">8192</span></code>. <code class="docutils literal"><span class="pre">watchdog</span></code> needs one
+per directory to monitor. To change this limit, edit
+<code class="docutils literal"><span class="pre">/etc/sysctl.conf</span></code> and add:</p>
+<div class="last highlight-python"><div class="highlight"><pre><span class="n">fs</span><span class="o">.</span><span class="n">inotify</span><span class="o">.</span><span class="n">max_user_watches</span><span class="o">=</span><span class="mi">16384</span>
+</pre></div>
+</div>
+</div>
+</dd>
+<dt>Mac OS X</dt>
+<dd><p class="first">The Darwin kernel/OS X API maintains two ways to monitor directories
+for file system events:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=kqueue&amp;sektion=2">kqueue</a></li>
+<li><a class="reference external" href="http://developer.apple.com/library/mac/#documentation/Darwin/Conceptual/FSEvents_ProgGuide/Introduction/Introduction.html">FSEvents</a></li>
+</ul>
+<p><code class="docutils literal"><span class="pre">watchdog</span></code> can use whichever one is available, preferring
+FSEvents over <code class="docutils literal"><span class="pre">kqueue(2)</span></code>. <code class="docutils literal"><span class="pre">kqueue(2)</span></code> uses open file descriptors for monitoring
+and the current implementation uses
+<a class="reference external" href="http://developer.apple.com/library/ios/#documentation/Performance/Conceptual/FileSystem/Articles/TrackingChanges.html">Mac OS X File System Monitoring Performance Guidelines</a> to open
+these file descriptors only to monitor events, thus allowing
+OS X to unmount volumes that are being watched without locking them.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">More information about how <code class="docutils literal"><span class="pre">watchdog</span></code> uses <code class="docutils literal"><span class="pre">kqueue(2)</span></code> is noted
+in <a class="reference internal" href="#bsd-unix-variants">BSD Unix variants</a>. Much of this information applies to
+Mac OS X as well.</p>
+</div>
+</dd>
+<dt><span class="target" id="bsd-unix-variants">BSD Unix variants</span></dt>
+<dd><p class="first">BSD variants come with <a class="reference external" href="http://www.freebsd.org/cgi/man.cgi?query=kqueue&amp;sektion=2">kqueue</a> which programs can use to monitor
+changes to open file descriptors. Because of the way <code class="docutils literal"><span class="pre">kqueue(2)</span></code> works,
+<code class="docutils literal"><span class="pre">watchdog</span></code> needs to open these files and directories in read-only
+non-blocking mode and keep books about them.</p>
+<p><code class="docutils literal"><span class="pre">watchdog</span></code> will automatically open file descriptors for all
+new files/directories created and close those for which are deleted.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p>The maximum number of open file descriptor per process limit
+on your operating system can hinder <code class="docutils literal"><span class="pre">watchdog</span></code>&#8216;s ability to
+monitor files.</p>
+<p>You should ensure this limit is set to at least <strong>1024</strong>
+(or a value suitable to your usage). The following command
+appended to your <code class="docutils literal"><span class="pre">~/.profile</span></code> configuration file does
+this for you:</p>
+<div class="last highlight-python"><div class="highlight"><pre>ulimit -n 1024
+</pre></div>
+</div>
+</div>
+</dd>
+<dt>Windows Vista and later</dt>
+<dd><p class="first">The Windows API provides the <a class="reference external" href="http://msdn.microsoft.com/en-us/library/aa365465(VS.85).aspx">ReadDirectoryChangesW</a>. <code class="docutils literal"><span class="pre">watchdog</span></code>
+currently contains implementation for a synchronous approach requiring
+additional API functionality only available in Windows Vista and later.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since renaming is not the same operation as movement
+on Windows, <code class="docutils literal"><span class="pre">watchdog</span></code> tries hard to convert renames to
+movement events. Also, because the <a class="reference external" href="http://msdn.microsoft.com/en-us/library/aa365465(VS.85).aspx">ReadDirectoryChangesW</a>
+API function returns rename/movement events for directories
+even before the underlying I/O is complete, <code class="docutils literal"><span class="pre">watchdog</span></code>
+may not be able to completely scan the moved directory
+in order to successfully queue movement events for
+files and directories within it.</p>
+</div>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since the Windows API does not provide information about whether
+an object is a file or a directory, delete events for directories
+may be reported as a file deleted event.</p>
+</div>
+</dd>
+<dt>OS Independent Polling</dt>
+<dd><code class="docutils literal"><span class="pre">watchdog</span></code> also includes a fallback-implementation that polls
+watched directories for changes by periodically comparing snapshots
+of the directory tree.</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Installation</a><ul>
+<li><a class="reference internal" href="#installing-from-pypi-using-pip">Installing from PyPI using pip</a></li>
+<li><a class="reference internal" href="#installing-from-source-tarballs">Installing from source tarballs</a></li>
+<li><a class="reference internal" href="#installing-from-the-code-repository">Installing from the code repository</a></li>
+<li><a class="reference internal" href="#dependencies">Dependencies</a><ul>
+<li><a class="reference internal" href="#installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#supported-platforms-and-caveats">Supported Platforms (and Caveats)</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Watchdog</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="quickstart.html"
+                        title="next chapter">Quickstart</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="quickstart.html" title="Quickstart"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Watchdog"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">watchdog 0.8.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2010, Yesudeep Mangalapilly.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

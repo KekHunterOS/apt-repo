@@ -1,0 +1,8 @@
+# jpda/examples.jar only contains source code
+openjdk-8-demo binary: codeless-jar usr/share/doc/openjdk-7-jre-headless/demo/jpda/examples.jar
+
+# OpenJDK is correct despite any Debian policy
+openjdk-8-demo binary: unknown-java-class-version
+
+# example jar file with sources and documentation
+openjdk-8-demo binary: codeless-jar

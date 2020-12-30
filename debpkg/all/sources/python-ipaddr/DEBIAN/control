@@ -1,0 +1,21 @@
+Package: python-ipaddr
+Version: 2.2.0-2
+Architecture: all
+Maintainer: Scott Kitterman <scott@kitterman.com>
+Installed-Size: 78
+Depends: python:any (<< 2.8)
+Section: python
+Priority: optional
+Homepage: https://github.com/google/ipaddr-py
+Description: Python module for working with IP addresses, both IPv4 and IPv6
+ This library is used to create/poke/manipulate IPv4 and IPv6 addresses
+ and networks in Python.  It is intended to be fast and lightweight.
+ .
+ This is a pure Python implementation of classes for IPv4/6 addresses and
+ networks. It supports comparisons to determine if IP addresses are contained
+ inside a defined network, conversion of lists of IP addresses into compact
+ CIDR lists, and other IP address manipulation.
+ .
+ This module was incorporated into python3.3 and later as ipaddress. A direct
+ backport of ipaddress is available in Debian as python-ipaddress.  There are
+ incompatibilies between the two, so both are provided.

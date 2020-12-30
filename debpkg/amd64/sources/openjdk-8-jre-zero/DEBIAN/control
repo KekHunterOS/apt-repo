@@ -1,0 +1,18 @@
+Package: openjdk-8-jre-zero
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: amd64
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 6304
+Depends: openjdk-8-jre-headless (= 8u212-b01-1), libc6 (>= 2.14), libstdc++6 (>= 4.1.1)
+Section: java
+Priority: optional
+Multi-Arch: same
+Homepage: http://openjdk.java.net/
+Description: Alternative JVM for OpenJDK, using Zero/Shark
+ The package provides an alternative runtime using the Zero VM and the
+ Shark Just In Time Compiler (JIT).  Built on architectures in addition
+ to the Hotspot VM as a debugging aid for those architectures which don't
+ have a Hotspot VM.
+ .
+ The VM is started with the option `-zero'. See the README.Debian for details.

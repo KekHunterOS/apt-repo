@@ -1,0 +1,15 @@
+Package: python-twisted-web
+Source: twisted
+Version: 17.5.0-2
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 203
+Depends: python-twisted-core (>= 17.5.0-2)
+Section: python
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://github.com/waylan/Python-Markdown
+Description: twisted dummy package for HTTP protocol implementation
+ All the code has been moved to python-twisted-core, this package
+ contains only documentation and is going to be removed.
+ See https://twistedmatrix.com/trac/ticket/7964.

@@ -1,0 +1,38 @@
+# Sample configuration file for pyrit
+#
+# Lines starting with # are treated as comments and are ignored, as are blank
+# lines. The commented values represent the default settings.
+#
+# For detailed  information on these options, see pyrit(1).
+
+## Storage to use
+# default_storage = file://
+
+## Space-separated list of IP-addresses of nodes providing computational
+## resources
+# rpc_knownclients = 
+
+## Whether to start an RPC server on TCP+UDP port 17935 or not
+## This is required if you want to use rpc_knownclients above.
+# rpc_server = false
+
+## Announce presence to knownclients via UDP-unicast
+# rpc_announce = true
+
+## Announce presence to knownclients via UDP-broadcast
+# rpc_announce_broadcast = false
+
+## Maximum size of workunits (a workunit is an ESSID and a list of passwords to
+## check). This value is used by the internal scheduler when assigning jobs to
+## individual cores. Upper limit is 1000000.
+# workunit_size = 75000
+
+## Limit the number of CPU cores used by Pyrit. 0 means use all available
+## cores. 
+# limit_ncpus = 0
+
+## Use OpenCL module (other package in Debian)
+# use_OpenCL = true
+
+## Use CUDA module (other package in Debian)
+# use_CUDA = true

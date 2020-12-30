@@ -1,0 +1,16 @@
+#! /bin/sh
+set -e
+
+if dpkg-maintscript-helper supports rm_conffile; then
+	dpkg-maintscript-helper rm_conffile /etc/bash_completion.d/pygmentize\
+	       	2.1+dfsg-1~ python-pygments -- "$@"
+fi
+
+
+# Automatically added by dh_python2
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p python-pygments 
+fi
+
+# End automatically added section
+

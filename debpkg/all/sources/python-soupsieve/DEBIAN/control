@@ -1,0 +1,23 @@
+Package: python-soupsieve
+Source: soupsieve
+Version: 1.9.5+dfsg-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 153
+Depends: python-backports.functools-lru-cache, python2:any (<< 2.8)
+Section: python
+Priority: optional
+Homepage: https://facelessuser.github.io/soupsieve/
+Description: Modern CSS selector implementation for BeautifulSoup (Python 2.7)
+ Soup Sieve is a CSS selector library designed to be used with Beautiful Soup 4
+ (python-bs4 in Debian). It aims to provide selecting, matching, and filtering
+ using modern CSS selectors. Soup Sieve currently provides selectors from the
+ CSS level 1 specifications up through the latest CSS level 4 drafts (though
+ some are not yet implemented).
+ .
+ Soup Sieve was written with the intent to replace Beautiful Soup's builtin
+ select feature, and as of Beautiful Soup version 4.7.0, it now is 🎊. Soup
+ Sieve can also be imported in order to use its API directly for more
+ controlled, specialized parsing.
+ .
+ This package contains Soup Sieve for cPython 2.7.

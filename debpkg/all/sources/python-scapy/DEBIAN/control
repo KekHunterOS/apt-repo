@@ -1,0 +1,25 @@
+Package: python-scapy
+Source: scapy
+Version: 2.3.3-1
+Architecture: all
+Maintainer: Internet Measurement Packaging Team <pkg-netmeasure-discuss@lists.alioth.debian.org>
+Installed-Size: 2465
+Depends: python:any (<< 2.8)
+Suggests: tcpdump, tcpreplay, wireshark, graphviz, imagemagick, python-gnuplot, python-crypto, python-pyx, ebtables, python-visual, sox, xpdf, gv, hexer, librsvg2-bin, python-pcapy
+Breaks: scapy (<< 1.0.5-1)
+Replaces: scapy (<< 1.0.5-1)
+Provides: scapy
+Section: python
+Priority: optional
+Homepage: http://www.secdev.org/projects/scapy/
+Description: Packet generator/sniffer and network scanner/discovery
+ Scapy is a powerful interactive packet manipulation tool, packet
+ generator, network scanner, network discovery, packet sniffer, etc. It
+ can for the moment replace hping, 85% of nmap, arpspoof, arp-sk, arping,
+ tcpdump, tethereal, p0f, ....
+ .
+ In scapy you define a set of packets, then it sends them, receives
+ answers, matches requests with answers and returns a list of packet couples
+ (request, answer) and a list of unmatched packets. This has the big advantage
+ over tools like nmap or hping that an answer is not reduced to
+ (open/closed/filtered), but is the whole packet.

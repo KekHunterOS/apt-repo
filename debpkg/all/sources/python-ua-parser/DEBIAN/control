@@ -1,0 +1,11 @@
+Package: python-ua-parser
+Version: 0.3.6-0kali1
+Architecture: all
+Maintainer: Sophie Brun <sophie@freexian.com>
+Installed-Size: 127
+Depends: python (>= 2.7), python (<< 2.8), python-yaml, python-pkg-resources
+Section: python
+Priority: optional
+Homepage: https://github.com/tobie/ua-parser
+Description: Python port of Browserscope's user agent parser
+ This package containe a Python port of Browserscope's user agent parser.

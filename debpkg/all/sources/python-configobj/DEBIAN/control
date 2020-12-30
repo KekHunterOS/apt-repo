@@ -1,0 +1,31 @@
+Package: python-configobj
+Source: configobj
+Version: 5.0.6-2
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 162
+Depends: python (>= 2.7), python (<< 2.8), python-six
+Suggests: python-configobj-doc
+Section: python
+Priority: optional
+Homepage: http://www.voidspace.org.uk/python/configobj.html
+Description: simple but powerful config file reader and writer for Python 2
+ ConfigObj is a simple but powerful config file reader and writer: an
+ ini file round tripper. Its main feature is that it is very easy to
+ use, with a straightforward programmer's interface and a simple
+ syntax for config files. It has lots of other features, though:
+ .
+  * Nested sections (subsections), to any level
+  * List values
+  * Multiple line values
+  * String interpolation (substitution)
+  * Integrated with a powerful validation system
+    + including automatic type checking/conversion
+    + and allowing default values
+    + repeated sections
+  * All comments in the file are preserved
+  * The order of keys/sections is preserved
+  * Full Unicode support
+  * Powerful unrepr mode for storing/retrieving Python data-types
+ .
+  This is the Python 2 version of the package.

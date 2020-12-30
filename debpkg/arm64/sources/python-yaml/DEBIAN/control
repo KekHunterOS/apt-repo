@@ -1,0 +1,15 @@
+Package: python-yaml
+Source: pyyaml (3.12-1)
+Version: 3.12-1+b1
+Architecture: arm64
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 456
+Depends: python (<< 2.8), python (>= 2.7~), python:any (<< 2.8), libyaml-0-2
+Section: python
+Priority: optional
+Homepage: https://github.com/yaml/pyyaml
+Description: YAML parser and emitter for Python
+ Python-yaml is a complete YAML 1.1 parser and emitter for Python.  It can parse
+ all examples from the specification. The parsing algorithm is simple enough to
+ be a reference for YAML parser implementors. A simple extension API is also
+ provided.  The package is built using libyaml for improved speed.

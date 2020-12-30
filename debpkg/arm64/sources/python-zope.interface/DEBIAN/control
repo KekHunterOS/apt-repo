@@ -1,0 +1,20 @@
+Package: python-zope.interface
+Source: zope.interface (4.3.2-1)
+Version: 4.3.2-1+b1
+Architecture: arm64
+Maintainer: Debian/Ubuntu Zope Team <pkg-zope-developers@lists.alioth.debian.org>
+Installed-Size: 663
+Depends: python (<< 2.8), python (>= 2.7~), python-pkg-resources, python:any (<< 2.8)
+Conflicts: python-zope, python-zopeinterface, zope3
+Replaces: python-zope, python-zopeinterface
+Provides: python-zope, python-zopeinterface, python2.7-zope.interface
+Section: zope
+Priority: optional
+Homepage: http://pypi.python.org/pypi/zope.interface
+Description: Interfaces for Python
+ This package provides an implementation of object interfaces for Python.
+ Interfaces are a mechanism for labeling objects as conforming to a given API
+ or contract. So, this package can be considered as implementation of the
+ Design By Contract methodology support in Python.
+ .
+ This is the Python 2 version.

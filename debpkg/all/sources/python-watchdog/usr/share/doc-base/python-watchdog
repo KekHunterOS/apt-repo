@@ -1,0 +1,9 @@
+Document: python-watchdog
+Title: Python WatchDog Documentation
+Author:  Yesudeep Mangalapilly. Google Inc.
+Abstract: Sphinx documentation for Python WatchDog
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/python-watchdog/html/index.html
+Files: /usr/share/doc/python-watchdog/html/*

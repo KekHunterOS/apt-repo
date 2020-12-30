@@ -1,0 +1,18 @@
+Package: python-certifi
+Version: 2017.4.17-2
+Architecture: all
+Maintainer: Sebastien Delafond <seb@debian.org>
+Installed-Size: 719
+Depends: python (<< 2.8), python (>= 2.7), ca-certificates
+Section: python
+Priority: optional
+Homepage: https://certifi.io/en/latest/
+Description: root certificates for validating SSL certs and verifying TLS hosts
+ Certifi is a carefully curated collection of Root Certificates for
+ validating the trustworthiness of SSL certificates while verifying
+ the identity of TLS hosts. It has been extracted from the Requests
+ project.
+ .
+ The version of certifi in this Debian package is patched to return
+ the location of Debian-provided CA certificates, instead of those
+ packaged by upstream.

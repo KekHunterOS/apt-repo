@@ -1,0 +1,16 @@
+Package: python-wcwidth
+Source: wcwidth
+Version: 0.1.8+dfsg1-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 74
+Depends: python2:any (<< 2.8)
+Section: python
+Priority: optional
+Homepage: https://pypi.python.org/pypi/wcwidth
+Description: determine printable width of a string on a terminal (Python 2)
+ wcwidth allows one to determine the printable width of a string on a terminal.
+ It provides functions similar to wcwidth(3) and wcswidth(3) for Python
+ programs.
+ .
+ This package provides the module for Python 2.

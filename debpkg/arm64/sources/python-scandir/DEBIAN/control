@@ -1,0 +1,15 @@
+Package: python-scandir
+Version: 1.10.0-2
+Architecture: arm64
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 80
+Depends: python (<< 2.8), python:any (<< 2.8)
+Section: python
+Priority: optional
+Homepage: https://github.com/benhoyt/scandir
+Description: Backport of the "scandir" stdlib module (Python 2)
+ Better directory iterator and faster os.walk(), as found in Python 3:
+ instead of returning a list of bare filenames, it yields DirEntry objects
+ that include much more information.
+ .
+ This package is (obviously) for Python 2.

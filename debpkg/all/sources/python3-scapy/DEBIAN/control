@@ -1,0 +1,26 @@
+Package: python3-scapy
+Source: scapy
+Version: 9.4.4
+Architecture: all
+Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
+Installed-Size: 38498
+Depends: python3:any, libjs-sphinxdoc (>= 2.4.3-5~), sphinx-rtd-theme-common (>= 0.5.0+dfsg)
+Recommends: ipython3, python3-cryptography, tcpdump
+Suggests: graphviz, python3-matplotlib, python3-pyx, sox, tcpreplay, wireshark
+Provides: scapy
+Section: python
+Priority: optional
+Homepage: https://scapy.net/
+Description: Packet generator/sniffer and network scanner/discovery (Python 3)
+ Scapy is a powerful interactive packet manipulation tool, packet
+ generator, network scanner, network discovery, packet sniffer, etc. It
+ can for the moment replace hping, 85% of nmap, arpspoof, arp-sk, arping,
+ tcpdump, tethereal, p0f, ....
+ .
+ In scapy you define a set of packets, then it sends them, receives
+ answers, matches requests with answers and returns a list of packet couples
+ (request, answer) and a list of unmatched packets. This has the big advantage
+ over tools like nmap or hping that an answer is not reduced to
+ (open/closed/filtered), but is the whole packet.
+ .
+ This package contains the Python 3 version of the library and scapy executable.

@@ -1,0 +1,16 @@
+Package: python-ipaddress
+Version: 1.0.17-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 101
+Depends: python:any (<< 2.8)
+Section: python
+Priority: optional
+Homepage: https://github.com/phihag/ipaddress
+Description: Backport of Python 3 ipaddress module (Python 2)
+ This module is a backport of the stdlib "ipaddress" module from Python 3. The
+ "ipaddress" module is in turn based off of the "ipaddr" module available in
+ the "python-ipaddr" but there are some important API differences; make sure
+ you are using the right module.
+ .
+ This package contains the Python 2 module.

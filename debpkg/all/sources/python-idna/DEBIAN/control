@@ -1,0 +1,20 @@
+Package: python-idna
+Version: 2.5-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 269
+Depends: python:any (<< 2.8)
+Section: python
+Priority: optional
+Homepage: https://github.com/kjd/idna
+Description: Python IDNA2008 (RFC 5891) handling (Python 2)
+ A library to support the Internationalised Domain Names in Applications (IDNA)
+ protocol as specified in RFC 5891. This version of the protocol is often
+ referred to as “IDNA2008” and can produce different results from the earlier
+ standard from 2003.
+ .
+ The library is also intended to act as a suitable drop-in replacement for the
+ “encodings.idna” module that comes with the Python standard library but
+ currently only supports the older 2003 specification.
+ .
+ This package contains the module for Python 2.

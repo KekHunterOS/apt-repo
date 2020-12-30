@@ -1,0 +1,32 @@
+Package: python3-requests
+Source: requests
+Version: 2.24.3
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 232
+Depends: python3-certifi, python3-chardet, python3-idna, python3-urllib3, python3:any, ca-certificates, python3-urllib3
+Suggests: python3-cryptography, python3-idna, python3-openssl, python3-socks, python-requests-doc
+Breaks: awscli (<< 1.11.139)
+Section: python
+Priority: optional
+Homepage: http://python-requests.org
+Description: elegant and simple HTTP library for Python3, built for human beings
+ Requests allow you to send HTTP/1.1 requests. You can add headers, form data,
+ multipart files, and parameters with simple Python dictionaries, and access
+ the response data in the same way. It's powered by httplib and urllib3, but
+ it does all the hard work and crazy hacks for you.
+ .
+ Features
+ .
+   - International Domains and URLs
+   - Keep-Alive & Connection Pooling
+   - Sessions with Cookie Persistence
+   - Browser-style SSL Verification
+   - Basic/Digest Authentication
+   - Elegant Key/Value Cookies
+   - Automatic Decompression
+   - Unicode Response Bodies
+   - Multipart File Uploads
+   - Connection Timeouts
+ .
+ This package contains the Python 3 version of the library.

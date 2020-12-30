@@ -1,0 +1,18 @@
+Package: libjs-jquery
+Source: jquery
+Version: 3.2.1-1
+Architecture: all
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Installed-Size: 552
+Conflicts: jquery
+Breaks: movabletype-opensource (<< 5.1.4+dfsg-3~)
+Replaces: jquery
+Section: javascript
+Priority: optional
+Multi-Arch: foreign
+Homepage: http://jquery.com/
+Description: JavaScript library for dynamic web applications
+ jQuery is a fast, concise, JavaScript Library that simplifies how you
+ traverse HTML documents, handle events, perform animations, and add Ajax
+ interactions to your web pages. jQuery is designed to change the way
+ that you write JavaScript.

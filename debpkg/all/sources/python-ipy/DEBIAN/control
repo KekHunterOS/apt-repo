@@ -1,0 +1,15 @@
+Package: python-ipy
+Source: ipy
+Version: 1:0.83-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 123
+Depends: python (>= 2.7), python (<< 2.8)
+Section: python
+Priority: optional
+Homepage: https://github.com/haypo/python-ipy/
+Description: Python module for handling IPv4 and IPv6 addresses and networks
+ IPy is a Python module for handling IPv4 and IPv6 addresses and
+ networks in a fashion similar to perl's Net::IP and friends. The IP
+ class allows a comfortable parsing and handling for most notations in
+ use for IPv4 and IPv6 addresses and networks.

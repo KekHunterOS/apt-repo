@@ -1,0 +1,21 @@
+Package: python-dnslib
+Version: 0.9.7+hg20170303-1
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 207
+Depends: python:any (<< 2.8)
+Section: python
+Priority: optional
+Homepage: https://bitbucket.org/paulc/dnslib
+Description: Module to encode/decode DNS wire-format packets (Python 2)
+ This DNS encode/decode Python module provides:
+ .
+  - Support for encoding/decoding DNS packets between wire format, Python
+    objects, and Zone/DiG textual representation (dnslib.dns)
+  - A server framework allowing the simple creation of custom DNS resolvers
+    (dnslib.server) and a number of example servers created using this
+    framework
+  - A number of utilities for testing (dnslib.client, dnslib.proxy,
+    dnslib.intercept)
+ .
+ This is the Python 2 version of the package.

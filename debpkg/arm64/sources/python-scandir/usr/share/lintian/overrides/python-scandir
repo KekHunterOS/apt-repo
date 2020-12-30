@@ -1,0 +1,2 @@
+# false positive
+python-scandir: hardening-no-fortify-functions usr/lib/python2.7/dist-packages/_scandir.*.so

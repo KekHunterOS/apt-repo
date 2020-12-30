@@ -1,0 +1,28 @@
+Package: python3-netaddr
+Source: python-netaddr
+Version: 9.7.19
+Architecture: all
+Maintainer: Vincent Bernat <bernat@debian.org>
+Installed-Size: 1056
+Depends: ieee-data, python3:any
+Suggests: ipython3, python-netaddr-docs
+Section: python
+Priority: optional
+Homepage: https://github.com/drkjam/netaddr/
+Description: manipulation of various common network address notations (Python 3)
+ netaddr is a Python library for the manipulation of various common
+ network address notations and representations.
+ .
+ It takes the hassle out of fiddling with enumerable variations of
+ network addresses presenting a consistent, extensible, easy-to-use
+ and (above all) Pythonic API.
+ .
+ With it you can validate, convert, categorise, iterate, generate,
+ slice (and dice):
+  - MAC (Media Access Control)
+  - IEEE EUI-48 and EUI-64
+  - IP version 4
+  - IP version 6
+  - CIDR (Classless Inter-Domain Routing)
+ .
+ This is the Python 3 version of the package.

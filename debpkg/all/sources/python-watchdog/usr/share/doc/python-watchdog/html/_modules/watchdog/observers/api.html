@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>watchdog.observers.api &mdash; watchdog 0.8.3 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.8.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="watchdog 0.8.3 documentation" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../../../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">watchdog 0.8.3 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for watchdog.observers.api</h1><div class="highlight"><pre>
+<span class="c">#!/usr/bin/env python</span>
+<span class="c"># -*- coding: utf-8 -*-</span>
+<span class="c">#</span>
+<span class="c"># Copyright 2011 Yesudeep Mangalapilly &lt;yesudeep@gmail.com&gt;</span>
+<span class="c"># Copyright 2012 Google, Inc.</span>
+<span class="c">#</span>
+<span class="c"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c"># you may not use this file except in compliance with the License.</span>
+<span class="c"># You may obtain a copy of the License at</span>
+<span class="c">#</span>
+<span class="c">#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c">#</span>
+<span class="c"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c"># See the License for the specific language governing permissions and</span>
+<span class="c"># limitations under the License.</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">with_statement</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">from</span> <span class="nn">watchdog.utils</span> <span class="kn">import</span> <span class="n">BaseThread</span>
+<span class="kn">from</span> <span class="nn">watchdog.utils.compat</span> <span class="kn">import</span> <span class="n">queue</span>
+<span class="kn">from</span> <span class="nn">watchdog.utils.bricks</span> <span class="kn">import</span> <span class="n">SkipRepeatsQueue</span>
+
+<span class="n">DEFAULT_EMITTER_TIMEOUT</span> <span class="o">=</span> <span class="mi">1</span>    <span class="c"># in seconds.</span>
+<span class="n">DEFAULT_OBSERVER_TIMEOUT</span> <span class="o">=</span> <span class="mi">1</span>   <span class="c"># in seconds.</span>
+
+
+<span class="c"># Collection classes</span>
+<div class="viewcode-block" id="EventQueue"><a class="viewcode-back" href="../../../api.html#watchdog.observers.api.EventQueue">[docs]</a><span class="k">class</span> <span class="nc">EventQueue</span><span class="p">(</span><span class="n">SkipRepeatsQueue</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Thread-safe event queue based on a special queue that skips adding</span>
+<span class="sd">    the same event (:class:`FileSystemEvent`) multiple times consecutively.</span>
+<span class="sd">    Thus avoiding dispatching multiple event handling</span>
+<span class="sd">    calls when multiple identical events are produced quicker than an observer</span>
+<span class="sd">    can consume them.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+</div>
+<div class="viewcode-block" id="ObservedWatch"><a class="viewcode-back" href="../../../api.html#watchdog.observers.api.ObservedWatch">[docs]</a><span class="k">class</span> <span class="nc">ObservedWatch</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An scheduled watch.</span>
+
+<span class="sd">    :param path:</span>
+<span class="sd">        Path string.</span>
+<span class="sd">    :param recursive:</span>
+<span class="sd">        ``True`` if watch is recursive; ``False`` otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">recursive</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_recursive</span> <span class="o">=</span> <span class="n">recursive</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The path that this watch monitors.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_recursive</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Determines whether subdirectories are watched for the path.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_recursive</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_recursive</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">watch</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">watch</span><span class="o">.</span><span class="n">key</span>
+
+    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">watch</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">!=</span> <span class="n">watch</span><span class="o">.</span><span class="n">key</span>
+
+    <span class="k">def</span> <span class="nf">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">&quot;&lt;ObservedWatch: path=</span><span class="si">%s</span><span class="s">, is_recursive=</span><span class="si">%s</span><span class="s">&gt;&quot;</span> <span class="o">%</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_recursive</span><span class="p">)</span>
+
+
+<span class="c"># Observer classes</span></div>
+<div class="viewcode-block" id="EventEmitter"><a class="viewcode-back" href="../../../api.html#watchdog.observers.api.EventEmitter">[docs]</a><span class="k">class</span> <span class="nc">EventEmitter</span><span class="p">(</span><span class="n">BaseThread</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Producer thread base class subclassed by event emitters</span>
+<span class="sd">    that generate events and populate a queue with them.</span>
+
+<span class="sd">    :param event_queue:</span>
+<span class="sd">        The event queue to populate with generated events.</span>
+<span class="sd">    :type event_queue:</span>
+<span class="sd">        :class:`watchdog.events.EventQueue`</span>
+<span class="sd">    :param watch:</span>
+<span class="sd">        The watch to observe and produce events for.</span>
+<span class="sd">    :type watch:</span>
+<span class="sd">        :class:`ObservedWatch`</span>
+<span class="sd">    :param timeout:</span>
+<span class="sd">        Timeout (in seconds) between successive attempts at reading events.</span>
+<span class="sd">    :type timeout:</span>
+<span class="sd">        ``float``</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event_queue</span><span class="p">,</span> <span class="n">watch</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">DEFAULT_EMITTER_TIMEOUT</span><span class="p">):</span>
+        <span class="n">BaseThread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_event_queue</span> <span class="o">=</span> <span class="n">event_queue</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_watch</span> <span class="o">=</span> <span class="n">watch</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_timeout</span> <span class="o">=</span> <span class="n">timeout</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">timeout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Blocking timeout for reading events.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_timeout</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">watch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The watch associated with this emitter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_watch</span>
+
+<div class="viewcode-block" id="EventEmitter.queue_event"><a class="viewcode-back" href="../../../api.html#watchdog.observers.api.EventEmitter.queue_event">[docs]</a>    <span class="k">def</span> <span class="nf">queue_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Queues a single event.</span>
+
+<span class="sd">        :param event:</span>
+<span class="sd">            Event to be queued.</span>
+<span class="sd">        :type event:</span>
+<span class="sd">            An instance of :class:`watchdog.events.FileSystemEvent`</span>
+<span class="sd">            or a subclass.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_event_queue</span><span class="o">.</span><span class="n">put</span><span class="p">((</span><span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">watch</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="EventEmitter.queue_events"><a class="viewcode-back" href="../../../api.html#watchdog.observers.api.EventEmitter.queue_events">[docs]</a>    <span class="k">def</span> <span class="nf">queue_events</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Override this method to populate the event queue with events</span>
+<span class="sd">        per interval period.</span>
+
+<span class="sd">        :param timeout:</span>
+<span class="sd">            Timeout (in seconds) between successive attempts at</span>
+<span class="sd">            reading events.</span>
+<span class="sd">        :type timeout:</span>
+<span class="sd">            ``float``</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+</div>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">should_keep_running</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">queue_events</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+</div>
+<div class="viewcode-block" id="EventDispatcher"><a class="viewcode-back" href="../../../api.html#watchdog.observers.api.EventDispatcher">[docs]</a><span class="k">class</span> <span class="nc">EventDispatcher</span><span class="p">(</span><span class="n">BaseThread</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Consumer thread base class subclassed by event observer threads</span>
+<span class="sd">    that dispatch events from an event queue to appropriate event handlers.</span>
+
+<span class="sd">    :param timeout:</span>
+<span class="sd">        Event queue blocking timeout (in seconds).</span>
+<span class="sd">    :type timeout:</span>
+<span class="sd">        ``float``</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">DEFAULT_OBSERVER_TIMEOUT</span><span class="p">):</span>
+        <span class="n">BaseThread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_event_queue</span> <span class="o">=</span> <span class="n">EventQueue</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_timeout</span> <span class="o">=</span> <span class="n">timeout</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">timeout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Event queue block timeout.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_timeout</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">event_queue</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The event queue which is populated with file system events</span>
+<span class="sd">        by emitters and from which events are dispatched by a dispatcher</span>
+<span class="sd">        thread.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_event_queue</span>
+
+<div class="viewcode-block" id="EventDispatcher.dispatch_events"><a class="viewcode-back" href="../../../api.html#watchdog.observers.api.EventDispatcher.dispatch_events">[docs]</a>    <span class="k">def</span> <span class="nf">dispatch_events</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event_queue</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Override this method to consume events from an event queue, blocking</span>
+<span class="sd">        on the queue for the specified timeout before raising :class:`queue.Empty`.</span>
+
+<span class="sd">        :param event_queue:</span>
+<span class="sd">            Event queue to populate with one set of events.</span>
+<span class="sd">        :type event_queue:</span>
+<span class="sd">            :class:`EventQueue`</span>
+<span class="sd">        :param timeout:</span>
+<span class="sd">            Interval period (in seconds) to wait before timing out on the</span>
+<span class="sd">            event queue.</span>
+<span class="sd">        :type timeout:</span>
+<span class="sd">            ``float``</span>
+<span class="sd">        :raises:</span>
+<span class="sd">            :class:`queue.Empty`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+</div>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">should_keep_running</span><span class="p">():</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dispatch_events</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">event_queue</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">queue</span><span class="o">.</span><span class="n">Empty</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+</div>
+<div class="viewcode-block" id="BaseObserver"><a class="viewcode-back" href="../../../api.html#watchdog.observers.api.BaseObserver">[docs]</a><span class="k">class</span> <span class="nc">BaseObserver</span><span class="p">(</span><span class="n">EventDispatcher</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Base observer.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">emitter_class</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">DEFAULT_OBSERVER_TIMEOUT</span><span class="p">):</span>
+        <span class="n">EventDispatcher</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_emitter_class</span> <span class="o">=</span> <span class="n">emitter_class</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">RLock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_watches</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handlers</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_emitters</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_emitter_for_watch</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_add_emitter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">emitter</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_emitter_for_watch</span><span class="p">[</span><span class="n">emitter</span><span class="o">.</span><span class="n">watch</span><span class="p">]</span> <span class="o">=</span> <span class="n">emitter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_emitters</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">emitter</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_remove_emitter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">emitter</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_emitter_for_watch</span><span class="p">[</span><span class="n">emitter</span><span class="o">.</span><span class="n">watch</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_emitters</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">emitter</span><span class="p">)</span>
+        <span class="n">emitter</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">emitter</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">_clear_emitters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">emitter</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_emitters</span><span class="p">:</span>
+            <span class="n">emitter</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">emitter</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_emitters</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">emitter</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+                <span class="k">pass</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_emitters</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_emitter_for_watch</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_add_handler_for_watch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event_handler</span><span class="p">,</span> <span class="n">watch</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">watch</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handlers</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handlers</span><span class="p">[</span><span class="n">watch</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_handlers</span><span class="p">[</span><span class="n">watch</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">event_handler</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_remove_handlers_for_watch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">watch</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handlers</span><span class="p">[</span><span class="n">watch</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">emitters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns event emitter created by this observer.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_emitters</span>
+
+    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">emitter</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_emitters</span><span class="p">:</span>
+            <span class="n">emitter</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">BaseObserver</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+<div class="viewcode-block" id="BaseObserver.schedule"><a class="viewcode-back" href="../../../api.html#watchdog.observers.api.BaseObserver.schedule">[docs]</a>    <span class="k">def</span> <span class="nf">schedule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event_handler</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Schedules watching a path and calls appropriate methods specified</span>
+<span class="sd">        in the given event handler in response to file system events.</span>
+
+<span class="sd">        :param event_handler:</span>
+<span class="sd">            An event handler instance that has appropriate event handling</span>
+<span class="sd">            methods which will be called by the observer in response to</span>
+<span class="sd">            file system events.</span>
+<span class="sd">        :type event_handler:</span>
+<span class="sd">            :class:`watchdog.events.FileSystemEventHandler` or a subclass</span>
+<span class="sd">        :param path:</span>
+<span class="sd">            Directory path that will be monitored.</span>
+<span class="sd">        :type path:</span>
+<span class="sd">            ``str``</span>
+<span class="sd">        :param recursive:</span>
+<span class="sd">            ``True`` if events will be emitted for sub-directories</span>
+<span class="sd">            traversed recursively; ``False`` otherwise.</span>
+<span class="sd">        :type recursive:</span>
+<span class="sd">            ``bool``</span>
+<span class="sd">        :return:</span>
+<span class="sd">            An :class:`ObservedWatch` object instance representing</span>
+<span class="sd">            a watch.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="n">watch</span> <span class="o">=</span> <span class="n">ObservedWatch</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">recursive</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_add_handler_for_watch</span><span class="p">(</span><span class="n">event_handler</span><span class="p">,</span> <span class="n">watch</span><span class="p">)</span>
+
+            <span class="c"># If we don&#39;t have an emitter for this watch already, create it.</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_emitter_for_watch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">watch</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">emitter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_emitter_class</span><span class="p">(</span><span class="n">event_queue</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">event_queue</span><span class="p">,</span>
+                                              <span class="n">watch</span><span class="o">=</span><span class="n">watch</span><span class="p">,</span>
+                                              <span class="n">timeout</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_add_emitter</span><span class="p">(</span><span class="n">emitter</span><span class="p">)</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_alive</span><span class="p">():</span>
+                    <span class="n">emitter</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_watches</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">watch</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">watch</span>
+</div>
+<div class="viewcode-block" id="BaseObserver.add_handler_for_watch"><a class="viewcode-back" href="../../../api.html#watchdog.observers.api.BaseObserver.add_handler_for_watch">[docs]</a>    <span class="k">def</span> <span class="nf">add_handler_for_watch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event_handler</span><span class="p">,</span> <span class="n">watch</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Adds a handler for the given watch.</span>
+
+<span class="sd">        :param event_handler:</span>
+<span class="sd">            An event handler instance that has appropriate event handling</span>
+<span class="sd">            methods which will be called by the observer in response to</span>
+<span class="sd">            file system events.</span>
+<span class="sd">        :type event_handler:</span>
+<span class="sd">            :class:`watchdog.events.FileSystemEventHandler` or a subclass</span>
+<span class="sd">        :param watch:</span>
+<span class="sd">            The watch to add a handler for.</span>
+<span class="sd">        :type watch:</span>
+<span class="sd">            An instance of :class:`ObservedWatch` or a subclass of</span>
+<span class="sd">            :class:`ObservedWatch`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_add_handler_for_watch</span><span class="p">(</span><span class="n">event_handler</span><span class="p">,</span> <span class="n">watch</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="BaseObserver.remove_handler_for_watch"><a class="viewcode-back" href="../../../api.html#watchdog.observers.api.BaseObserver.remove_handler_for_watch">[docs]</a>    <span class="k">def</span> <span class="nf">remove_handler_for_watch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event_handler</span><span class="p">,</span> <span class="n">watch</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Removes a handler for the given watch.</span>
+
+<span class="sd">        :param event_handler:</span>
+<span class="sd">            An event handler instance that has appropriate event handling</span>
+<span class="sd">            methods which will be called by the observer in response to</span>
+<span class="sd">            file system events.</span>
+<span class="sd">        :type event_handler:</span>
+<span class="sd">            :class:`watchdog.events.FileSystemEventHandler` or a subclass</span>
+<span class="sd">        :param watch:</span>
+<span class="sd">            The watch to remove a handler for.</span>
+<span class="sd">        :type watch:</span>
+<span class="sd">            An instance of :class:`ObservedWatch` or a subclass of</span>
+<span class="sd">            :class:`ObservedWatch`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handlers</span><span class="p">[</span><span class="n">watch</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">event_handler</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="BaseObserver.unschedule"><a class="viewcode-back" href="../../../api.html#watchdog.observers.api.BaseObserver.unschedule">[docs]</a>    <span class="k">def</span> <span class="nf">unschedule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">watch</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Unschedules a watch.</span>
+
+<span class="sd">        :param watch:</span>
+<span class="sd">            The watch to unschedule.</span>
+<span class="sd">        :type watch:</span>
+<span class="sd">            An instance of :class:`ObservedWatch` or a subclass of</span>
+<span class="sd">            :class:`ObservedWatch`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="n">emitter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_emitter_for_watch</span><span class="p">[</span><span class="n">watch</span><span class="p">]</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handlers</span><span class="p">[</span><span class="n">watch</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_remove_emitter</span><span class="p">(</span><span class="n">emitter</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_watches</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">watch</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="BaseObserver.unschedule_all"><a class="viewcode-back" href="../../../api.html#watchdog.observers.api.BaseObserver.unschedule_all">[docs]</a>    <span class="k">def</span> <span class="nf">unschedule_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Unschedules all watches and detaches all associated event</span>
+<span class="sd">        handlers.&quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_handlers</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_clear_emitters</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_watches</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</div>
+    <span class="k">def</span> <span class="nf">on_thread_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">unschedule_all</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">dispatch_events</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event_queue</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
+        <span class="n">event</span><span class="p">,</span> <span class="n">watch</span> <span class="o">=</span> <span class="n">event_queue</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="c"># To allow unschedule/stop and safe removal of event handlers</span>
+            <span class="c"># within event handlers itself, check if the handler is still</span>
+            <span class="c"># registered after every dispatch.</span>
+            <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_handlers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">watch</span><span class="p">,</span> <span class="p">[])):</span>
+                <span class="k">if</span> <span class="n">handler</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handlers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">watch</span><span class="p">,</span> <span class="p">[]):</span>
+                    <span class="n">handler</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+        <span class="n">event_queue</span><span class="o">.</span><span class="n">task_done</span><span class="p">()</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">watchdog 0.8.3 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2010, Yesudeep Mangalapilly.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

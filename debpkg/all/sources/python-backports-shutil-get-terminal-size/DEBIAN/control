@@ -1,0 +1,15 @@
+Package: python-backports-shutil-get-terminal-size
+Version: 1.0.0-5
+Architecture: all
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Installed-Size: 29
+Depends: python:any (<< 2.8)
+Breaks: python-backports.ssl-match-hostname (<< 3.5)
+Section: python
+Priority: optional
+Homepage: https://github.com/chrippa/backports.shutil_get_terminal_size
+Description: Backport of the "shutil.get_terminal_size" function (Python 2)
+ This is a backport to Python 2 of the get_terminal_size in the shutil module
+ of Python 3.
+ .
+ This package is (obviously) for Python 2.

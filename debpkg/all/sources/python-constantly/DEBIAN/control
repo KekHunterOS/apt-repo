@@ -1,0 +1,18 @@
+Package: python-constantly
+Source: constantly
+Version: 15.1.0-1
+Architecture: all
+Maintainer: Free Ekanayaka <freee@debian.org>
+Installed-Size: 40
+Depends: python:any (<< 2.8)
+Section: python
+Priority: optional
+Homepage: https://github.com/twisted/constantly
+Description: Symbolic constants in Python
+ A library that provides symbolic constant support. It includes
+ collections and constants with text, numeric, and bit flag
+ values.
+ .
+ Originally twisted.python.constants from the Twisted project.
+ .
+ This package provides the Python 2.x module.

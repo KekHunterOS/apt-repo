@@ -1,0 +1,15 @@
+Package: python-backports.functools-lru-cache
+Source: backports.functools-lru-cache
+Version: 1.5-3
+Architecture: all
+Maintainer: Sandro Tosi <morph@debian.org>
+Installed-Size: 34
+Depends: python:any (<< 2.8)
+Section: python
+Priority: optional
+Homepage: https://github.com/jaraco/backports.functools_lru_cache
+Description: backport of functools.lru_cache from Python 3.3 to Python 2
+ Backport of functools.lru_cache from Python 3.3 as published at ActiveState:
+ <http://code.activestate.com/recipes/578078/>
+ .
+ This package provides functools.lru_cache to Python 2.

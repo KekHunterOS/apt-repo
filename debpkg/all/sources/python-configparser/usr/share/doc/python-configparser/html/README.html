@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>configparser &#8212; ConfigParser 3.3.0r2-1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '3.3.0r2-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="configparser.html">ConfigParser 3.3.0r2-1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="configparser">
+<h1>configparser<a class="headerlink" href="#configparser" title="Permalink to this headline">¶</a></h1>
+<p>The ancient <code class="docutils literal"><span class="pre">ConfigParser</span></code> module available in the standard library 2.x has
+seen a major update in Python 3.2. This is a backport of those changes so that
+they can be used directly in Python 2.6 - 3.5.</p>
+<p>To use the <code class="docutils literal"><span class="pre">configparser</span></code> backport instead of the built-in version on both
+Python 2 and Python 3, simply import it explicitly as a backport:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">backports</span> <span class="k">import</span> <span class="n">configparser</span>
+</pre></div>
+</div>
+<p>If you&#8217;d like to use the backport on Python 2 and the built-in version on
+Python 3, use that invocation instead:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">configparser</span>
+</pre></div>
+</div>
+<p>For detailed documentation consult the vanilla version at
+<a class="reference external" href="http://docs.python.org/3/library/configparser.html">http://docs.python.org/3/library/configparser.html</a>.</p>
+<div class="section" id="why-you-ll-love-configparser">
+<h2>Why you&#8217;ll love <code class="docutils literal"><span class="pre">configparser</span></code><a class="headerlink" href="#why-you-ll-love-configparser" title="Permalink to this headline">¶</a></h2>
+<p>Whereas almost completely compatible with its older brother, <code class="docutils literal"><span class="pre">configparser</span></code>
+sports a bunch of interesting new features:</p>
+<ul>
+<li><p class="first">full mapping protocol access (<a class="reference external" href="http://docs.python.org/3/library/configparser.html#mapping-protocol-access">more info</a>):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span> <span class="o">=</span> <span class="n">ConfigParser</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span><span class="o">.</span><span class="n">read_string</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="go">[DEFAULT]</span>
+<span class="go">location = upper left</span>
+<span class="go">visible = yes</span>
+<span class="go">editable = no</span>
+<span class="go">color = blue</span>
+
+<span class="go">[main]</span>
+<span class="go">title = Main Menu</span>
+<span class="go">color = green</span>
+
+<span class="go">[options]</span>
+<span class="go">title = Options</span>
+<span class="go">&quot;&quot;&quot;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span><span class="p">[</span><span class="s1">&#39;main&#39;</span><span class="p">][</span><span class="s1">&#39;color&#39;</span><span class="p">]</span>
+<span class="go">&#39;green&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span><span class="p">[</span><span class="s1">&#39;main&#39;</span><span class="p">][</span><span class="s1">&#39;editable&#39;</span><span class="p">]</span>
+<span class="go">&#39;no&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">section</span> <span class="o">=</span> <span class="n">parser</span><span class="p">[</span><span class="s1">&#39;options&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">section</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+<span class="go">&#39;Options&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">section</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Options (editable: </span><span class="si">%(editable)s</span><span class="s1">)&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">section</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+<span class="go">&#39;Options (editable: no)&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">there&#8217;s now one default <code class="docutils literal"><span class="pre">ConfigParser</span></code> class, which basically is the old
+<code class="docutils literal"><span class="pre">SafeConfigParser</span></code> with a bunch of tweaks which make it more predictable for
+users. Don&#8217;t need interpolation? Simply use
+<code class="docutils literal"><span class="pre">ConfigParser(interpolation=None)</span></code>, no need to use a distinct
+<code class="docutils literal"><span class="pre">RawConfigParser</span></code> anymore.</p>
+</li>
+<li><p class="first">the parser is highly <a class="reference external" href="http://docs.python.org/3/library/configparser.html#customizing-parser-behaviour">customizable upon instantiation</a>
+supporting things like changing option delimiters, comment characters, the
+name of the DEFAULT section, the interpolation syntax, etc.</p>
+</li>
+<li><p class="first">you can easily create your own interpolation syntax but there are two powerful
+implementations built-in (<a class="reference external" href="http://docs.python.org/3/library/configparser.html#interpolation-of-values">more info</a>):</p>
+<ul class="simple">
+<li>the classic <code class="docutils literal"><span class="pre">%(string-like)s</span></code> syntax (called <code class="docutils literal"><span class="pre">BasicInterpolation</span></code>)</li>
+<li>a new <code class="docutils literal"><span class="pre">${buildout:like}</span></code> syntax (called <code class="docutils literal"><span class="pre">ExtendedInterpolation</span></code>)</li>
+</ul>
+</li>
+<li><p class="first">fallback values may be specified in getters (<a class="reference external" href="http://docs.python.org/3/library/configparser.html#fallback-values">more info</a>):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;closet&#39;</span><span class="p">,</span> <span class="s1">&#39;monster&#39;</span><span class="p">,</span>
+<span class="gp">... </span>           <span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;No such things as monsters&#39;</span><span class="p">)</span>
+<span class="go">&#39;No such things as monsters&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">ConfigParser</span></code> objects can now read data directly <a class="reference external" href="http://docs.python.org/3/library/configparser.html#configparser.ConfigParser.read_string">from strings</a>
+and <a class="reference external" href="http://docs.python.org/3/library/configparser.html#configparser.ConfigParser.read_dict">from dictionaries</a>.
+That means importing configuration from JSON or specifying default values for
+the whole configuration (multiple sections) is now a single line of code. Same
+goes for copying data from another <code class="docutils literal"><span class="pre">ConfigParser</span></code> instance, thanks to its
+mapping protocol support.</p>
+</li>
+<li><p class="first">many smaller tweaks, updates and fixes</p>
+</li>
+</ul>
+</div>
+<div class="section" id="a-few-words-about-unicode">
+<h2>A few words about Unicode<a class="headerlink" href="#a-few-words-about-unicode" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">configparser</span></code> comes from Python 3 and as such it works well with Unicode.
+The library is generally cleaned up in terms of internal data storage and
+reading/writing files.  There are a couple of incompatibilities with the old
+<code class="docutils literal"><span class="pre">ConfigParser</span></code> due to that. However, the work required to migrate is well
+worth it as it shows the issues that would likely come up during migration of
+your project to Python 3.</p>
+<p>The design assumes that Unicode strings are used whenever possible <a class="footnote-reference" href="#id13" id="id1">[1]</a>.  That
+gives you the certainty that what&#8217;s stored in a configuration object is text.
+Once your configuration is read, the rest of your application doesn&#8217;t have to
+deal with encoding issues. All you have is text <a class="footnote-reference" href="#id14" id="id2">[2]</a>. The only two phases when
+you should explicitly state encoding is when you either read from an external
+source (e.g. a file) or write back.</p>
+</div>
+<div class="section" id="versioning">
+<h2>Versioning<a class="headerlink" href="#versioning" title="Permalink to this headline">¶</a></h2>
+<p>This backport is intended to keep 100% compatibility with the vanilla release in
+Python 3.2+. To help maintaining a version you want and expect, a versioning
+scheme is used where:</p>
+<ul class="simple">
+<li>the first two numbers indicate the version of Python 3 from which the
+backport is done</li>
+<li>a backport release number is provided as the final number (zero-indexed)</li>
+</ul>
+<p>For example, <code class="docutils literal"><span class="pre">3.5.2</span></code> is the <strong>third</strong> backport release of the
+<code class="docutils literal"><span class="pre">configparser</span></code> library as seen in Python 3.5.  Note that <code class="docutils literal"><span class="pre">3.5.2</span></code> does
+<strong>NOT</strong> necessarily mean this backport version is based on the standard library
+of Python 3.5.2.</p>
+<p>One exception from the 100% compatibility principle is that bugs fixed before
+releasing another minor Python 3 bugfix version <strong>will be included</strong> in the
+backport releases done in the mean time.</p>
+</div>
+<div class="section" id="maintenance">
+<h2>Maintenance<a class="headerlink" href="#maintenance" title="Permalink to this headline">¶</a></h2>
+<p>This backport is maintained on BitBucket by Łukasz Langa, the current vanilla
+<code class="docutils literal"><span class="pre">configparser</span></code> maintainer for CPython:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://bitbucket.org/ambv/configparser">configparser Mercurial repository</a></li>
+<li><a class="reference external" href="https://bitbucket.org/ambv/configparser/issues">configparser issue tracker</a></li>
+</ul>
+</div>
+<div class="section" id="change-log">
+<h2>Change Log<a class="headerlink" href="#change-log" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>3.5.0<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>a complete rewrite of the backport; now single codebase working on Python
+2.6 - 3.5. To use on Python 3 import <code class="docutils literal"><span class="pre">from</span> <span class="pre">backports</span> <span class="pre">import</span> <span class="pre">configparser</span></code>
+instead of the built-in version.</li>
+<li>compatible with 3.5.1</li>
+<li>fixes <a class="reference external" href="https://bitbucket.org/ambv/configparser/issue/1">BitBucket issue #1</a>: versioning non-compliant
+with PEP 386</li>
+<li>fixes <a class="reference external" href="https://bitbucket.org/ambv/configparser/issue/3">BitBucket issue #3</a>: <code class="docutils literal"><span class="pre">reload(sys);</span>
+<span class="pre">sys.setdefaultencoding('utf8')</span></code> in setup.py</li>
+<li>fixes <a class="reference external" href="https://bitbucket.org/ambv/configparser/issue/5">BitBucket issue #5</a>: Installing the backport
+on Python 3 breaks virtualenv</li>
+<li>fixes <a class="reference external" href="https://bitbucket.org/ambv/configparser/issue/6">BitBucket issue #6</a>: PyPy compatibility</li>
+</ul>
+</div>
+<div class="section" id="b2">
+<h3>3.5.0b2<a class="headerlink" href="#b2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>second beta of 3.5.0, not using any third-party futurization libraries</li>
+</ul>
+</div>
+<div class="section" id="b1">
+<h3>3.5.0b1<a class="headerlink" href="#b1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>first beta of 3.5.0, using python-future</li>
+<li>for the full feature list, see <a class="reference internal" href="#id3">3.5.0</a></li>
+</ul>
+</div>
+<div class="section" id="r2">
+<h3>3.3.0r2<a class="headerlink" href="#r2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>updated the fix for <a class="reference external" href="http://bugs.python.org/issue16820">#16820</a>: parsers
+now preserve section order when using <code class="docutils literal"><span class="pre">__setitem__</span></code> and <code class="docutils literal"><span class="pre">update</span></code></li>
+</ul>
+</div>
+<div class="section" id="r1">
+<h3>3.3.0r1<a class="headerlink" href="#r1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>compatible with 3.3.0 + fixes for <a class="reference external" href="http://bugs.python.org/issue15803">#15803</a> and <a class="reference external" href="http://bugs.python.org/issue16820">#16820</a></li>
+<li>fixes <a class="reference external" href="https://bitbucket.org/ambv/configparser/issue/4">BitBucket issue #4</a>: <code class="docutils literal"><span class="pre">read()</span></code> properly
+treats a bytestring argument as a filename</li>
+<li><a class="reference external" href="http://pypi.python.org/pypi/ordereddict">ordereddict</a> dependency required
+only for Python 2.6</li>
+<li><a class="reference external" href="http://pypi.python.org/pypi/unittest2">unittest2</a> explicit dependency
+dropped. If you want to test the release, add <code class="docutils literal"><span class="pre">unittest2</span></code> on your own.</li>
+</ul>
+</div>
+<div class="section" id="r3">
+<h3>3.2.0r3<a class="headerlink" href="#r3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>proper Python 2.6 support<ul>
+<li>explicitly stated the dependency on <a class="reference external" href="http://pypi.python.org/pypi/ordereddict">ordereddict</a></li>
+<li>numbered all formatting braces in strings</li>
+</ul>
+</li>
+<li>explicitly says that Python 2.5 support won&#8217;t happen (too much work necessary
+without abstract base classes, string formatters, the <code class="docutils literal"><span class="pre">io</span></code> library, etc.)</li>
+<li>some healthy advertising in the README</li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>3.2.0r2<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>a backport-specific change: for convenience and basic compatibility with the
+old ConfigParser, bytestrings are now accepted as section names, options and
+values.  Those strings are still converted to Unicode for internal storage so
+in any case when such conversion is not possible (using the &#8216;ascii&#8217; codec),
+UnicodeDecodeError is raised.</li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h3>3.2.0r1<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>the first public release compatible with 3.2.0 + fixes for <a class="reference external" href="http://bugs.python.org/issue11324">#11324</a>, <a class="reference external" href="http://bugs.python.org/issue11670">#11670</a> and <a class="reference external" href="http://bugs.python.org/issue11858">#11858</a>.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="conversion-process">
+<h2>Conversion Process<a class="headerlink" href="#conversion-process" title="Permalink to this headline">¶</a></h2>
+<p>This section is technical and should bother you only if you are wondering how
+this backport is produced. If the implementation details of this backport are
+not important for you, feel free to ignore the following content.</p>
+<p><code class="docutils literal"><span class="pre">configparser</span></code> is converted using <a class="reference external" href="http://python-future.org">python-future</a> and free time.  Because a fully automatic
+conversion was not doable, I took the following branching approach:</p>
+<ul class="simple">
+<li>the <code class="docutils literal"><span class="pre">3.x</span></code> branch holds unchanged files synchronized from the upstream
+CPython repository. The synchronization is currently done by manually copying
+the required files and stating from which CPython changeset they come from.</li>
+<li>the <code class="docutils literal"><span class="pre">default</span></code> branch holds a version of the <code class="docutils literal"><span class="pre">3.x</span></code> code with some tweaks
+that make it independent from libraries and constructions unavailable on 2.x.
+Code on this branch still <em>must</em> work on the corresponding Python 3.x but
+will also work on Python 2.6 and 2.7 (including PyPy).  You can check this
+running the supplied unit tests with <code class="docutils literal"><span class="pre">tox</span></code>.</li>
+</ul>
+<p>The process works like this:</p>
+<ol class="arabic simple">
+<li>I update the <code class="docutils literal"><span class="pre">3.x</span></code> branch with new versions of files.  Note that the
+actual <code class="docutils literal"><span class="pre">configparser.py</span></code> file is now just a proxy for sources held in
+<code class="docutils literal"><span class="pre">backports/configparser/__init__.py</span></code>.</li>
+<li>I check for new names in <code class="docutils literal"><span class="pre">__all__</span></code> and update imports in
+<code class="docutils literal"><span class="pre">configparser.py</span></code> accordingly. I run the tests on Python 3. Commit.</li>
+<li>I merge the new commit to <code class="docutils literal"><span class="pre">default</span></code>. I run <code class="docutils literal"><span class="pre">tox</span></code>. Commit.</li>
+<li>If there are necessary changes, I do them now (on <code class="docutils literal"><span class="pre">default</span></code>). Note that
+the changes should be written in the syntax subset supported by Python
+2.6.</li>
+<li>I run <code class="docutils literal"><span class="pre">tox</span></code>. If it works, I update the docs and release the new version.
+Otherwise, I go back to point 3. I might use <code class="docutils literal"><span class="pre">pasteurize</span></code> to suggest me
+required changes but usually I do them manually to keep resulting code in
+a nicer form.</li>
+</ol>
+</div>
+<div class="section" id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id13" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>To somewhat ease migration, passing bytestrings is still supported but
+they are converted to Unicode for internal storage anyway. This means
+that for the vast majority of strings used in configuration files, it
+won&#8217;t matter if you pass them as bytestrings or Unicode. However, if you
+pass a bytestring that cannot be converted to Unicode using the naive
+ASCII codec, a <code class="docutils literal"><span class="pre">UnicodeDecodeError</span></code> will be raised. This is purposeful
+and helps you manage proper encoding for all content you store in
+memory, read from various sources and write back.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id14" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Life gets much easier when you understand that you basically manage
+<strong>text</strong> in your application.  You don&#8217;t care about bytes but about
+letters.  In that regard the concept of content encoding is meaningless.
+The only time when you deal with raw bytes is when you write the data to
+a file.  Then you have to specify how your text should be encoded.  On
+the other end, to get meaningful text from a file, the application
+reading it has to know which encoding was used during its creation.  But
+once the bytes are read and properly decoded, all you have is text.  This
+is especially powerful when you start interacting with multiple data
+sources.  Even if each of them uses a different encoding, inside your
+application data is held in abstract text form.  You can program your
+business logic without worrying about which data came from which source.
+You can freely exchange the data you store between sources.  Only
+reading/writing files requires encoding your text to bytes.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="configparser.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">configparser</a><ul>
+<li><a class="reference internal" href="#why-you-ll-love-configparser">Why you&#8217;ll love <code class="docutils literal"><span class="pre">configparser</span></code></a></li>
+<li><a class="reference internal" href="#a-few-words-about-unicode">A few words about Unicode</a></li>
+<li><a class="reference internal" href="#versioning">Versioning</a></li>
+<li><a class="reference internal" href="#maintenance">Maintenance</a></li>
+<li><a class="reference internal" href="#change-log">Change Log</a><ul>
+<li><a class="reference internal" href="#id3">3.5.0</a></li>
+<li><a class="reference internal" href="#b2">3.5.0b2</a></li>
+<li><a class="reference internal" href="#b1">3.5.0b1</a></li>
+<li><a class="reference internal" href="#r2">3.3.0r2</a></li>
+<li><a class="reference internal" href="#r1">3.3.0r1</a></li>
+<li><a class="reference internal" href="#r3">3.2.0r3</a></li>
+<li><a class="reference internal" href="#id8">3.2.0r2</a></li>
+<li><a class="reference internal" href="#id9">3.2.0r1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#conversion-process">Conversion Process</a></li>
+<li><a class="reference internal" href="#footnotes">Footnotes</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/README.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="configparser.html">ConfigParser 3.3.0r2-1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Łukasz Langa &lt;lukasz@langa.pl&gt;.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.
+    </div>
+  </body>
+</html>

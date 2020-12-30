@@ -1,0 +1,15 @@
+Package: sslstrip
+Version: 0.9-1kali3
+Architecture: all
+Maintainer: Chow Loong Jin <hyperair@ubuntu.com>
+Installed-Size: 89
+Depends: python-twisted-web, python (>= 2.7~)
+Section: net
+Priority: optional
+Homepage: http://www.thoughtcrime.org/software/sslstrip/
+Description: SSL/TLS man-in-the-middle attack tool
+ sslstrip is a tool that transparently hijacks HTTP traffic on a network, watch
+ for HTTPS links and redirects, and then map those links into look-alike HTTP
+ links or homograph-similar HTTPS links. It also supports modes for supplying a
+ favicon which looks like a lock icon, selective logging, and session
+ denial.
