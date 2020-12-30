@@ -9,9 +9,9 @@ Priority: optional
 Section: interpreters
 Filename: pool/bleeding-edge/i/ipython/ipython_5.8.0-1_all.deb
 Size: 13932
-SHA256: bdf1fdc21e6e2a9812504e13918c83dbb5d8a87e10a5b12265c3232e51b46781
-SHA1: 1a32b9f5c375d315d0046b4baf91bfebf058a7fc
-MD5sum: 07d477bf7750909ef871d140e79aaaae
+SHA256: 3520e3a5c6d2aa1c923684b19c21c710fb4dcd6c902f80d3b182c98315c9a4d3
+SHA1: 5a21839bead704341b59a183a56429ad9ce8686d
+MD5sum: 49bb33ae09c2488b701050a952e01c31
 Description: Enhanced interactive Python 2 shell
  IPython can be used as a replacement for the standard Python shell,
  or it can be used as a complete working environment for scientific
@@ -39,9 +39,9 @@ Priority: optional
 Section: javascript
 Filename: pool/bleeding-edge/j/jquery/libjs-jquery_3.2.1-1_all.deb
 Size: 154020
-SHA256: 9e63f46c32fd01c39845a99af161ad71d585053c31eb65939b729987d709a063
-SHA1: 5c45fb474751bbe9f7d2645a97a7cde0ec7d6ecf
-MD5sum: d004eca3be6f8a8e26324ac90471b4cf
+SHA256: aeb734792ef455c51a8678c909072930d7aaa240c3139444317174c00278f7a6
+SHA1: 68b73b604cb40cb5fdd1d2ec097813d379845abd
+MD5sum: 9b322e9039f10313608b7393e57a83e2
 Description: JavaScript library for dynamic web applications
  jQuery is a fast, concise, JavaScript Library that simplifies how you
  traverse HTML documents, handle events, perform animations, and add Ajax
@@ -60,9 +60,9 @@ Priority: optional
 Section: misc
 Filename: pool/bleeding-edge/m/mitmf/mitmf_0.9.8_all.deb
 Size: 142192
-SHA256: 3437c6b9e60497edff37d0653b7410f535ce1262d12c1d7aa3fae3b003942a2b
-SHA1: c406817efc6052fdbc0c54eec25b6204c3fbc0dd
-MD5sum: a5cbc7452d4422fe557d66c906fa16f4
+SHA256: 4c9abe4bda64a4c1c4a96b7379ac75cffc9e153a86d2a69adc1adef60db1ed00
+SHA1: 02a1de8dc44964bc275a4646d5b5a1837d025b5c
+MD5sum: dfd5c958f665034c9152a2be6cdecfa1
 Description: Framework for Man-In-The-Middle attacks
  The program was created to deal with some of the significant shortcomings
  that Ettercap filters have when modifying HTTP traffic. It tries to provide
@@ -98,6 +98,56 @@ Description: Framework for Man-In-The-Middle attacks
   - SMBAuth - Evoke SMB challenge-response auth attempts
   - Upsidedownternet - Flips images 180 degrees
 
+Package: openjdk-8-doc
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: all
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 282819
+Suggests: openjdk-8-jdk
+Homepage: http://openjdk.java.net/
+Priority: optional
+Section: doc
+Filename: pool/bleeding-edge/o/openjdk-8/openjdk-8-doc_8u212-b01-1_all.deb
+Size: 11701616
+SHA256: 74d7287643975575a28d601cfdca8b050273455ceb3a4436c8c12a972008942e
+SHA1: 6d1f0035849f602d316bc0be2fda889ca96ca15b
+MD5sum: ffb26802a1144b3bb6f3818cd86931ee
+Description: OpenJDK Development Kit (JDK) documentation
+ OpenJDK is a development environment for building applications,
+ applets, and components using the Java programming language.
+ .
+ This package contains the API documentation.
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.
+
+Package: openjdk-8-source
+Source: openjdk-8
+Version: 8u212-b01-1
+Architecture: all
+Maintainer: OpenJDK Team <openjdk@lists.launchpad.net>
+Installed-Size: 50814
+Depends: openjdk-8-jre (>= 8u212-b01-1), openjdk-8-jdk (>= 8u212-b01-1)
+Replaces: openjdk-8-jdk (<< 8u20~b26-1~)
+Homepage: http://openjdk.java.net/
+Priority: optional
+Section: java
+Filename: pool/bleeding-edge/o/openjdk-8/openjdk-8-source_8u212-b01-1_all.deb
+Size: 46326200
+SHA256: b9e45986dd9c6e2b2628b649f5e35dfd0d6b536908f88a8e1db24a4d907d8406
+SHA1: 44b2c4ee5143c16c92c548f26e9a27d7931cc1fd
+MD5sum: a2e3232403c9cb1fbb135f260ecc7a3d
+Description: OpenJDK Development Kit (JDK) source files
+ OpenJDK is a development environment for building applications,
+ applets, and components using the Java programming language.
+ .
+ This package contains the Java programming language source files
+ (src.zip) for all classes that make up the Java core API.
+ .
+ The packages are built using the IcedTea build support and patches
+ from the IcedTea project.
+
 Package: python-argh
 Version: 0.26.2-1
 Architecture: all
@@ -109,9 +159,9 @@ Priority: extra
 Section: python
 Filename: pool/bleeding-edge/p/python-argh/python-argh_0.26.2-1_all.deb
 Size: 24328
-SHA256: 1735e81255db1b8b477764a4715b3577726915a51f3d82d227a0e2adac1f962c
-SHA1: f5b32e2de8f7efe1d70ffcc5a1c3c5dceee07bd5
-MD5sum: f7a17fb009e7328994b0fc625adab872
+SHA256: 4d7c2a071968c731c3d86e0861a9f01e65735cfc1bb2c0ef841a110dd7b293a5
+SHA1: 2c614175ec7c8e305f28070a34672147ba692323
+MD5sum: 1d67ee1e1e386e7a5824bc12a060ab59
 Description: simple argparse wrapper (Python 2)
  Argh provides a very simple wrapper for argparse.
  .
@@ -148,9 +198,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/a/asn1crypto/python-asn1crypto_0.22.0-1_all.deb
 Size: 68912
-SHA256: 9a75ec65a3be704de0a4ed9face9eb62272002fc1f13e592263193d8768874ae
-SHA1: 3a0877af9761ad7637566d6a31d954da84b761eb
-MD5sum: 92a586e072d2f4fed8c91088de17eb10
+SHA256: c2767d1f32f61cab30bdba704944eddba5f7f482b414f4a5e80e1d2261f3394b
+SHA1: b092b9207e08a6751d0b69b79cb92dfdfb1fff08
+MD5sum: 9bc460d597b3c24c0d6753b19b57431e
 Description: Fast ASN.1 parser and serializer (Python 2)
  asn1crypto focuses on:
   - Delayed parsing of byte string values
@@ -172,9 +222,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-attrs/python-attr_17.2.0-1_all.deb
 Size: 18276
-SHA256: fbbc90eba2bffb7d10f6d5a424fbbf107c20650a78857cfbac4d95f474f4731b
-SHA1: 34c66fd3705f937ebfc51d5dc4bea1298356b7f7
-MD5sum: 01e9c5c611f691c572077f1ee21ae19b
+SHA256: 4755ecc75ba5627ad055e06a9811d22a8951ad3a07f774fdfc04ef0999cf0121
+SHA1: 0240243123c60b4404bfd46c3e544a9f4137e8e7
+MD5sum: c3824d3fc95921405b9d0b2406a340a2
 Description: Attributes without boilerplate (Python 2)
  attrs is an MIT-licensed Python package with class decorators that ease the
  chores of implementing the most common attribute-related object protocols.
@@ -200,9 +250,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/a/automat/python-automat_0.6.0-1_all.deb
 Size: 24436
-SHA256: b18bcd328d06e789465a210dbee035160ea5a6599020c1daca952c2aac731323
-SHA1: fa7a32f2febad4cad0d9763a345214ea441852c8
-MD5sum: 6a8393ec8de6337947b75194fef20f83
+SHA256: ff347f1730e783164da74b7b6f14f43283700d3b135f6e2bf8f68540c69d7ebe
+SHA1: a19cb744b9aa2a59c7065b3df7612fc67d5cff51
+MD5sum: a5018adcd1542b0d8adf7872599b04a2
 Description: Self-service finite-state machines for the programmer on the go
  Automat is a library for concise, idiomatic Python expression of
  finite-state automata (particularly deterministic finite-state
@@ -220,9 +270,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-backports-shutil-get-terminal-size/python-backports-shutil-get-terminal-size_1.0.0-5_all.deb
 Size: 4768
-SHA256: 0498153cbf172e03b473adfbe00016a5b3c52433076107d072519a1c471a88e3
-SHA1: 51d076b10e5dc5c14fc2353e41bf858d07de930d
-MD5sum: 2a1ceea0343933c06c55baecdcf363da
+SHA256: e14a7df24c8a6c18e4a057a920ea61a0d28ba4895b390d1588d8893758473723
+SHA1: f1638cd38c3fc97c3e951bb6362c27a575de6463
+MD5sum: 5f73270fd176002ee67d69a77b50f5e1
 Description: Backport of the "shutil.get_terminal_size" function (Python 2)
  This is a backport to Python 2 of the get_terminal_size in the shutil module
  of Python 3.
@@ -241,9 +291,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/b/backports.functools-lru-cache/python-backports.functools-lru-cache_1.5-3_all.deb
 Size: 6344
-SHA256: 65645cac37cbb68c2657471c07f43bf14312844dae3c4b07645ddc5a240ba0fc
-SHA1: 23566c877bbc08e84f39108c0410169a261ea9d1
-MD5sum: 0dd5eece6754a3625b4d38723bcb7683
+SHA256: 2c420e81dca706ad618f2fdc6fb38ba0869043688a40e93b2539e31a415e477f
+SHA1: 8752ca8876d598d860be7ae20397fd547a285a74
+MD5sum: 43fb202efbe640c5838195fce1475118
 Description: backport of functools.lru_cache from Python 3.3 to Python 2
  Backport of functools.lru_cache from Python 3.3 as published at ActiveState:
  <http://code.activestate.com/recipes/578078/>
@@ -263,9 +313,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/b/beautifulsoup4/python-bs4_4.8.2-1_all.deb
 Size: 105864
-SHA256: 2ddb82959d1d9254f512ec7e25d4c6303b96bee13bf728ccaae9c8648162683d
-SHA1: 1471944487d15d2045873a6ee0aedc812ac0c1eb
-MD5sum: d1bf8ddd0108d3f9714d818b609229bd
+SHA256: 9f9a33eaf05e9fa7ce5965e882ef9d2d12903fa7b772969aa0bff5b6b60cf289
+SHA1: e111c6a3b9a53d20233b21f4477f896859f7da57
+MD5sum: 71c860e5069941dd8294169877ca8924
 Description: error-tolerant HTML parser for Python
  Beautiful Soup is a Python library for pulling data out of HTML and XML files.
  It works with your favorite parser to provide idiomatic ways of navigating,
@@ -285,9 +335,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-certifi/python-certifi_2017.4.17-2_all.deb
 Size: 176852
-SHA256: 84296e70ca50fb9b3ca7ccc686418e3803a6f028c372cf1ba2610bfacbad1e51
-SHA1: ce27d50159c84cc0e8ac26bc1e373e1294b2f283
-MD5sum: 4855620c4fd2c7cbf911c49020b39552
+SHA256: 1f003179a9b1dd1024d311846055b8f81a82905a2bd3b79a47721c1c0bac10fc
+SHA1: 2693308f5f0b414f2aca25fa8be26eaf49a1a987
+MD5sum: dc2134471cd0b21d8ec54d148e75e47d
 Description: root certificates for validating SSL certs and verifying TLS hosts
  Certifi is a carefully curated collection of Root Certificates for
  validating the trustworthiness of SSL certificates while verifying
@@ -310,9 +360,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/c/chardet/python-chardet_3.0.4-1_all.deb
 Size: 78896
-SHA256: d0ba5f8fa92e1d37832aa1320760b13c57eb42065c246d44094d867b32eb5985
-SHA1: 38f1716465fc3d77f3c60b38a2a113616e1546e2
-MD5sum: 3bf26a465ab46c3a8c65302cc60430f5
+SHA256: ca26c0a514cd8e66b6f19240a9df4fdb7c30a6a2b4bc9fe8c146982074865bd5
+SHA1: 53a99d4d35ccf5d641240eb5d2405afee5e099c6
+MD5sum: f6e46bc3e3ded44ea3b1410bfad681fb
 Description: universal character encoding detector for Python2
  Chardet takes a sequence of bytes in an unknown character encoding, and
  attempts to determine the encoding.
@@ -344,9 +394,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-click/python-click_6.7-1_all.deb
 Size: 55628
-SHA256: 39042bc378765a5d94c2a6199219b3e9afc45a19b684cad9d7f1591b155d43d5
-SHA1: cbb6333709869e63179c2155e788ea75e1a7a430
-MD5sum: 585b68559a1f846ca2080cb65455cf1e
+SHA256: 310c1ba79b5cab9802068d77ffb629f3bdd661271f0dff45167266bc91022acb
+SHA1: 22f1d964b1909445b8bee6d5dff30277bbed57c8
+MD5sum: 98e085d1b3d496f3f3e78f26313ede93
 Description: Simple wrapper around optparse for powerful command line utilities - Python 2.7
  Click is a Python package for creating beautiful command line interfaces
  in a composable way with as little code as necessary.  It's the "Command
@@ -370,9 +420,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-colorama/python-colorama_0.3.7-1_all.deb
 Size: 24984
-SHA256: da97ec1159fbd5816e1d57655938e495f04aa71e26867397167542c27569dc67
-SHA1: 8a7babeaa97087379a36c375e32f921bdadf2bc6
-MD5sum: 6618dcb01b6b093867d5d1cd7d707c09
+SHA256: 2dd58f116ea5097cb0e5163b18b3fafe570b4e01a1b7700e122c40160571b0c4
+SHA1: f764b6c0d078950c2af67c9fb943cfeae805ea3d
+MD5sum: b8249bf55260c851082891a8b274e0f2
 Description: Cross-platform colored terminal text in Python - Python 2.x
  Python-colorama provides a simple cross-platform API to print colored terminal
  text from Python applications.
@@ -398,9 +448,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/c/configobj/python-configobj_5.0.6-2_all.deb
 Size: 35000
-SHA256: 6fb024ac51f182bdbeee7a0b83f00e4f357dab778bc12a5c0e6e2686474f1367
-SHA1: 98249930f8b0625e7accba86fd015da790db5072
-MD5sum: 006e9cdcc0d974f46b8cbdf933023a75
+SHA256: 12bea0c46e7533682f1df7c15b75e9645277f90dac7fb74c4c20ac5758c86f47
+SHA1: 5c274929e6a5d0506aa50cbcc595b7e42cf2e167
+MD5sum: c559c5e857052f6b339e8366c033342e
 Description: simple but powerful config file reader and writer for Python 2
  ConfigObj is a simple but powerful config file reader and writer: an
  ini file round tripper. Its main feature is that it is very easy to
@@ -434,9 +484,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/c/configparser/python-configparser_3.5.0-1_all.deb
 Size: 59300
-SHA256: 0ee30dda21c6440bf64ccdb5ddf0956b2301a92c8f3c3c2c1e9d3e8b257e0399
-SHA1: ce579d9ff2a6a40dcc96ca749340ec33e60bcae3
-MD5sum: c43f2ecc19ac591cde25baec057c7487
+SHA256: 1419033d47a48924b015879eae9187c841546e49b5ced928d24f7ebe7cbd3862
+SHA1: 855bd626917616bd85a070792d278c29fd9064f0
+MD5sum: 90dab68c75eb5ec23f7c00d5f8c6ec9b
 Description: backport of the enhanced config parser introduced in Python 3.2
  The ancient ConfigParser module available in the standard library 2.x has
  seen a major update in Python 3.2. This is a backport of those changes so
@@ -454,9 +504,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/c/constantly/python-constantly_15.1.0-1_all.deb
 Size: 7640
-SHA256: 38a107d9c0156285d2c77a788d8bca92b9965927229258f8a623db175afe7713
-SHA1: 34204e798d0d245be5836d7a2f43c05912f23160
-MD5sum: 961803cf72062cef3603d39259fc9813
+SHA256: b712b7ef6a882f7ee14c3456eeab3b4145c416aa230b214137e0c9385d2d29a3
+SHA1: 5761e4fe48456f7f1564b7d4252e695cae5c5cde
+MD5sum: cc7b3404e1d767e4149abd44fd895610
 Description: Symbolic constants in Python
  A library that provides symbolic constant support. It includes
  collections and constants with text, numeric, and bit flag
@@ -478,9 +528,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-decorator/python-decorator_4.3.0-1_all.deb
 Size: 13876
-SHA256: 724a351cb287fd149ad01c7b1ded99a8d1f08449ec87f639a5ed35ceea206e53
-SHA1: f47739c05204c2c91ba63a2cd924c2fa451d2e0e
-MD5sum: 13c40f30a332dba339e59dfe18b7aa31
+SHA256: acc6ad69644ec5d0fcc1c5cdce1eb012209916158006e50f7de24c3ad2cd599c
+SHA1: 663d152693bb523024bdc11bb53419f17fa4bb96
+MD5sum: def24f69030158c4d768b3abebd10e6c
 Description: simplify usage of Python decorators by programmers
  Python 2.4 decorators have significantly changed the way Python programs are
  structured.
@@ -507,9 +557,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-dnslib/python-dnslib_0.9.7+hg20170303-1_all.deb
 Size: 38596
-SHA256: 934292f1a3225da591c66b6b0efb1507c785e2e2c03c1f443030d061a99ff029
-SHA1: 2986b0bb6189870a9d4641b64927b13aad7b156d
-MD5sum: 2f6b5b6ee1c04d901b617d4c76aa0b24
+SHA256: f4d4910f480b4a33d086a2d82e187b12b4f86c0ea791ab40662accfbfa063761
+SHA1: 50cce7d4444c4a87b6256774332d627f1916d460
+MD5sum: b868bef5f8b55b734f712aa0c05bb26f
 Description: Module to encode/decode DNS wire-format packets (Python 2)
  This DNS encode/decode Python module provides:
  .
@@ -535,9 +585,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/d/dnspython/python-dnspython_1.15.0-1_all.deb
 Size: 98840
-SHA256: 12afd50695f4aeb9ad47dcbf4177810a3af7a111864da0e728b869f72a68a689
-SHA1: 11c86809ea492c844b10139158d89395ea307750
-MD5sum: fe7cf703f13819c3a00cf0cf97f8242d
+SHA256: 9c5dd617d01a68e76fc047a0f0fd661df6fd2c8236258aa3519c4aba31d2a543
+SHA1: 1d74564ccc5aaaf58060975cac88a206aea92c2c
+MD5sum: d424d0e59db7505aaa5db3f7d8caf6c6
 Description: DNS toolkit for Python
  dnspython is a DNS toolkit for Python. It supports almost all record types. It
  can be used for queries, zone transfers, and dynamic updates. It supports TSIG
@@ -562,9 +612,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/e/enum34/python-enum34_1.1.6-1_all.deb
 Size: 34668
-SHA256: 980cd74820447cbb1d7473b999fb5dab7a222aab78108f901c3d89ab7e22360d
-SHA1: 1192bcf45880f6d85947aa72a449d432a24a7c0a
-MD5sum: 156b495da335e69ae7c04fc740766ab9
+SHA256: ece7dd173c1428e14fe5c53b8a2b174a62ea9c4636fec194a4013bffe8d8d894
+SHA1: 2d9284e48ee8f914392bd9cae5fb32c75e304a96
+MD5sum: 252d5b6e744a052ab84814a22f745e1d
 Description: backport of Python 3.4's enum package
  PEP 435 adds an enumeration to Python 3.4.  This module provides a
  backport of that data type for older Python versions.  It defines two
@@ -587,9 +637,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/f/flask/python-flask_0.12.2-2_all.deb
 Size: 61444
-SHA256: 723ab0065999ae70ccdcb93aa38cdde6f03bb52fa0baf1b1dcb0cca34ff12b48
-SHA1: e5bd00c2f6705cef22051010fb2a1ea91b0f20ec
-MD5sum: 86de5cceea61021ec93adfd3c6a54072
+SHA256: a924b60e012cc59ddeb5c7ebea9f908e4199b295bb6528d939b3318b3f2aca90
+SHA1: 41cbb14fa13ce4fdbb0682c4677bce2a188b7301
+MD5sum: 2f7890956e8f0b197ce96e98b1658e54
 Description: micro web framework based on Werkzeug and Jinja2 - Python 2.7
  Flask is a micro web framework for Python based on Werkzeug, Jinja 2 and good
  intentions. A minimal Flask application looks like that:
@@ -618,9 +668,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-future/python-future_0.15.2-4_all.deb
 Size: 340988
-SHA256: 2525a7ee2fef8dd39bee98f1393fa276655c19fa7d17d5f4dd259015219f1f8d
-SHA1: ceed448ab2c9a1d0ba0da03f30fe5c7f67fecf36
-MD5sum: 1a47bc7a7dfac4aeeb8dede4c4903314
+SHA256: a64963a4812913055021525bc3d7224181cdfbb9e3d7404ec85208f4403915d5
+SHA1: 3a9071ae82c79400be65962638ed9f5bcd851640
+MD5sum: 1f8434514ba7d32d74c342623a5668b1
 Description: single-source support for Python 3 and 2 - Python 2.x
  Future is the missing compatibility layer between Python 2 and Python 3. It
  allows one to use a single, clean Python 3.x-compatible codebase to support
@@ -644,9 +694,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/h/hyperlink/python-hyperlink_17.3.1-2_all.deb
 Size: 28772
-SHA256: cd2af239e69afd2ba8c953a6ae4dae648a3952f478c7abde47c34dd13ef19875
-SHA1: 10bf2286317ec43dddf75c18d2a365894140b91a
-MD5sum: 3f818441aac4a24c3e6cc2f6a447cc33
+SHA256: 3a6554dc4e41d566c0db0bb50f8e3a30c98aa3ce28d51780442c719b286339d5
+SHA1: 506bc755977ca291bb15a3e42f70dfad5095bc66
+MD5sum: 7a8d1318f950e16ea5b2a81ea71afdb6
 Description: Immutable, Pythonic, correct URLs.
  Hyperlink provides a pure-Python implementation of immutable URLs. Based on
  RFC 3986 and 3987, the Hyperlink URL makes working with both URIs and IRIs
@@ -665,9 +715,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-idna/python-idna_2.5-1_all.deb
 Size: 32684
-SHA256: b9141ed5751d24fff6aeef6525037db84d8d0171418048a456c257cd594bf4e4
-SHA1: a5d12de6e8de595f13c6b043a6ab21ae19a31cd3
-MD5sum: cfaa550f6c6c39dad883ec11f65eaec5
+SHA256: 99c3c04ba18d9929ab9a8cbc12b89c5e104252b94c1d701060b43c3bffb8626d
+SHA1: e89dd3e3a9bd0508890139e25254fe3c6b43125e
+MD5sum: 589d170a6c940b13556ce0ea44a17e73
 Description: Python IDNA2008 (RFC 5891) handling (Python 2)
  A library to support the Internationalised Domain Names in Applications (IDNA)
  protocol as specified in RFC 5891. This version of the protocol is often
@@ -692,9 +742,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/i/impacket/python-impacket_0.9.30_all.deb
 Size: 687804
-SHA256: 384d1a02817d146ebd7d7374438ec477832420acccc63db005f5e851aee3a704
-SHA1: bfabac15eee66d1b59402f3900780b748ebaeb3e
-MD5sum: 33b7ed260f63cd3903b07f29f03f2514
+SHA256: 216334c5904f9601390cc5aef0aa2796665f1533f0bf2876226a021e8f7f1164
+SHA1: 825460ea014259b198a275258c13e06a992ab83a
+MD5sum: 38b1220dcca87e1be28173eca60e49dc
 Description: Python module to easily build and dissect network protocols
  Impacket  is a  collection  of Python  classes  focused on  providing
  access  to network  packets.   Impacket allows  Python developers  to
@@ -722,9 +772,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/i/incremental/python-incremental_16.10.1-3_all.deb
 Size: 13980
-SHA256: 3c8a419f13ad7037dff27f216ff9ec31fb7750babfe173233c392be8d1a077af
-SHA1: 2b8c9739e6366c7f9165b87c2c46138d9704ce2e
-MD5sum: 7aa7593e1ebf5f89ec1dca59dc5ee84d
+SHA256: 002be61f4c42539f0eed5f9311310c54722e2c72bed800c4dcb8463b4d3df0ff
+SHA1: 8e9823ee673db2aba4121ad5eaac566bf77ea5a1
+MD5sum: 1c22e2164f84f0f10b96ebb21fbfa175
 Description: Library for versioning Python projects.
  Incremental is a small library that versions your Python projects.
  .
@@ -741,9 +791,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-ipaddr/python-ipaddr_2.2.0-2_all.deb
 Size: 15948
-SHA256: 8726c48ae8c3bcffb2986d075bc5b7065ede5748b953d0ed12db283c3d5ed8b4
-SHA1: 3e8771b2dbacc29a1a938979a5ba07ae3b98970b
-MD5sum: abc6af3e026a24f2b5f271e0ab0a649e
+SHA256: 00c30fbfd7f0139441188ae3256e7f1bd76fc5dd5604611a1ed5750c4eb83c43
+SHA1: f65cb58c090093bcedf453c6c63c874e9c41f3e8
+MD5sum: 358fdcbaa1a2aac26851d3f8a836386f
 Description: Python module for working with IP addresses, both IPv4 and IPv6
  This library is used to create/poke/manipulate IPv4 and IPv6 addresses
  and networks in Python.  It is intended to be fast and lightweight.
@@ -768,9 +818,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-ipaddress/python-ipaddress_1.0.17-1_all.deb
 Size: 17928
-SHA256: d9d7a833ca2a23c308673735fe549066796703ba6e4f80de22c123aca4f70418
-SHA1: da4e0a57f7fe4554757d0d9a585aedaa43e91ae1
-MD5sum: 1c6d0dcd465d81f0b60d42630b593f94
+SHA256: 7711172c24938e7876cf4c4d3692634f1f67fd56a4b3251d4a3e551ed2789e3f
+SHA1: 1e3f0e26e06c3f843e8b371b52eb9d62d3c698a9
+MD5sum: 5f1addd708ca6ff4babbb9d7e5fa8490
 Description: Backport of Python 3 ipaddress module (Python 2)
  This module is a backport of the stdlib "ipaddress" module from Python 3. The
  "ipaddress" module is in turn based off of the "ipaddr" module available in
@@ -791,9 +841,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/i/ipy/python-ipy_0.83-1_all.deb
 Size: 31600
-SHA256: 9ea801bf75a7214a2c31738a614281976825c640dee056e88993b9f733bda499
-SHA1: 77c2594790561593ba3a9c20100f5e4428670fb7
-MD5sum: a1ad68bae55147d5e5dbfe460faec590
+SHA256: 121d591130ccb4f115ad5b257ba7ef84b7cb92b56254b3f3a827abcbcfb603c6
+SHA1: 9f9a405f9b081cf2bcc4c9707535d6bc48259154
+MD5sum: d5c93c6cf47784d6107cfca79eea1f0e
 Description: Python module for handling IPv4 and IPv6 addresses and networks
  IPy is a Python module for handling IPv4 and IPv6 addresses and
  networks in a fashion similar to perl's Net::IP and friends. The IP
@@ -814,9 +864,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/i/ipython/python-ipython_5.8.0-1_all.deb
 Size: 383680
-SHA256: d726b63f067d130e401218026425ae61a65fe685205789b72a192a0150f614f3
-SHA1: f2a891021d2d67d9d818dc8e0964e36c5ad60dd2
-MD5sum: bd47b9b83edd5dea4313d413f9cef1a1
+SHA256: 0984ed92e773fa55d465a8d20320eec250c55cee0ae894cbf5ee5d70240eed8c
+SHA1: ffd812647747d4217fcee11d7b4ff6748315a16d
+MD5sum: 696350351a2bed2ad0ebe7f93e34a4f2
 Description: Enhanced interactive Python shell (Python 2 version)
  IPython can be used as a replacement for the standard Python shell,
  or it can be used as a complete working environment for scientific
@@ -843,9 +893,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/i/ipython-genutils/python-ipython-genutils_0.2.0-1_all.deb
 Size: 20280
-SHA256: 1b9c38075c9b33d5a745386660e03811938abfc81ea3b9531580fc76f39d2399
-SHA1: 74d5b0b412f7324b51256eeac1e84497207bf3c5
-MD5sum: 5569ba02070c822891b69bfd9502b022
+SHA256: 5013ae61f720b1f344fd7b6acd1e66a8379512a51ff5acd2b5dd07f8bf70a78d
+SHA1: 7db4b0c05fd6640e778fc291717b98d9d8eaf243
+MD5sum: 06a2e800e1f01137bacc33552e966271
 Description: IPython vestigial utilities for Python 2
  Contains some utilities shared by the IPython and Jupyter projects.
  .
@@ -865,9 +915,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-itsdangerous/python-itsdangerous_0.24+dfsg1-2_all.deb
 Size: 12780
-SHA256: 380ff553270b5b85e546669a830aad9471eba179e6492c6f47bcf9a30462b0ce
-SHA1: 338a2b0742daaf60ccb73ad0eb467b66ab86ace5
-MD5sum: 65762fc1ab65da38ce7cf962d15889f9
+SHA256: 85f69c158e0dfc2f5370a575c9c1bbe23b7c2ea456d4a38e084e91e714c62f59
+SHA1: 4237ea2f06d9effba3531e211932056a03897120
+MD5sum: a887f0547c8b94842eaa3d582723c767
 Description: Various helpers to pass trusted data to untrusted environment - Python 2.x
  itsdangerous provides a module that is a port of the django signing
  module.  It's not directly copied but some changes were applied to
@@ -895,9 +945,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/j/jinja2/python-jinja2_2.9.6-1_all.deb
 Size: 115940
-SHA256: 42ed2d1af4d1d2b2756cc9e4fbe63ab6718ea3d5f89e2408c2358701782ed25e
-SHA1: f8a4f87f4107515ece89071ad2466174f6914f74
-MD5sum: 8d25810a702f56e77fb8c1090de21c81
+SHA256: 72c5503519e9ea8c647dc0349b1a3750e1606a2c5edcc3fa4665b88a03883237
+SHA1: 10f3d23c73e20baa59537fbdb8b38cf0e9d2772b
+MD5sum: 517fdaf0d0fec2afd726428cb5151bba
 Description: small but fast and easy to use stand-alone template engine
  Jinja2 is a template engine written in pure Python. It provides a Django
  inspired non-XML syntax but supports inline expressions and an optional
@@ -930,9 +980,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/f/file/python-magic_5.32-1_all.deb
 Size: 48096
-SHA256: 1007c8467a549a401775a33cc6c4abacafa69d8a6ddedc8d6c7b3b9b8bbb5a62
-SHA1: 0c06bfc23b557c02a5b930c254fdff2d1fa3cfce
-MD5sum: d3aabd69c0e44b5188d582c87814e3c1
+SHA256: 06dce5347b09bfecffd2883b445677b7afd2463682644720e6628ec83fbd8e20
+SHA1: ca6cb8381197d3dd9f79e979a6ab7eaa7513aa79
+MD5sum: 45f9a669cd5547f1e2a0ecadc47ef27e
 Description: Recognize the type of data in a file using "magic" numbers - Python bindings
  This package contains the Python bindings for the libmagic file type
  detection library.
@@ -949,9 +999,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-netaddr/python-netaddr_0.7.19-1_all.deb
 Size: 228380
-SHA256: 014c651850f635fa426cc4e0bf544d99cffb4cd73796b8a8c14d1f39bd1b2c46
-SHA1: 184364fe4ab5435b667b62593275fbad0cefaffd
-MD5sum: 2c6b02d83653f18effe5536e8e50c5e9
+SHA256: dd9d5c0830beb2c25138e7a0857fcc674cb5f9ba5ba8f440d83e0c33564a91c5
+SHA1: 7335b0ba3f76a9cae0d3aed6f6fa1e1d60a3c7fd
+MD5sum: e7abc6b524bb2b3efbe417f5fb39de73
 Description: manipulation of various common network address notations (Python 2)
  netaddr is a Python library for the manipulation of various common
  network address notations and representations.
@@ -982,9 +1032,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/o/olefile/python-olefile_0.44-1_all.deb
 Size: 37044
-SHA256: b4154f6b45c9dce07defa6debad11007e629387fb0cbb11681ebe36df9c14d9d
-SHA1: d4ed44489a4e56d1a71d56799c40bd81d3801b3c
-MD5sum: 2864327e805e1d28110481a68a7160f9
+SHA256: d481feceed7ff6a92528bb233c727a3441a1cb6079840edc199d25c1f5a0dea6
+SHA1: 795926a3cff2f0a1c8b414625093432e3ce792dd
+MD5sum: 75fcfe3154250c4c4fdcfa29037538c4
 Description: Python module to read/write MS OLE2 files
  Python package to parse, read and write Microsoft OLE2 files (also called
  Structured Storage, Compound File Binary Format or Compound Document File
@@ -1006,9 +1056,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/pyopenssl/python-openssl_16.2.0-1_all.deb
 Size: 43304
-SHA256: 1d4cafed09538be020cd7e3d40104cf6e709523ae74623d47017cfada65701f9
-SHA1: d83e5518d076322aa5d4a59203d2f4162e29643c
-MD5sum: 44b9f4965afd2dbc8e71a28f8aae9443
+SHA256: afbfcc1361179a705dd3cb4c406097890f6a488c3b20fefa92eea9e8dadaf5d1
+SHA1: 5fef6a05dd306cb336da26e00396db966b019300
+MD5sum: 1c3cd242d0250d567590974606bab27e
 Description: Python 2 wrapper around the OpenSSL library
  High-level wrapper around a subset of the OpenSSL library, includes
  .
@@ -1033,9 +1083,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-pathlib/python-pathlib_1.0.1-2_all.deb
 Size: 24668
-SHA256: d657e97b4b5c4d1671ba769c49a19a54f3bffce2d3951989b7d40cb10f662fbc
-SHA1: 94edece6ed4b6236d4aeee4824c34d88b658ed59
-MD5sum: 3e0624fc7931c438d037db28bd8a1d68
+SHA256: 15b607001aa1a998ff75036b0c38687687180d985ecce126a64575f16de1fad2
+SHA1: 9594fe8702c0f1d297fb42e41c36dee368e9cc1d
+MD5sum: 2a4e89fa8b34afafbca735f550f0c801
 Description: set of Python 2 classes to handle filesystem paths
  Pathlib offers a set of classes to handle filesystem paths.
  It offers the following advantages over using string objects:
@@ -1060,9 +1110,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-pathlib2/python-pathlib2_2.3.5-1_all.deb
 Size: 19272
-SHA256: cb28c57d62a49be44e13dbcb60b21494956af50344af2d74f765c998fe64422c
-SHA1: a76bb3d4aae8b59497653f313b2f2472d73f5c0c
-MD5sum: e4edcc8051980c6c4d28698582d29966
+SHA256: 8e699697fedf742f41c25c10223b35ff40c1e280ec84f1f9e704b7b321ac78de
+SHA1: eb621e98ecc0a0b359e101a0d7c065c56793a68f
+MD5sum: 70c685087a759f5d0f892d92f80e64f3
 Description: Backport of the "pathlib" stdlib module (Python 2)
  The old pathlib module on bitbucket is in bugfix-only mode. The goal of
  pathlib2 is to provide a backport of standard pathlib module which tracks
@@ -1082,9 +1132,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-pathtools/python-pathtools_0.1.2-2_all.deb
 Size: 10588
-SHA256: d71be6c2efc53b3290814739638f8abe2d8b9ba1480823cfa424296aef9de318
-SHA1: af9fcc05b2f3440024de81825d5cc4bb28f45492
-MD5sum: 390cd346a12c6714c4f176e3beac7c28
+SHA256: f9040e5888cfbd07915e242f23303c53662b113d44f3defab560b36175f9edca
+SHA1: 6ca8e03c587425fba72e407c3f6d05c5856d9e58
+MD5sum: 9c29923ad7df078de63d6d840cef65ed
 Description: Path utilities for Python - Python 2.x
  Python API library which provides pattern matching functions
  and various utilities for filesystem paths.
@@ -1102,9 +1152,9 @@ Priority: extra
 Section: python
 Filename: pool/bleeding-edge/p/python-pefile/python-pefile_2017.9.3-1_all.deb
 Size: 54480
-SHA256: a84995d54c2c867ef020b3246fae12f0e7357b9b473cba04add27d03e22571f3
-SHA1: 66daeaaf2eb1eefcbc54ecae9a10d0e335ca3677
-MD5sum: fc60e1e8c3d30499ac84c2ac298da448
+SHA256: e16c25631fc57f3253394d0d22cb116713841c5d69fc7ebd3eb2902c68472273
+SHA1: 57c1ad7d4977a627d8ccd8b50783b48e18f22385
+MD5sum: 1a47fbaf70b423eaf0f28584e088219d
 Description: Portable Executable (PE) parsing module for Python
  pefile is a Python module to read and work with Portable Executable (PE)
  files. Most of the information in the PE header is accessible, as well as all
@@ -1142,9 +1192,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/pexpect/python-pexpect_4.6.0-1_all.deb
 Size: 51028
-SHA256: 771ad99b96cc4cadb67f5563ca0e7f6b31789d3759590dd07a5b311837341cc3
-SHA1: eefda30f7663eac92f84e0f53b355b1c06f930d6
-MD5sum: fcb35ea476ed0f2a4ec750e27deae5d7
+SHA256: 19d0dc49b4f981e2e125f3077cf4b54edebfb954c4470a5bcd4d31f68625ec97
+SHA1: 772f48a50ac20f46d0ad56efccf4d57dd51bbc10
+MD5sum: 0f9766bbd84a206ee1ab8b2d6e77ad92
 Description: Python module for automating interactive applications
  Pexpect is a pure Python module for spawning child applications;
  controlling them; and responding to expected patterns in their
@@ -1164,9 +1214,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/pickleshare/python-pickleshare_0.7.5-1_all.deb
 Size: 6992
-SHA256: e085143cad6a241a7a0ce356c5f1bcd8e15a87cccbf8dd1c7f95ea0c1dabec7e
-SHA1: feda884db4ed097d99ac99367e2e78e4aab410fa
-MD5sum: 8a2826173af8e316299badb03f398f9e
+SHA256: 7910f721ca7de8666b742f2c6fed22e2f590f0e8cd27b26ae00441c58aa13692
+SHA1: e06c4b4a38a3c75e38cbd5bfa07057efb473d45d
+MD5sum: 76c68609bdb6f5c7850899d272db08ac
 Description: File system based database that uses Python pickles for Python 2
  Like shelve, a PickleShareDB object acts like a normal dictionary. Unlike
  shelve, many processes can access the database simultaneously. Changing a
@@ -1192,9 +1242,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/prompt-toolkit/python-prompt-toolkit_1.0.15-1_all.deb
 Size: 175816
-SHA256: 523317a6bbbc28a5ab13ce019ff1fec7ab601ae1ba9970c14d3efc820c11246e
-SHA1: 6ff1dd560188d026c822a5ab7608804892d89f83
-MD5sum: 813993e95d87e7d1b6ecc8aa8a3c64c8
+SHA256: 2cb6e6b755a006e652f50d6881de225d69154e56c7caeaa82ab5cd57710d7935
+SHA1: 0a07081203dc189fbf2cd39aa404b4d04d32afea
+MD5sum: 13679c555fec9df9ba2c55c0c0cee455
 Description: library for building interactive command lines (Python 2)
  prompt_toolkit is a GNU readline replacement written in pure Python supporting
  advanced features like syntax highlighting, multi line editing and code
@@ -1214,9 +1264,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/ptyprocess/python-ptyprocess_0.6.0-1_all.deb
 Size: 12852
-SHA256: f8f6f7ec0bbd25ed0952a4181b2da46c5630b99e64fd34388102142722b8c6bf
-SHA1: 96b7698599e19d160d8367d20c3491bb6254f479
-MD5sum: 60a659efa75c4967e13c85df7845ba6f
+SHA256: b02e1727ef486247192a06d4bce007ed0472ed5a376d5b05db99335d3c29a586
+SHA1: 4ac955a5d1aeeb543cff3b469fa958e088589f44
+MD5sum: 6f2bb96b446c09ec566705f7d64f68af
 Description: Run a subprocess in a pseudo terminal from Python 2
  Launch a subprocess in a pseudo terminal (pty), and interact with both
  the process and its pty.
@@ -1242,9 +1292,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/pyasn1/python-pyasn1_0.1.9-2_all.deb
 Size: 50688
-SHA256: 28a4d0fccb1dcf0c9c16789c361713af374764190262586d66ca0008eb2fd026
-SHA1: af00f347220d12bfed52ade8dbec361bdae11f05
-MD5sum: 4f5e31e235aee862396155d0e0390cb1
+SHA256: ee5e5120a9c4acb4ca6e20d5f9ab351c79a78717ac4d496c78b45dc79d50dae9
+SHA1: 4d3077a87789ef09c1fdc6b7fd821a2484019776
+MD5sum: 98bc97a30f6bf3425d4e142341f8228b
 Description: ASN.1 library for Python (Python 2 module)
  This  is  an implementation  of  ASN.1  types  and codecs  in  Python
  programming language. It has been first written to support particular
@@ -1264,9 +1314,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-pyasn1-modules/python-pyasn1-modules_0.0.7-0.1_all.deb
 Size: 20728
-SHA256: 58bb466b1ae806ba018f39a08595ca99c4dc54112d82d6327bb1a681fb10e9ac
-SHA1: 9af2d64f50eb7481a81ff5b7fba09d30de3b948d
-MD5sum: 6f68729a26c1388c3d23f813f236bca2
+SHA256: 22bed9f044d76c0b3af134b99652d520aedf5afa81e8449dccfc39b8efba93f3
+SHA1: d36cc35b10747f38b779ba850ed292ca72a4a1df
+MD5sum: cf066aacfabb28f5e93ba949b35abbad
 Description: Collection of protocols modules written in ASN.1 language
  This is a small but growing collection of ASN.1 data structures
  expressed in Python terms using pyasn1 data model.
@@ -1291,9 +1341,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/pygments/python-pygments_2.3.1+dfsg-3_all.deb
 Size: 589048
-SHA256: c9fea36684e400237f23023fb81f448475e77b086a26967f4496c1543a089a37
-SHA1: 2e7206572af8d28c9ed222ab416832632f0f2000
-MD5sum: c57f8fbc72de7aed557f6dbf9ebe0c88
+SHA256: 6a38f7bdd0d721bf764c2c40a7751cf9070ae52b92cf74bde2a1006a751cb19c
+SHA1: ae217e73ab546462eb802b61a8a9433c933a834a
+MD5sum: f8d8621141769d936e51cd8010719583
 Description: syntax highlighting package written in Python
  Pygments aims to be a generic syntax highlighter for general use in all kinds
  of software such as forum systems, wikis or other applications that need to
@@ -1320,9 +1370,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/pyinotify/python-pyinotify_0.9.6-1_all.deb
 Size: 26636
-SHA256: 64d4fd1cd396199d7f1c94fdfc96ff4fca88bba7c79663f13a7110cdc9dc4bdc
-SHA1: a9ed660c4ffbf0f0365b5afcb9b8b76a04f0d437
-MD5sum: 09c213ab4cc1ea749364a4b712b74912
+SHA256: 46897b8a718b722a2e79721b2c3670e4d2f3a16fa36771b048dedd5b6e7f1e7a
+SHA1: 16e4ad792cd0063143e072b2fd4160331d36a10f
+MD5sum: f95ad47fc15874e2cc80f02816ba7efd
 Description: simple Linux inotify Python bindings
  pyinotify is a simple wrapper for the Linux inotify mechanism.
  .
@@ -1343,9 +1393,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/r/requests/python-requests_2.18.1-1_all.deb
 Size: 75680
-SHA256: 47696953ce6ce50c3718bc0cf05321989a047d5a3c2c56d56ca9c18238643f1d
-SHA1: 6a97226231792cd235bf8b056c5db194d8006492
-MD5sum: 701c8b1d93c0f0a5071751212877f7ee
+SHA256: 11133b443ebfc3fd9d0363c5526bcdb40f0c52f091ea3499336ae60e52e4eb24
+SHA1: 0c1a36b6da7dd9aa7e2f1db92c96adb4d78de220
+MD5sum: e468f77baf0437681f163426f0b0f42e
 Description: elegant and simple HTTP library for Python2, built for human beings
  Requests allow you to send HTTP/1.1 requests. You can add headers, form data,
  multipart files, and parameters with simple Python dictionaries, and access
@@ -1381,9 +1431,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/s/scapy/python-scapy_2.3.3-1_all.deb
 Size: 357436
-SHA256: 805e61789feeea5e840fefb7fa0f987f9097d5c1b9ab434fb9c79f1cf8125ded
-SHA1: 12c08e19851f713503a24e1c10d064ac11563c7c
-MD5sum: fa5660302d6d635c6619ecebdb7ce1f0
+SHA256: 24f3c223f986ae456fafea4f84b6e9223a7c79161809f312c417285f098d4f77
+SHA1: cf7b2ae10f4142cc0c62e9ede0ac8249a2886e75
+MD5sum: 08e431fd743129630f6623149ec4f1e5
 Description: Packet generator/sniffer and network scanner/discovery
  Scapy is a powerful interactive packet manipulation tool, packet
  generator, network scanner, network discovery, packet sniffer, etc. It
@@ -1408,9 +1458,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-service-identity/python-service-identity_16.0.0-2_all.deb
 Size: 9004
-SHA256: a71a85eff45c1bfe3d495b3be6263126f377387c5cd76c0fdae3aa4029d78d7e
-SHA1: 2aec3437129e348e55d29c0c1e58e7a8b7b257aa
-MD5sum: 9a7aafbf4ae9e4644a2ca6f7219a9ef5
+SHA256: dd21c266a04fca9a837ac6d6562b357878b63b7bd909a8c9c3531c16b9a9784d
+SHA1: 5ea7f6276f760266886c85740abb5eddd96c4a82
+MD5sum: 3dc4e7dc97d7dbed17f27e8f298f6430
 Description: Service identity verification for pyOpenSSL (Python 2 module)
  Service_identity aspires to give you all the tools you need for verifying
  whether a certificate is valid for the intended purposes.
@@ -1433,9 +1483,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/s/simplegeneric/python-simplegeneric_0.8.1-2_all.deb
 Size: 10720
-SHA256: b8ddaca7ee02a1dbe9504f0d1635bf001c7721cf7050646c31606c8a4974e363
-SHA1: 0bfdd9f3f21cb2bea910e3a0d47fbc2cb78a3f12
-MD5sum: d686877e9cc2f2c0e882b50e8fafca9a
+SHA256: f4ed124fd3992c4577a95d4dfc245ad2dc603ad498ceaf38b5ca4bc22733efdf
+SHA1: a343454c7e2b701feb031163baad71da1262fee4
+MD5sum: 1e684bc2a4089baa9bee9781eabf76a3
 Description: simple generic functions for Python
  The simplegeneric module lets you define simple single-dispatch generic
  functions, akin to Python's built-in generic functions like len(), iter() and
@@ -1455,9 +1505,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/s/soupsieve/python-soupsieve_1.9.5+dfsg-1_all.deb
 Size: 32988
-SHA256: f7ba669ff2fb8d4cd75818bc451e6ad8c4d4d2e8e1b19c5dfe8dc7bc209e8b2a
-SHA1: 29296aced677cebdc8d4816ca1ed136ddcaf5c07
-MD5sum: af2464790ec7bca42484f3c179677edc
+SHA256: f2102c9c30b4b78dd5aa1d6ea181e2becbc7c2fa48159b61b45cea36911e622f
+SHA1: 43da6506a0723de509b7c5f71cbbc1c70b3e1307
+MD5sum: 353039a0040485e2b5ab33788973f90b
 Description: Modern CSS selector implementation for BeautifulSoup (Python 2.7)
  Soup Sieve is a CSS selector library designed to be used with Beautiful Soup 4
  (python-bs4 in Debian). It aims to provide selecting, matching, and filtering
@@ -1484,9 +1534,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/t/traitlets/python-traitlets_4.3.3-2_all.deb
 Size: 60556
-SHA256: 3b06fe2200be3d2f48318cb2118f4270a639376596e3f2a674bc46fea5ec31cb
-SHA1: 40575e91fd0d01bf60da77e8e1439fc701102848
-MD5sum: 0ee86d80948337e00f2a31f4af691782
+SHA256: d7cbd8aadc37ce493990ef8695dd63b9d67ed2dcb2b8c6a8b4d6aa24c9b304e1
+SHA1: 9e136f5dd28b75e57de32a51207cc3e6335685d8
+MD5sum: e0752c9751597fbbbe7027e5b0d00b0e
 Description: Lightweight Traits-like package for Python 2
  A lightweight pure-Python derivative of Enthought Traits, used
  for configuring Python objects.
@@ -1513,9 +1563,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/t/twisted/python-twisted-core_17.5.0-2_all.deb
 Size: 1968600
-SHA256: 707aeb221abec73df1117ec200079f68067b90360faf6afb1fd8f5569489070a
-SHA1: e264c1766bb4ccf15bc5336d51cb5ae905cacd47
-MD5sum: 25bebc67778390a92ca96ba362a0c3b2
+SHA256: 5b492d3f4c7facfaf6e3387eae98e10dd8394293649d9b19241aa6d228ac87e5
+SHA1: 10a92da9efcc36c02fd88e069fd25095c307c073
+MD5sum: 9a148698ca4d3a7fe329c7cf051d57f5
 Description: Event-based framework for internet applications
  It includes a web server, a telnet server, a multiplayer RPG engine, a
  generic client and server for remote object access, and APIs for creating
@@ -1557,9 +1607,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/t/twisted/python-twisted-web_17.5.0-2_all.deb
 Size: 78524
-SHA256: bf8535794fbc09de0938470240511f65e8cd4b3424d644504dbc1c6031882902
-SHA1: be2d5d3cfc91f2947b21af8adfc366db1d125027
-MD5sum: 15c0d1c79e5e261c11f3012a5ca16498
+SHA256: f45077eeff2afe924535617dddc10c1dc79eb8a754b9edd328d3549cc4eba606
+SHA1: fe1c5f237c2ee79535a9678e82564770742f6f66
+MD5sum: bb9ac143b818db75bdd08e1ed5871a34
 Description: twisted dummy package for HTTP protocol implementation
  All the code has been moved to python-twisted-core, this package
  contains only documentation and is going to be removed.
@@ -1576,9 +1626,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-ua-parser/python-ua-parser_0.3.6-0kali1_all.deb
 Size: 21036
-SHA256: b8047ec7e73a29716bc0bd3f3a5d69406e5e2b1561de8af7b87e2d15b5a48633
-SHA1: a88b2e3d4ab9214666ac50c4a370107880a8316f
-MD5sum: 2c916aaf9ee48ef80b55f9b89b29867e
+SHA256: 0d68fd24781658127f56527750b3e416c947480cc5b4c3f6b254f26fc5d9f629
+SHA1: 51ae28c091458945cc8114af612ca88c20f0560e
+MD5sum: 481ebbba1a51872ec5cb8cf2b2e84b4b
 Description: Python port of Browserscope's user agent parser
  This package containe a Python port of Browserscope's user agent parser.
 
@@ -1595,9 +1645,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-urllib3/python-urllib3_1.21.1-1_all.deb
 Size: 95844
-SHA256: ede8ec8c5cfe70c80ed71ad216f7eb887eb28a511f713b03edee9eba3dd3f746
-SHA1: f384556c13c270fb5dbf14d85fcbc894fcabc108
-MD5sum: 51f6c7cbefa9bb82d22440bd212f4f7b
+SHA256: ff6ba9a1bd105c246db52cbed2a79cabdb867ca1a2fcff91699dea25e7969f5e
+SHA1: 4618a299de5dca71671a980e330c0d3fc883253c
+MD5sum: 0fb9669cba99d736bcc251ceaa91357d
 Description: HTTP library with thread-safe connection pooling for Python
  urllib3 supports features left out of urllib and urllib2 libraries.
  .
@@ -1622,9 +1672,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-user-agents/python-user-agents_0.3.2-0kali1_all.deb
 Size: 9112
-SHA256: d3150ad9a57eeeec734cc8f3697ff50616cd583a1a167235175a728f8e23ff3e
-SHA1: bc6154794911658d6686282e8b13b9d79f7c5024
-MD5sum: 08f42e25529e81928698442384a43ce7
+SHA256: 59ca098ced65f49cda26882353b1c9a183c0fc0d3601cf370f039b87fa5adf84
+SHA1: 84dd4077b545522a50a2996b8a5614fec88d3755
+MD5sum: 47128cb5479ca337df67a3fd472f23b0
 Description: library to identify devices and their user agent
  This package contains a Python library that provides an easy way to
  identify/detect devices like mobile phones, tablets and their capabilities
@@ -1644,9 +1694,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-watchdog/python-watchdog_0.8.3-2_all.deb
 Size: 182644
-SHA256: e06ba8b421cbe9eb846dba42c02057b7d121df4f5c2b376efb5c8d7bd2d5bb9e
-SHA1: ad562c2138bf49b1aac0fea26b6d6227be27e936
-MD5sum: 41962e68d631b1e8133ba780916705c4
+SHA256: 314e3086bb52b32f2c381154e49b95d9b782f36c032f9cbca53ea30cb4e5f174
+SHA1: be81f68a23f8fc6eb94ceb2f6adf0be0470d24cc
+MD5sum: 9dceba5cc015ab1336ac56075dc9e4fc
 Description: Python API and shell utilities to monitor file system events - Python 2.x
  Watchdog comes with a utility script called watchmedo. It can be used to
  execute commands in response to events.
@@ -1665,9 +1715,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/w/wcwidth/python-wcwidth_0.1.8+dfsg1-1_all.deb
 Size: 15004
-SHA256: cd9648ec04e824de0af0260861d304ad448ccd55999e469b56c86f278fbe6114
-SHA1: 61e39f6b0b93413156b42e4b4dc9b72f7dfcf3e5
-MD5sum: 856884557ecc313bd5adb72df979de63
+SHA256: 1a86a67424c376f5926a1a0b646135caa26dba780141b6a446512478aa906aa4
+SHA1: da9003495064755a822916ff51d3e4a054c2fa4b
+MD5sum: e35f4969fae124f29d581f4f0ddd0d07
 Description: determine printable width of a string on a terminal (Python 2)
  wcwidth allows one to determine the printable width of a string on a terminal.
  It provides functions similar to wcwidth(3) and wcswidth(3) for Python
@@ -1688,9 +1738,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-werkzeug/python-werkzeug_1.0.0+dfsg1-1_all.deb
 Size: 192848
-SHA256: 57e4f8b5cb1104ac6d9b6aefc50c8c173ab1f56e70f76362cb7c49562fc814c6
-SHA1: a421bf85ca7ab34eb49cf863052f13e5263a2bd6
-MD5sum: a317da2f45c3e1571a5f3ff6907bd01f
+SHA256: 1f710eb5bf3dce134d1548d6432d82b4bc158ca0e7eaded87290782e0f256ddc
+SHA1: 5709c8f8f660fd32d4a4c32a044b48fcf268df4e
+MD5sum: 8f7994303257234e04aa87be2eb08516
 Description: collection of utilities for WSGI applications (Python 2.x)
  The Web Server Gateway Interface (WSGI) is a standard interface between web
  server software and web applications written in Python.
@@ -1715,9 +1765,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/c/chardet/python3-chardet_3.1.9_all.deb
 Size: 75860
-SHA256: f2e6837184189e018393941310bf099884e3d7b1768047eaa16806ba6bc138c2
-SHA1: 3a68e38e61170220291006f1221db8fb95f1ad49
-MD5sum: 9b49173c93b2928feea512bdd68dd4f0
+SHA256: 472606730f4871dfc64a3bfaee673289b700585deeca99031ce78ddf0eb24084
+SHA1: abdd7f70f5073d95071fbfaa02050c67be41a7a0
+MD5sum: d523ac02413e4c799f78d03df7d67c4c
 Description: universal character encoding detector for Python3
  Chardet takes a sequence of bytes in an unknown character encoding, and
  attempts to determine the encoding.
@@ -1752,9 +1802,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/i/impacket/python3-impacket_9.9.21_all.deb
 Size: 672972
-SHA256: 890c57787c6e644da782a12cfa46882bece297f7115d9a2ea9e61c1daf7eb997
-SHA1: a280c42493819bb897573daa2d93000335e7fcde
-MD5sum: 150591f99c193bbcc25668983f253226
+SHA256: 9fd0cf43eb02bb3e605dec58a5c79127a6495d7d546f1025bfd3b554d6cae679
+SHA1: 9f2747be6c39cc32009ad6bb5d30d9e7d9aff091
+MD5sum: a0f6d5e545c801b43e7fd07094713997
 Description: Python3 module to easily build and dissect network protocols
  Impacket  is a  collection  of Python3  classes  focused on  providing
  access  to network  packets.   Impacket allows  Python3 developers  to
@@ -1781,9 +1831,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/p/python-netaddr/python3-netaddr_9.7.19_all.deb
 Size: 232660
-SHA256: 50f0f39557ead62daa03a012f22f11778c529dacf9e4fbbcd4af2498b36b9abd
-SHA1: 5003844a35745fb52844bc9418d68f65d0d04cf8
-MD5sum: e0e19605c873378a1b7978890653ed6a
+SHA256: 057c5235323163f123b33ac98f4de2b793f1980b577191f717b5204eab0c42f1
+SHA1: eedc19ee2ab683f4bd51e4b6d6e04f8537a29550
+MD5sum: b9f81b787063db462d4f206e631dc402
 Description: manipulation of various common network address notations (Python 3)
  netaddr is a Python library for the manipulation of various common
  network address notations and representations.
@@ -1816,9 +1866,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/r/requests/python3-requests_2.24.3_all.deb
 Size: 70576
-SHA256: 7d3a74cd69e7c1ff8a45d2cd2a0994aec4e55723a6a13eaac0b020fd73d0fbcd
-SHA1: eeacc0cbc01a01d9ea02d8c23599634654878520
-MD5sum: 11c0e2d15d3d609ac80b149f37be7d62
+SHA256: ecaf746f6b155d41f963503aad7fe02c917fdf9327e098063687c1e2094047bb
+SHA1: 860393cdef68d0d96400508242899b36c1353296
+MD5sum: 719e15b696fa2f46328ce36dafec7445
 Description: elegant and simple HTTP library for Python3, built for human beings
  Requests allow you to send HTTP/1.1 requests. You can add headers, form data,
  multipart files, and parameters with simple Python dictionaries, and access
@@ -1855,9 +1905,9 @@ Priority: optional
 Section: python
 Filename: pool/bleeding-edge/s/scapy/python3-scapy_9.4.4_all.deb
 Size: 774040
-SHA256: 0a41ec3238f8cd750c70ebf897aafcdad49f7ca1cacf8bf70fc0786cab04b1bf
-SHA1: 9868feade0416e0aa5ab18bb26be8f4a636d3ddc
-MD5sum: 341f62e4465b8daf6aa7dc7104fdcc1e
+SHA256: 9be156bb9dce370d60ddb5457f489a2f177a5ca2eec5aa62b9255d1dfdc59ef9
+SHA1: c6ee19d7ab84b768e02e6672cb5edf5eb4ef3648
+MD5sum: c68d508aeb6abe5b452ba27368305cbf
 Description: Packet generator/sniffer and network scanner/discovery (Python 3)
  Scapy is a powerful interactive packet manipulation tool, packet
  generator, network scanner, network discovery, packet sniffer, etc. It
@@ -1883,9 +1933,9 @@ Priority: optional
 Section: net
 Filename: pool/bleeding-edge/s/sslstrip/sslstrip_0.9-1kali3_all.deb
 Size: 11708
-SHA256: 90c14e9cc0f99f0190cef326b8600367ca37b0ea699eb2ca88f8c4a58b344505
-SHA1: 137071245a743c7f6b1096fd2b1610f8740cb295
-MD5sum: bfc8988cc7295ea7ec831be34f101a4d
+SHA256: 526d4c99eefa551a66abaa3fe9aff801165419abda6bddc88c5ba9bd8f1f76d3
+SHA1: 456016e0fdb293f14ef340a45291a6652aecba64
+MD5sum: 40839e8d3ab1f4fa3c118ce17fc4895a
 Description: SSL/TLS man-in-the-middle attack tool
  sslstrip is a tool that transparently hijacks HTTP traffic on a network, watch
  for HTTPS links and redirects, and then map those links into look-alike HTTP
