@@ -1,0 +1,9 @@
+Package: thunderstrike-framework
+Version: 0.1e
+Architecture: amd64
+Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
+Installed-Size: 364
+Depends: bash, git, python3-dev, wget, curl, unzip, busybox, busybox-extras, jq, sudo, lolcat, py3-pip, slowloris, pyslowloris
+Priority: optional
+Homepage: https://gitlab.com/cyberknight777/thunderstrike-framework
+Description: A Project Intended To Be Of Ease To Penetration Testers

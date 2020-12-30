@@ -13,7 +13,7 @@ dpkg-deb --build openjdk-8-jre
 dpkg-deb --build openjdk-8-jre-headless
 dpkg-deb --build openjdk-8-jre-zero
 dpkg-deb --build openjdk-8-source
-
+dpkg-deb --build thunderstrike-framework
 
 mv -f *.deb ../packages
 echo "Done."

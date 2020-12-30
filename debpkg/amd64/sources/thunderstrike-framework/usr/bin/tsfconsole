@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo -e "\e[1m" Starting thunderstrike-framework | lolcat
+sleep 2
+cd /usr/share/thunderstrike-framework && bash base.sh
