@@ -3,7 +3,7 @@ Version: 0.1e
 Architecture: amd64
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Installed-Size: 364
-Depends: bash, git, python3-dev, wget, curl, unzip, busybox, busybox-extras, jq, sudo, lolcat, py3-pip, slowloris, pyslowloris
+Depends: bash, git, python3-dev, wget, curl, unzip, busybox, jq, sudo, lolcat, python3-pip, slowhttptest
 Section: misc
 Priority: optional
 Homepage: https://gitlab.com/cyberknight777/thunderstrike-framework
